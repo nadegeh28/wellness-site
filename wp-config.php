@@ -9,7 +9,6 @@
  * This file contains the following configurations:
  *
  * * Database settings
- *  * * Database sett
  * * Secret keys
  * * Database table prefix
  * * ABSPATH
