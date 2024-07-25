@@ -83,11 +83,6 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-/** SFTP: mettre l'URL **/
-define('FTP_HOST', 'wellness.emu.isfsc.be');
-define('FTP_USER', 'wellness');
-define('FTP_PASS', 'Tf3aVo3EWmiv');
-define('FTP_SSL', true); // Pour utiliser SFTP
 
 /* That's all, stop editing! Happy publishing. */
 
