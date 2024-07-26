@@ -40,17 +40,48 @@ nav ul li a {
     text-decoration: none;
     color: #707070;
     font-weight: medium;
+
 }
 
-.auth-buttons button {
+nav ul li a:hover {
+    background-color: #DCEDC8; /* Couleur de fond au survol (vert) */
+    color:#707070; 
+    border-radius: 30px;/* Couleur du texte au survol */
+}
+
+
+/* Styles généraux pour les liens dans .auth-buttons */
+.auth-buttons a {
     margin-left: 10px;
     padding: 5px 10px;
-    background-color: #6ecf78;
     border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
 }
+
+/* Style pour le bouton de connexion */
+.btn-login {
+    background-color: transparent; /* Fond transparent */
+    color: #6ecf78; /* Couleur du texte en vert */
+    border: 2px solid #6ecf78; /* Bordure verte pour le bouton */
+}
+
+/* Style pour le bouton d'inscription */
+.btn-register {
+    background-color: #6ecf78; /* Fond vert pour le bouton */
+    color: #ffffff; /* Couleur du texte en blanc */
+    border: none; /* Pas de bordure */
+}
+
+
+
+
+
+
+
+
+
 
 main {
     padding: 20px;
@@ -78,7 +109,7 @@ main {
     border: none;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 1em;
 }
 

@@ -29,9 +29,10 @@
             </ul>
         </nav>
         <div class="auth-buttons">
-            <a href="<?php echo wp_login_url(); ?>" class="btn btn-success">Se connecter</a>
-            <a href="<?php echo wp_registration_url(); ?>" class="btn btn-success ml-2">S'inscrire</a>
-        </div>
+    <a href="<?php echo wp_login_url(); ?>" class="btn btn-login">Se connecter</a>
+    <a href="<?php echo wp_registration_url(); ?>" class="btn btn-register">S'inscrire</a>
+
+
     </div>
 </header>
 <?php wp_footer(); ?>
