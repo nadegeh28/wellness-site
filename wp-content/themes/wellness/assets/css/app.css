@@ -13,9 +13,17 @@ header {
     background-color: #ffff;
 }
 
+
+
 .logo img {
     width: 50px;
 }
+
+/* Dans votre fichier style.css */
+.navbar-custom {
+    background-color: #FFFF; /* Couleur de fond blanche */
+}
+
 
 nav ul {
     list-style: none;

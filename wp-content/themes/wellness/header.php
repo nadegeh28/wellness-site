@@ -6,11 +6,16 @@
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/app.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Votre CSS personnalisé -->
+    <style>
+        .navbar-custom {
+            background-color: #FFFF; /* Couleur de fond blanche */
+        }
+    </style>
 </head>
 <body <?php body_class(); ?>>
-<header class="bg-light py-3">
+<header class="navbar-custom py-3">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
             <a href="<?php echo home_url(); ?>">
@@ -38,6 +43,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
