@@ -10,7 +10,7 @@
     <!-- Votre CSS personnalisé -->
     <style>
         .navbar-custom {
-            background-color: #FFFF; /* Couleur de fond blanche */
+            background-color: #FFFF; 
         }
     </style>
 </head>
@@ -19,8 +19,10 @@
     <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
             <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Wellness Logo" class="img-fluid" style="width: 50px;">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="img-fluid" style="width: 150px;">
+           
             </a>
+
         </div>
         <nav>
             <ul class="nav">
