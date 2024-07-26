@@ -34,10 +34,10 @@
                         <li>Adresse: 111 Rue de la Poste<br>1030 Bruxelles<br>Belgique</li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h5>Apps</h5>
-                    <a href="#"><img src="path-to-google-play-badge.png" alt="Google Play" class="img-fluid"></a>
-                    <a href="#"><img src="path-to-app-store-badge.png" alt="App Store" class="img-fluid"></a>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gooogleplay1.png" alt="Google play" class="img-fluid" style="width: 150px;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/appstore1.png" alt="App store" class="img-fluid" style="width: 150px;">
                 </div>
             </div>
         </div>
