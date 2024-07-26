@@ -92,6 +92,43 @@ nav ul li a:hover {
 
 
 
+.footer {
+    background-color: #689F38;
+    color: white;
+}
+
+.footer h5 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #c8e6c9;
+}
+
+.footer .img-fluid {
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+
+
+
 
 
 
