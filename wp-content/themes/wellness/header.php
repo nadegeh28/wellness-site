@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
-    <!-- Bootstrap CSS -->
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Votre CSS personnalisé -->
+ 
     <style>
-        .navbar-custom {
-            background-color: #FFFF; 
-        }
+
     </style>
 </head>
 <body <?php body_class(); ?>>
@@ -20,9 +18,7 @@
         <div class="logo">
             <a href="<?php echo home_url(); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="img-fluid" style="width: 150px;">
-           
             </a>
-
         </div>
         <nav>
             <ul class="nav">
