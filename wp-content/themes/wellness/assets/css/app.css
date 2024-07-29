@@ -139,8 +139,10 @@ h1 {
 
 
 
+
+
 .hero, .recipes, .services, .app-promo, .testimonials {
-    background-color: #ffffff; /* Fond blanc pour chaque section */
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }

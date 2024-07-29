@@ -4,7 +4,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/app.css" rel="stylesheet">
 
-<main>
+
     <section class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
@@ -108,7 +108,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/app-image.png" class="img-fluid" alt="Wellness App">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tel.png" class="img-fluid" alt="Wellness App">
                 </div>
                 <div class="col-md-6">
                     <h2>Venez explorer notre application mobile !</h2>
@@ -147,7 +147,7 @@
             </div>
         </div>
     </section>
-</main>
+
 
 <br><br><br><br><br><br><br>
 
