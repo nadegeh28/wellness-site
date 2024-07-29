@@ -21,55 +21,58 @@
     </section>
 
     <section class="recipes py-5">
-        <div class="container">
-            <h2>Nos Recettes</h2>
-            <br> <br>
-            <p class="text-center">Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" class="card-img-top" alt="Muesli aux fruits">
-                        <div class="card-body">
-                            <h5 class="card-title">Muesli aux fruits</h5>
-                            <ul class="list-unstyled">
-                                <li>100g d'avoine</li>
-                                <li>50g de fruits secs</li>
-                                <li>1 yaourt nature</li>
-                                <li>1 cuillère à soupe de miel</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" class="card-img-top" alt="Curry de légumes">
-                        <div class="card-body">
-                            <h5 class="card-title">Curry de légumes</h5>
-                            <ul class="list-unstyled">
-                                <li>200g de légumes variés</li>
-                                <li>100g de pois chiches</li>
-                                <li>200ml de lait de coco</li>
-                                <li>1 cuillère à soupe de curry</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" class="card-img-top" alt="Wrap végétalien">
-                        <div class="card-body">
-                            <h5 class="card-title">Wrap végétalien</h5>
-                            <ul class="list-unstyled">
-                                <li>1 tortilla de blé</li>
-                                <li>100g de houmous</li>
-                                <li>50g de légumes grillés</li>
-                                <li>1 poignée de roquette</li>
-                            </ul>
-                        </div>
+    <div class="container">
+        <h2>Nos Recettes</h2>
+        <br> <br>
+        <p class="text-center">Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" class="img-fluid" alt="Muesli aux fruits" style="width: 220px;">
+                    <div class="recipe-body">
+                        <h5 class="recipe-title">Muesli aux fruits</h5>
+                        <ul class="list-unstyled">
+                            <li>100g d'avoine</li>
+                            <li>50g de fruits secs</li>
+                            <li>1 yaourt nature</li>
+                            <li>1 cuillère à soupe de miel</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" class="img-fluid" alt="Curry de légumes" style="width: 220px;">
+                    <div class="recipe-body">
+                        <h5 class="recipe-title">Curry de légumes</h5>
+                        <ul class="list-unstyled">
+                            <li>200g de légumes variés</li>
+                            <li>100g de pois chiches</li>
+                            <li>200ml de lait de coco</li>
+                            <li>1 cuillère à soupe de curry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="recipe-block">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" class="img-fluid" alt="Wrap végétalien" style="width: 220px;">
+                    <div class="recipe-body">
+                        <h5 class="recipe-title">Wrap végétalien</h5>
+                        <ul class="list-unstyled">
+                            <li>1 tortilla de blé</li>
+                            <li>100g de houmous</li>
+                            <li>50g de légumes grillés</li>
+                            <li>1 poignée de roquette</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
             <div class="text-center mt-4">
                 <a href="#" class="btn btn-secondary">Voir plus de recettes ici</a>
             </div>
@@ -79,6 +82,7 @@
     <section class="services py-5 bg-light">
         <div class="container">
             <h2 class="text-center">Nos Services</h2>
+            <br> <br>
             <div class="row text-center">
                 <div class="col-md-3">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/chef-icon.png" class="mb-3" alt="Cuisiner comme un chef">
@@ -122,6 +126,7 @@
     <section class="testimonials py-5 bg-light">
         <div class="container">
             <h2 class="text-center">Vos Avis</h2>
+            <br> <br>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card text-center">
