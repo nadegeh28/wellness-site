@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/muesli.jpg" class="card-img-top" alt="Muesli aux fruits">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" class="card-img-top" alt="Muesli aux fruits">
                         <div class="card-body">
                             <h5 class="card-title">Muesli aux fruits</h5>
                             <ul class="list-unstyled">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/curry.jpg" class="card-img-top" alt="Curry de légumes">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" class="card-img-top" alt="Curry de légumes">
                         <div class="card-body">
                             <h5 class="card-title">Curry de légumes</h5>
                             <ul class="list-unstyled">
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/wrap.jpg" class="card-img-top" alt="Wrap végétalien">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" class="card-img-top" alt="Wrap végétalien">
                         <div class="card-body">
                             <h5 class="card-title">Wrap végétalien</h5>
                             <ul class="list-unstyled">
@@ -108,7 +108,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tel.png" class="img-fluid" alt="Wellness App">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tel.png" class="img-fluid" alt="Wellness App" style="width: 400px;">
                 </div>
                 <div class="col-md-6">
                     <h2>Venez explorer notre application mobile !</h2>
