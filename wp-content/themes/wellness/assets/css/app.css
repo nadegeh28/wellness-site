@@ -56,6 +56,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: flex-end;
     padding: 20px;
+
 }
 
 .auth-buttons .btn {
@@ -95,16 +96,19 @@ nav ul li a:hover {
 .footer {
     background-color: #689F38;
     color: white;
+    
 }
 
 .footer h5 {
     margin-bottom: 1rem;
     font-weight: bold;
+    text-align: left;
 }
 
 .footer ul {
     padding: 0;
     list-style: none;
+    text-align: left;
 }
 
 .footer ul li {
@@ -115,6 +119,7 @@ nav ul li a:hover {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+    text-align: left;
 }
 
 .footer ul li a:hover {
@@ -145,6 +150,7 @@ h1 {
     text-align: left;
 }
 
+
 /* Styles spécifiques à la section hero */
 .hero {
     padding: 50px 0;
@@ -159,16 +165,18 @@ h1 {
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 20px;
+    color:#707070
 }
 
 .hero .btn-primary {
-    background-color: #4CAF50;
+    background-color: #689F38;
     border: none;
+    border-radius: 27px;
 }
 
 .hero .img {
     border-radius: 50%;
-    max-width: 80%;
+    max-width: 500px;
 }
 
 .recipes {
@@ -226,7 +234,7 @@ ul.list-unstyled li {
 /* Styles spécifiques à la section services */
 .services {
     padding: 50px 0;
-    background-color: #FFFF; /* Fond blanc */
+     /* Fond blanc */
     
 }
 
@@ -245,7 +253,7 @@ ul.list-unstyled li {
     color: #707070;
 }
 
-/* Styles spécifiques à la section app-promo */
+
 .app-promo {
     padding: 50px 0;
 }
