@@ -137,8 +137,12 @@ h1 {
     text-align: left;
 }
 
-.container {
-    background-color: #ffffff;
+
+
+.hero, .recipes, .services, .app-promo, .testimonials {
+    background-color: #ffffff; /* Fond blanc pour chaque section */
+    margin: 0;
+    padding: 0;
 }
 
 
