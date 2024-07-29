@@ -171,9 +171,15 @@ h1 {
     max-width: 80%;
 }
 
-/* Styles spécifiques à la section recipes */
 .recipes {
     padding: 50px 0;
+    border:#689F38; 
+}
+
+.recipes h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #689F38;
 }
 
 .recipes h5 {
@@ -184,21 +190,27 @@ h1 {
 
 /* Styles pour les blocs de recette */
 .recipe-block {
-    background-color: #4CAF50; /* Fond vert */
-    padding: 20px; /* Padding autour du contenu */
-    border-radius: 8px; /* Bords arrondis */
-    margin-bottom: 30px; /* Espace entre les blocs */
-    color: #ffffff; /* Couleur du texte en blanc */
+    background-color: #F2F2F2;
+    border: 2px solid #689F38 ; 
+    padding: 20px; 
+    border-radius: 50px; 
+    margin-bottom: 30px; 
+    color: #689F38; 
 }
 
 .recipe-block img {
-    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du bloc */
-    border-radius: 8px; /* Bords arrondis pour l'image */
+    max-width: 150px; 
+    border-radius: 15px; 
+    margin-left: 80px;
+
 }
+
 
 .recipe-title {
     font-size: 1.5rem;
-    margin-bottom: 15px; /* Espace en dessous du titre */
+    margin-bottom: 15px; 
+    text-align: center;
+
 }
 
 ul.list-unstyled {
@@ -215,15 +227,22 @@ ul.list-unstyled li {
 .services {
     padding: 50px 0;
     background-color: #FFFF; /* Fond blanc */
+    
 }
 
 .services h2 {
     font-size: 2rem;
     margin-bottom: 30px;
+    color: #689F38;
+    background-color: #DCEDC8;
+    border-radius: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 .services .col-md-3 {
     margin-bottom: 30px;
+    color: #707070;
 }
 
 /* Styles spécifiques à la section app-promo */
@@ -248,6 +267,11 @@ ul.list-unstyled li {
 .testimonials h2 {
     font-size: 2rem;
     margin-bottom: 30px;
+    color: #689F38;
+    background-color: #DCEDC8;
+    border-radius: 30px;
+    margin-left: 450px;
+    margin-right: 450px;
 }
 
 .testimonials .img {
