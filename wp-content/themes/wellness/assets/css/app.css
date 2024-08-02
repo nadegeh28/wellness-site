@@ -369,9 +369,17 @@ ul.list-unstyled li {
     flex-direction: row-reverse; /* Inverse l'ordre des éléments pour la section Vegan */
 }
 
-.diet-image img {
-    width: 100%; /* Ajustez la taille de l'image selon vos besoins */
+.diet-image1 img {
+    width: 500px; 
     height: auto;
+    margin-left: 85px;
+}
+
+.diet-image2 img {
+    width: 500px; 
+    height: auto;
+    margin-right: 85px;
+    margin-bottom: 80px;
 }
 
 .diet-content {
@@ -391,9 +399,9 @@ ul.list-unstyled li {
     margin-bottom: 50px;
     background-color: #F2F2F2;
     border: 2px solid #62891F;
-    border-radius: 30px;
+    border-radius: 60px;
     padding: 30px 30px;
-    font-size: 20px;
 
     
 }
+
