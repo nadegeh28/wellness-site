@@ -9,7 +9,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1>Revitalisez votre vie. Maintenant.</h1>
+                    <h1 class="part1">Revitalisez votre vie.</h1>
+                        <h1 class="part2">Maintenant.</h1>
                     <p>Une alimentation équilibrée constitue la santé d'une vie saine, offrant une vitalité renouvelée à chaque repas. De nourrir non seulement le corps mais aussi l'esprit. Transformez une claire matinée en une énergie constante.</p>
                     <a href="#" class="btn btn-primary">Faire le quizz</a>
                 </div>

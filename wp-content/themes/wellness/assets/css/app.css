@@ -293,27 +293,25 @@ ul.list-unstyled li {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
 }
 
 
 
-.header h1 {
-    color: #6fb365;
+.part1{
+    color: #8BC34A;
+    font-size: 36px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.part2{
+    color: #689F38;
     font-size: 36px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.diet-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 2px solid #6fb365;
-    border-radius: 8px;
-}
+
 
 .diet-section:nth-child(even) .diet-content {
     order: 2;
@@ -327,22 +325,16 @@ ul.list-unstyled li {
 
 
 .diet-title {
-    color: #6fb365;
+    color: #689F38;
     font-size: 28px;
-    margin-bottom: 20px;
-    background-color: #e0f3e3;
+    margin-bottom: 60px;
+    background-color: #DCEDC8;
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
-.diet-title.diabetic {
-    background-color: #e0f3e3;
-}
 
-.diet-title.vegan {
-    background-color: #e0f3e3;
-}
 
 .diet-content p {
     font-size: 18px;
@@ -389,4 +381,16 @@ ul.list-unstyled li {
 .learn-more {
     color: #007BFF; /* Exemple de couleur pour les liens */
     text-decoration: none;
+}
+
+.textreg{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: #F2F2F2;
+    border: 2px solid #62891F;
+    border-radius: 30px;
+    padding: 30px 30px;
+    font-size: 20px;
+    
 }
