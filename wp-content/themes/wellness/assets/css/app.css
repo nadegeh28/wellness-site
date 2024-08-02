@@ -378,9 +378,11 @@ ul.list-unstyled li {
     padding: 20px;
 }
 
-.learn-more {
-    color: #007BFF; /* Exemple de couleur pour les liens */
+.learnmore {
+    color: #707070; /* Exemple de couleur pour les liens */
     text-decoration: none;
+    margin-top: 10px;
+    
 }
 
 .textreg{
@@ -392,5 +394,6 @@ ul.list-unstyled li {
     border-radius: 30px;
     padding: 30px 30px;
     font-size: 20px;
+
     
 }
