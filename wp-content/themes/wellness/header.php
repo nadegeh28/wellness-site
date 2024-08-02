@@ -22,9 +22,9 @@
         </div>
         <nav>
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="<?php echo home_url(); ?>">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/accueil/">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/forum'); ?>">Forum</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/regimes'); ?>">Régimes</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/regimes/">Régimes</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/quizz'); ?>">Quizz</a></li>
             </ul>
         </nav>

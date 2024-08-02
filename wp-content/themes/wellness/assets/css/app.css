@@ -1,6 +1,5 @@
 body {
         font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
         padding: 0;
         color: #707070;
         background-color: white;
@@ -12,12 +11,13 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: #ffff;
+    font-size: 20px;
 }
 
 
 
 .logo img {
-    width: 50px;
+  width: 900px;
 }
 
 
@@ -96,6 +96,7 @@ nav ul li a:hover {
 .footer {
     background-color: #689F38;
     color: white;
+    margin-top: 150px;
     
 }
 
@@ -326,20 +327,22 @@ ul.list-unstyled li {
 
 .diet-title {
     color: #689F38;
-    font-size: 28px;
+    font-size: 20px;
+    font-weight: 550;
     margin-bottom: 60px;
     background-color: #DCEDC8;
     display: inline-block;
     padding: 10px 20px;
     border-radius: 30px;
+
 }
 
 
 
 .diet-content p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
-    color: #555;
+    color: #707070;
     margin: 0 auto;
 }
 
@@ -370,13 +373,13 @@ ul.list-unstyled li {
 }
 
 .diet-image1 img {
-    width: 500px; 
+    width: 400px; 
     height: auto;
     margin-left: 85px;
 }
 
 .diet-image2 img {
-    width: 500px; 
+    width: 400px; 
     height: auto;
     margin-right: 85px;
     margin-bottom: 80px;
@@ -387,9 +390,11 @@ ul.list-unstyled li {
 }
 
 .learnmore {
-    color: #707070; /* Exemple de couleur pour les liens */
+    color: #689F38;
     text-decoration: none;
     margin-top: 10px;
+    font-weight: bold;
+
     
 }
 
@@ -406,5 +411,36 @@ ul.list-unstyled li {
 }
 
 .quizsection{
-    
+
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #F2F2F2;
+    border: 3px solid #62891F;
+    border-radius: 60px;
+    margin-top: 20px;
+    color: #689F38;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 20px;
+    margin-bottom: 150px;
 }
+
+.quiztitle{
+    align-items: center;
+    text-align: center;
+    color:#62891F;
+    font-weight: bolder;
+}
+
+.startbtn{
+    padding: 5px 35px;
+    background-color: #8BC34A;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 18px;
+}
+

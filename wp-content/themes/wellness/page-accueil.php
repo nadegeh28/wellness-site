@@ -15,7 +15,7 @@
                     <a href="#" class="btn btn-primary">Faire le quizz</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo-page-accueil.png" class="img-fluid" alt="Salad Image" style="width" 300>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo-page-accueil.png" class="img-fluid" alt="Salad Image" style="width : 800px;">
                 </div>
             </div>
         </div>
