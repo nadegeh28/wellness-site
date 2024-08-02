@@ -33,6 +33,31 @@
             <a href="#" class="learnmore">Voir plus ici</a>
         </div>
     </div>
+    <div class="diet-section vegan-section">
+        <div class="diet-content">
+            <h2 class="diet-title vegan">Sans sucre</h2>
+            <p class="textreg">Un régime sans sucre évite les aliments riches en sucre, favorisant les aliments naturels comme les légumes, les protéines maigres et les céréales complètes. Il limite les fruits sucrés et exclut les produits transformés, les boissons sucrées et les desserts, privilégiant des alternatives sucrées naturelles ou des édulcorants sans sucre pour combler les envies de sucre. </p>
+            <br>
+            <a href="#" class="learnmore">Voir plus ici</a>
+        </div>
+        <div class="diet-image1">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-14.png" class="imgreg1" alt="Plat Vegan">
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="diet-section reverse">
+        <div class="diet-image2">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-13.png" class="imgreg2" alt="Plat Vegan">
+        </div>
+        <div class="diet-content">
+            <h2 class="diet-title diabetic">Diabétique</h2>
+            <p class="textreg">Un régime diabétique maintient la glycémie en surveillant les glucides. Il favorise les aliments à faible indice glycémique tels que les fruits, les légumes et les céréales complètes. Il intègre également des protéines maigres, des graisses saines et des fibres, tout en évitant les sucres ajoutés et les aliments transformés.</p>
+            <br>
+            <a href="#" class="learnmore">Voir plus ici</a>
+        </div>
+    </div>
 </div>
 
 
