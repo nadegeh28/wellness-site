@@ -286,3 +286,107 @@ ul.list-unstyled li {
     height: 100px;
     object-fit: cover;
 }
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+.header h1 {
+    color: #6fb365;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.diet-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #6fb365;
+    border-radius: 8px;
+}
+
+.diet-section:nth-child(even) .diet-content {
+    order: 2;
+}
+
+.diet-content {
+    width: 50%;
+    padding: 20px;
+}
+
+
+
+.diet-title {
+    color: #6fb365;
+    font-size: 28px;
+    margin-bottom: 20px;
+    background-color: #e0f3e3;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.diet-title.diabetic {
+    background-color: #e0f3e3;
+}
+
+.diet-title.vegan {
+    background-color: #e0f3e3;
+}
+
+.diet-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 auto;
+}
+
+.diet-content .learn-more {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #6fb365;
+    text-decoration: none;
+}
+
+.diet-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.diet-image {
+    flex: 1;
+}
+
+.diet-content {
+    flex: 2;
+}
+
+.vegan-section {
+    flex-direction: row-reverse; /* Inverse l'ordre des éléments pour la section Vegan */
+}
+
+.diet-image img {
+    width: 100%; /* Ajustez la taille de l'image selon vos besoins */
+    height: auto;
+}
+
+.diet-content {
+    padding: 20px;
+}
+
+.learn-more {
+    color: #007BFF; /* Exemple de couleur pour les liens */
+    text-decoration: none;
+}
