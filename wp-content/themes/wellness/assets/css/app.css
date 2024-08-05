@@ -212,31 +212,45 @@ nav ul li a:hover {
 }
 
 .recipe-card {
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    border-radius: 10px;
+    background: #F2F2F2;
+    border: 2px solid #689F38;
+    padding: 60px 40px;
+    border-radius: 30px;
     max-width: 30%;
     text-align: left;
+    color: #689F38;
 }
 
 .recipe-card img {
-    max-width: 100%;
-    border-radius: 10px;
+    max-width: 150px;
+    border-radius: 30px;
+    text-align: center;
 }
 
 .recipe-card h3 {
     font-size: 20px;
     margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    color: #8BC34A;
+}
+
+.prep{
+    font-size: 10px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .recipe-card ul {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
 .recipe-card ul li {
     margin: 5px 0;
+    text-align: left;
 }
 
 .services-list {

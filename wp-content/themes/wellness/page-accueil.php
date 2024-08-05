@@ -17,34 +17,34 @@
         <p class="textec">Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
         <div class="recipe-cards">
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/recipe-1.jpg" alt="Muesli aux fruits">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits">
                 <h3>Muesli aux fruits</h3>
                 <ul>
                     <li>100g d’avoine</li>
                     <li>50g d’amandes</li>
                     <li>30g de raisins secs</li>
                 </ul>
-                <p>10 min</p>
+                <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/recipe-2.jpg" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Curry de légumes</h3>
                 <ul>
                     <li>200g de pois chiches</li>
                     <li>100g de carottes</li>
                     <li>100g de courgettes</li>
                 </ul>
-                <p>30 min</p>
+                <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/recipe-3.jpg" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
                 <ul>
                     <li>1 tortilla</li>
                     <li>50g de haricots noirs</li>
                     <li>30g de maïs</li>
                 </ul>
-                <p>15 min</p>
+                <p class="prep">Préparation : 15 min</p>
             </div>
         </div>
     </section>
