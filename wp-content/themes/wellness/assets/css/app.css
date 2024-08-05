@@ -136,175 +136,113 @@ nav ul li a:hover {
 }
 
 
-/* Global Styles for Background */
-.hero, .recipes, .services, .app-promo, .testimonials {
-    background-color: #ffffff; /* Set background color to white */
-}
-
-/* Hero Section Styles */
-.hero h1 {
-    color: #7ac142;
-    text-align: left;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    color: #707070;
-}
-
-.hero .btn-primary {
-    background-color: #689F38;
-    border: none;
-    border-radius: 27px;
-}
-
-.hero .img {
-    max-width: 500px;
-}
-
-/* Recipes Section Styles */
-.recipes h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #689F38;
-    background-color: #DCEDC8;
-    border-radius: 30px;
-    margin-left: 400px;
-    margin-right: 400px;
-}
-
-.recipes h5 {
-    font-size: 2rem;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.recipe-block {
-    background-color: #F2F2F2;
-    border: 2px solid #689F38;
-    padding: 20px;
-    border-radius: 50px;
-    margin-bottom: 30px;
-    color: #689F38;
-}
-
-.recipe-block img {
-    max-width: 150px;
-    border-radius: 15px;
-    margin-left: 80px;
-}
-
-ul.list-unstyled {
-    padding: 0;
-    list-style: none;
-}
-
-ul.list-unstyled li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-/* Services Section Styles */
-.services {
-    padding: 80px 0;
-    background-color: #ffffff; /* Ensure the background is white */
-}
-
-.services .container {
+.home-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 30px;
+
 }
 
-.services .text-center {
-    text-align: center;
-}
-
-.services .row {
+.hero {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+padding: 30px;
+    margin-top: -60px;
+
 }
 
-.services .service-col {
-    max-width: 23%;
+
+
+
+.hero-text {
+    max-width: 50%;
+
+
+}
+
+
+
+.hero-text p {
+    color: #707070;
     margin: 20px 0;
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #689F38;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 60px;
+}
+
+.hero-image img {
+    max-width: 130%;
+}
+
+.recipes, .services, .app-promotion, .testimonials {
     text-align: center;
-    box-sizing: border-box;
+    padding: 50px 0;
 }
 
-.services .service-icon {
-    margin-bottom: 20px;
-    max-width: 100px;
-}
-
-.services h2 {
+.recipes h2, .services h2, .testimonials h2 {
     font-size: 28px;
     margin-bottom: 20px;
 }
 
-.services h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
+.recipe-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-.services p {
-    font-size: 14px;
-    color: #666;
+.recipe-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 30%;
+    text-align: left;
 }
 
-/* Media Queries for Services */
-@media (max-width: 768px) {
-    .services .service-col {
-        max-width: 45%;
-    }
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-@media (max-width: 480px) {
-    .services .service-col {
-        max-width: 100%;
-    }
+.recipe-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
 }
 
-/* App Promo Section Styles */
-.app-promo {
-    padding: 50px 0;
-    background-color: #ffffff; /* Ensure the background is white */
+.recipe-card ul {
+    list-style: none;
+    padding: 0;
 }
 
-.app-promo h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+.recipe-card ul li {
+    margin: 5px 0;
 }
 
-.app-promo p {
-    font-size: 1.25rem;
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-/* Testimonials Section Styles */
-.testimonials {
-    padding: 50px 0;
-    background-color: #ffffff; /* Ensure the background is white */
+.service-item {
+    max-width: 45%;
+    margin: 20px 0;
 }
 
-.testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #689F38;
-    background-color: #DCEDC8;
-    border-radius: 30px;
-    margin-left: 450px;
-    margin-right: 450px;
+.service-item img {
+    max-width: 60px;
+    margin-bottom: 20px;
 }
 
-.testimonials .img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
+
 
 
 
