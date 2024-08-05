@@ -136,26 +136,25 @@ nav ul li a:hover {
 }
 
 
-.header, .services, .mobile-app, .testimonials, .footer {
+.services, .mobile-app, .testimonials{
     text-align: center;
-    padding: 20px;
+
+
 }
 
 /* Styles globaux pour les sections */
 .hero, .recipes, .services, .app-promo, .testimonials {
-    background-color: #ffffff; /* Assurez-vous que le fond est blanc */
-    margin: 0;
-    padding: 0;
+    background-color: white; /* Assurez-vous que le fond est blanc */
+
 }
 
-/* Style pour le titre h1 */
+
 h1 {
     color: #7ac142;
     text-align: left;
 }
 
 
-/* Styles spécifiques à la section hero */
 .hero {
     padding: 50px 0;
 }
@@ -163,7 +162,6 @@ h1 {
 .hero h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
 .hero p {
