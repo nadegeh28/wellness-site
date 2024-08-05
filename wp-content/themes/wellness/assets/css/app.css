@@ -451,7 +451,7 @@ ul.list-unstyled li {
     color: #707070;
     font-size: 20px;
     margin-left:150px;
-    margin-right: 100px;
+    margin-right: 150px;
   }
   
   .conditions-generales-container h1 {
@@ -474,6 +474,12 @@ ul.list-unstyled li {
     margin-bottom: 20px;
   }
   
-  .conditions-generales-container h5{
+.conditions-generales-container h5{
     color:#62891F;
   }
+
+.title-underline{
+    border: 0;
+    border-top: 2px solid #62891F;
+    margin: 10px 0 20px;
+}

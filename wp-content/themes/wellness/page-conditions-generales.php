@@ -3,7 +3,8 @@
 <div class="conditions-generales-container">
   <h1>CONDITIONS GÉNÉRALES</h1>
 
-  <br><br>
+  <hr class="title-underline">
+
   <p>Bienvenue sur Wellness !</p>
   <p>Veuillez lire attentivement ces Conditions Générales d’Utilisation (ci-après dénommées « CGU ») avant d’utiliser notre site web <a href="http://www.wellness.emu.isfsc.be">www.wellness.emu.isfsc.be</a> (ci-après dénommé le « Site ») exploité par Wellthy (ci-après dénommé “ nous ”, « notre », « nos »).</p>
   <br>
@@ -69,8 +70,9 @@
   <p>Ces conditions générales sont plus détaillées pour couvrir un éventail plus large de situations et offrir une protection plus exhaustive pour votre site web de conseils en nutrition. Assurez-vous de personnaliser ces CGU selon les besoins spécifiques de votre entreprise et de consulter un professionnel juridique pour des conseils adaptés à votre situation particulière.</p>
   
   <p><strong>Date d’entrée en vigueur : 21 décembre 2023</strong></p>
+  <hr class="title-underline">
 </div>
 
-<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
 <?php get_footer();?>
