@@ -21,9 +21,9 @@
                 <div class="col-md-3">
                     <h5>Help</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Condition générales</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="http://localhost:8888/wellness-site/index.php/conditions-generales/">Condition générales</a></li>
+                        <li><a href="http://localhost:8888/wellness-site/index.php/mentions-legales/">Mentions légales</a></li>
+                        <li><a href="#">Forum</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -44,8 +44,6 @@
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
