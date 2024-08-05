@@ -14,4 +14,12 @@ function enqueue_bootstrap() {
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 
 
+function enqueue_conditions_generales_styles() {
+  if (is_page_template('page-conditions-générales.php')) {
+      wp_enqueue_style('conditions-generales-styles', get_template_directory_uri() . '/app.css');
+  }
+}
+add_action('wp_enqueue_scripts', 'enqueue_conditions_generales_styles');
+
+
 
