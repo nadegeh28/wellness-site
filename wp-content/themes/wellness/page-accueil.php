@@ -1,15 +1,9 @@
-<?php
-/*
-Template Name: Home
-*/
-
-get_header();
-?>
+<?php get_header();?>
 
 <div class="home-container">
     <section class="hero">
         <div class="hero-text">
-            <h1 class="part1">revitalisez votre vie.</h1>  <h1 class="part2">maintenant.</h1>
+            <h1 class="part1">Revitalisez votre vie.</h1>  <h1 class="part2">Maintenant.</h1>
             <p>Une alimentation équilibrée constitue la santé d’une vie saine, offrant une vitalité renouvelée à chaque repas. De nombreux avantages pour la santé sont à l’esprit. Sentez-vous bien clair mental et aimé d'énergie constante.</p>
             <a href="#" class="hero-button">Faire le quiz</a>
         </div>
@@ -20,7 +14,7 @@ get_header();
 
     <section class="recipes">
         <h2>Nos Recettes</h2>
-        <p>Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
+        <p class="textec">Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
         <div class="recipe-cards">
             <div class="recipe-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/recipe-1.jpg" alt="Muesli aux fruits">
