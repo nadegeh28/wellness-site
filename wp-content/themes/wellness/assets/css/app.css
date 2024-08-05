@@ -136,30 +136,15 @@ nav ul li a:hover {
 }
 
 
-.services, .mobile-app, .testimonials{
-    text-align: center;
-
-
-}
-
-/* Styles globaux pour les sections */
+/* Global Styles for Background */
 .hero, .recipes, .services, .app-promo, .testimonials {
-    background-color: white; /* Assurez-vous que le fond est blanc */
-
+    background-color: #ffffff; /* Set background color to white */
 }
 
-
-h1 {
+/* Hero Section Styles */
+.hero h1 {
     color: #7ac142;
     text-align: left;
-}
-
-
-.hero {
-    padding: 50px 0;
-}
-
-.hero h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -167,7 +152,7 @@ h1 {
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 20px;
-    color:#707070
+    color: #707070;
 }
 
 .hero .btn-primary {
@@ -177,70 +162,11 @@ h1 {
 }
 
 .hero .img {
-    border-radius: 50%;
     max-width: 500px;
 }
 
-.recipes {
-    padding: 50px 0;
-    border:#689F38; 
-}
-
+/* Recipes Section Styles */
 .recipes h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #689F38;
-}
-
-.recipes h5 {
-    font-size: 2rem;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-/* Styles pour les blocs de recette */
-.recipe-block {
-    background-color: #F2F2F2;
-    border: 2px solid #689F38 ; 
-    padding: 20px; 
-    border-radius: 50px; 
-    margin-bottom: 30px; 
-    color: #689F38; 
-}
-
-.recipe-block img {
-    max-width: 150px; 
-    border-radius: 15px; 
-    margin-left: 80px;
-
-}
-
-
-.recipe-title {
-    font-size: 1.5rem;
-    margin-bottom: 15px; 
-    text-align: center;
-
-}
-
-ul.list-unstyled {
-    padding: 0;
-    list-style: none;
-}
-
-ul.list-unstyled li {
-    font-size: 1rem;
-    margin-bottom: 10px; /* Espace entre les éléments de la liste */
-}
-
-/* Styles spécifiques à la section services */
-.services {
-    padding: 50px 0;
-     /* Fond blanc */
-    
-}
-
-.services h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     color: #689F38;
@@ -250,14 +176,103 @@ ul.list-unstyled li {
     margin-right: 400px;
 }
 
-.services .col-md-3 {
+.recipes h5 {
+    font-size: 2rem;
+    margin-top: 20px;
     margin-bottom: 30px;
-    color: #707070;
 }
 
+.recipe-block {
+    background-color: #F2F2F2;
+    border: 2px solid #689F38;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    color: #689F38;
+}
 
+.recipe-block img {
+    max-width: 150px;
+    border-radius: 15px;
+    margin-left: 80px;
+}
+
+ul.list-unstyled {
+    padding: 0;
+    list-style: none;
+}
+
+ul.list-unstyled li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Services Section Styles */
+.services {
+    padding: 80px 0;
+    background-color: #ffffff; /* Ensure the background is white */
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.services .text-center {
+    text-align: center;
+}
+
+.services .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.services .service-col {
+    max-width: 23%;
+    margin: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.services .service-icon {
+    margin-bottom: 20px;
+    max-width: 100px;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.services h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.services p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Media Queries for Services */
+@media (max-width: 768px) {
+    .services .service-col {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services .service-col {
+        max-width: 100%;
+    }
+}
+
+/* App Promo Section Styles */
 .app-promo {
     padding: 50px 0;
+    background-color: #ffffff; /* Ensure the background is white */
 }
 
 .app-promo h2 {
@@ -269,8 +284,10 @@ ul.list-unstyled li {
     font-size: 1.25rem;
 }
 
+/* Testimonials Section Styles */
 .testimonials {
     padding: 50px 0;
+    background-color: #ffffff; /* Ensure the background is white */
 }
 
 .testimonials h2 {
@@ -288,6 +305,7 @@ ul.list-unstyled li {
     height: 100px;
     object-fit: cover;
 }
+
 
 
 
@@ -370,7 +388,7 @@ ul.list-unstyled li {
 }
 
 .vegan-section {
-    flex-direction: row-reverse; /* Inverse l'ordre des éléments pour la section Vegan */
+    flex-direction: row-reverse; 
 }
 
 .diet-image1 img {
