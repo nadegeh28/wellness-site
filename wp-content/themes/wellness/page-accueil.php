@@ -20,9 +20,14 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits">
                 <h3>Muesli aux fruits</h3>
                 <ul>
-                    <li>100g d’avoine</li>
-                    <li>50g d’amandes</li>
-                    <li>30g de raisins secs</li>
+                    <li>100g de floconsavoine</li>
+                    <li>50g d’amandes, de noisettes</li>
+                    <li>15g de miel</li>
+                    <li>Fruits frais (au choix)</li>
+                    <li>150g de yaourt frais</li>
+                    <li>2 cuillères à soupe de miel</li>
+                    <li>2 cuillères à soupe de miel</li>
+                    <li>1 pincée de canelle</li>
                 </ul>
                 <p class="prep">Préparation : 10 min</p>
             </div>
@@ -30,9 +35,13 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Curry de légumes</h3>
                 <ul>
-                    <li>200g de pois chiches</li>
-                    <li>100g de carottes</li>
-                    <li>100g de courgettes</li>
+                    <li>400g de légumes assortis</li>
+                    <li>1 oignon</li>
+                    <li>2 gousses d'ail</li>
+                    <li>1 cuillère à café de gingembre</li>
+                    <li>2 tomates</li>
+                    <li>400ml de lait de coco</li>
+                    <li>3 cuillère de pâtes de curry</li>
                 </ul>
                 <p class="prep">Préparation : 30 min</p>
             </div>
@@ -40,9 +49,13 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
                 <ul>
-                    <li>1 tortilla</li>
-                    <li>50g de haricots noirs</li>
-                    <li>30g de maïs</li>
+                    <li>1 grande tortilla de blé complet</li>
+                    <li>1/2 avocat mûr</li>
+                    <li>1/2 poivron rouge</li>
+                    <li>1 carotte rapée</li>
+                    <li>1 feuille de salade</li>
+                    <li>30g cuillère à soupe de houmous</li>
+                    <li>1 cuillère à soupe de jus de citron</li>
                 </ul>
                 <p class="prep">Préparation : 15 min</p>
             </div>
