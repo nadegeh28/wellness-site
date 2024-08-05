@@ -483,3 +483,30 @@ ul.list-unstyled li {
     border-top: 2px solid #62891F;
     margin: 10px 0 20px;
 }
+
+.mentions-legales-container {
+    color: #707070;
+    font-size: 20px;
+    margin-left:150px;
+    margin-right: 150px;
+  }
+  
+  .mentions-legales-container h1 {
+    color: #707070;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .mentions-legales-container p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .mentions-legales-container a {
+    color: #707070; 
+    text-decoration: none;
+  }
+
+  
+  
