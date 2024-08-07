@@ -280,7 +280,7 @@ margin-top: -17px;
 
 .services{
     color:#689F38;
-    margin-top: -5px;
+    margin-top: -30px;
 
 }
 
@@ -288,6 +288,109 @@ margin-top: -17px;
     max-width: 120px;
     margin: 0 auto;
     padding: 40px;
+}
+
+
+
+.app-promotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.app-promotion img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+.app-promotion .app-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+
+
+
+.app-promotion p {
+    margin: 30px 0;
+    display: right;
+    color: #707070;
+font-size: 18px ;
+
+}
+
+.app-promotion p strong {
+    color:#8BC34A;
+    font-weight: bold;
+}
+
+.testimonials {
+    margin: 40px 20px;
+}
+
+
+
+.testimonials-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.testimonial {
+
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F2F2F2;
+    border: 2px solid #689F38;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.testimonial p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #689F38;
+    font-weight: light;
+}
+
+
+
+@media (max-width: 768px) {
+    .app-promotion {
+        padding: 10px;
+    }
+
+    .app-promotion img {
+        width: 100px;
+    }
+
+    .app-promotion .app-text {
+        max-width: 100%;
+    }
+
+    .testimonial {
+        width: 90%;
+    }
 }
 
 

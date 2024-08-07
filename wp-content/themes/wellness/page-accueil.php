@@ -84,9 +84,9 @@
     </section>
 
     <section class="app-promotion">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/mobile-app.png" alt="Mobile App">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tel.png" alt="Mobile App">
         <div class="app-text">
-            <h2>Venez explorer notre application mobile!</h2>
+            <h2 class="part1">Venez explorer </h2><h2 class="part2">notre application mobile!</h2>
             <p>Wellness App est bien plus qu’une simple application de nutrition. Découvrez un univers complet dédié à votre bien-être alimentaire. Trouvez des recettes adaptées à vos préférences et besoins nutritionnels spécifiques. Utilisez la version mobile afin de consulter votre progression et les recettes où que vous soyez!</p>
             <p><strong>Wellness App, votre allié pour une vie saine.</strong></p>
         </div>
@@ -114,6 +114,4 @@
     </section>
 </div>
 
-<?php
-get_footer();
-?>
+<?php get_footer();?>
