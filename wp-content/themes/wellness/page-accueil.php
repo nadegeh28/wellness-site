@@ -20,12 +20,11 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
 <h3>Muesli aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                <p class="ingredients">100g de floconsavoine</p>
+                <p class="ingredients">100g de flocons avoine</p>
                     <p class="ingredients">50g d’amandes, de noisettes</p>
                     <p class="ingredients">15g de miel</p>
                     <p class="ingredients">Fruits frais (au choix)</p>
                     <p class="ingredients">150g de yaourt frais</p>
-                    <p class="ingredients">2 cuillères à soupe de miel</p>
                     <p class="ingredients">2 cuillères à soupe de miel</p>
                     <p class="ingredients">1 pincée de canelle</p>
                 <p class="prep">Préparation : 10 min</p>

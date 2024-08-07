@@ -62,14 +62,14 @@ nav ul li a:hover {
 }
 
 .auth-buttons .btn {
-    padding: 10px 20px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
     margin: 4px 2px;
     border-radius: 70px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: 0.3s ease, color 0.3s ease;
     font-size: 17px;
+    font-weight: 500 ;
 }
 
 .auth-buttons .btn-login {
@@ -90,8 +90,9 @@ nav ul li a:hover {
 }
 
 .auth-buttons .btn-register:hover {
-    background-color: #76b042;
-    color: white;
+    background-color: #62891F;
+    text-decoration: none;
+    color: #DCEDC8;
 }
 
 
@@ -177,9 +178,18 @@ nav ul li a:hover {
     margin-right: 20px;
 }
 
+.hero-button:hover {
+background-color: #62891F;
+text-decoration: none;
+color: #DCEDC8;
+
+}
+
+
 .hero-image img {
     max-width: 850px;
     margin-right: -200px;
+
 }
 
 .recipes, .services, .app-promotion, .testimonials {
@@ -196,7 +206,8 @@ nav ul li a:hover {
     border-radius: 50px;
     margin-left: 480px ;
     margin-right: 470px ;
-    padding: 7px;
+    padding: 7px 12px;
+
 }
 
 .textec{
@@ -217,7 +228,6 @@ nav ul li a:hover {
 
 .recipe-card {
     padding: 5px;
-    margin: 10px;
     border-radius: 10px;
     width: 300px;
     text-align: left;
@@ -229,6 +239,7 @@ nav ul li a:hover {
     border-radius: 30px;
     color: #689F38;
     margin-left: 30px;
+    margin: 40px 20px;
 }
 
 .recipe-card img {
@@ -236,7 +247,7 @@ nav ul li a:hover {
     border-radius: 100px;
     text-align: center;
     margin-top: -120px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-bottom: 10px;
 
 }
@@ -285,15 +296,16 @@ margin-left: 0px;
     text-align: right;
     margin-bottom: 100px;
     font-weight: 200;
+    margin-top: 50px;
 }
 
 .seereceipe{
 
     color: #689F38;
     text-decoration: underline;
-    margin-top: 20px;
     font-weight: 600;
 }
+
 
 .services-list {
     display: flex;
@@ -335,7 +347,7 @@ margin-left: 0px;
 }
 
 .app-promotion img {
-    width: 400px;
+    width: 450px;
     height: auto;
     margin-bottom: 20px;
     margin-right: 50px;
