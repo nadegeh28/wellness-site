@@ -378,6 +378,8 @@ font-size: 18px ;
 .avistitlte{
     color: #62891F;
     margin-bottom: 5px;
+    margin-top: -5px;
+    font-weight: 600;
 }
 
 
