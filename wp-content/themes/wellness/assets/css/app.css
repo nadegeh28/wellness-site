@@ -190,7 +190,7 @@ nav ul li a:hover {
 
 .recipes h2, .services h2, .testimonials h2 {
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     color: #689F38;
     background-color: #DCEDC8;
     font-weight: 600;
@@ -269,17 +269,16 @@ margin-top: -17px;
 
 .service-item {
     max-width: 45%;
-    margin: 20px 0;
 }
 
 .service-item img {
-    max-width: 60px;
-    margin-bottom: 20px;
+  width: 120px;
+  margin-top: 20px;
 }
 
 .services{
     color:#689F38;
-    margin-bottom: 0%;
+
 }
 
 .container {

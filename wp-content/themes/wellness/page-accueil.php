@@ -61,12 +61,12 @@
         <h2>Nos Services</h2>
         <div class="services-list">
             <div class="service-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-1.png" alt="Cuisiner comme un chef">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/chef2.png" alt="Cuisiner comme un chef">
                 <h3 class="services">Cuisiner comme un chef</h3>
                 <p>Apprenez à préparer des petits plats faciles et savoureux. Découvrez des recettes simples pour manger sainement tout en vous régalant!</p>
             </div>
             <div class="service-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-2.png" alt="Forum actif">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/chef2.png" alt="Forum actif">
                 <h3 class="services">Forum actif</h3>
                 <p>Rejoignez notre forum interactif pour échanger avec une communauté passionnée de nutrition. Posez vos questions, partagez vos expériences et découvrez de nouveaux conseils pour une alimentation saine!</p>
             </div>
