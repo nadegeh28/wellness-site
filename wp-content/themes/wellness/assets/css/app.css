@@ -326,6 +326,9 @@ margin-top: -17px;
 .app-promotion p strong {
     color:#8BC34A;
     font-weight: bold;
+    text-align: right;
+    display:block;
+
 }
 
 .testimonials {
