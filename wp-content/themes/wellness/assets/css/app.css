@@ -47,7 +47,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #DCEDC8; 
-    color:#707070; 
+    color:#689F38; 
     border-radius: 30px;
 }
 
@@ -366,32 +366,26 @@ font-size: 18px ;
 }
 
 
+.etoiles{
+    width: -100px;
+}
+
+.avistitlte{
+    color: #62891F;
+}
+
+
+
 .testimonial p {
-    font-size: 16px;
+    font-size: 13px;
     margin-bottom: 15px;
-    color: #689F38;
-    font-weight: light;
+    color: #62891F;
+    font-weight: 200;
 }
 
 
 
-@media (max-width: 768px) {
-    .app-promotion {
-        padding: 10px;
-    }
 
-    .app-promotion img {
-        width: 100px;
-    }
-
-    .app-promotion .app-text {
-        max-width: 100%;
-    }
-
-    .testimonial {
-        width: 90%;
-    }
-}
 
 
 
