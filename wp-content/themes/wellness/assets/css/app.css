@@ -209,17 +209,18 @@ nav ul li a:hover {
 .recipe-cards {
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 .recipe-card {
     background: #F2F2F2;
     border: 2px solid #689F38;
-    padding: 20px 30px;
+    padding:10px 30px;
     border-radius: 30px;
     max-width: 30%;
     text-align: left;
     color: #689F38;
+    margin-bottom: 70px;
 }
 
 .recipe-card img {
@@ -235,9 +236,8 @@ nav ul li a:hover {
 width: 100px; 
 height: auto; 
 margin-top: 10px;
-margin-bottom: 20px;
+margin-bottom: 30px;
 text-align: center;
-display: flex;
 
 }
 
@@ -259,9 +259,6 @@ display: flex;
     margin-top: 30px;
 }
 
-.recipe-card ul {
-    list-style: none;
-}
 
 .ingredients{
 font-size: 18px;
@@ -269,7 +266,23 @@ font-weight: 200 ;
 text-align: left;
 font-style: italic;
 margin-top: -17px;
+margin-left: 0px;
 
+}
+
+.phrasrecettes{
+    color: #707070;
+    text-align: right;
+    margin-bottom: 100px;
+    font-weight: 200;
+}
+
+.seereceipe{
+
+    color: #689F38;
+    text-decoration: underline;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 .services-list {
@@ -506,9 +519,9 @@ margin-top: -17px;
 
 .learnmore {
     color: #689F38;
-    text-decoration: none;
+    text-decoration: underline;
     margin-top: 10px;
-    font-weight: bold;
+    font-weight: 600;
 
     
 }

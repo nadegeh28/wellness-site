@@ -33,6 +33,7 @@
             <div class="recipe-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Curry de légumes</h3>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">400g de légumes assortis</p>
                     <p class="ingredients">1 oignon</p>
                     <p class="ingredients">2 gousses d'ail</p>
@@ -46,6 +47,7 @@
             <div class="recipe-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">1 grande tortilla de blé complet</p>
                     <p class="ingredients">1/2 avocat mûr</p>
                     <p class="ingredients">1/2 poivron rouge</p>
@@ -56,6 +58,7 @@
                 <p class="prep">Préparation : 15 min</p>
             </div>
         </div>
+        <p class="phrasrecettes">Voir plus de recettes <a href="#" class="seereceipe">ici</a></p>
     </section>
 
     <section class="services">
