@@ -215,22 +215,32 @@ nav ul li a:hover {
 .recipe-card {
     background: #F2F2F2;
     border: 2px solid #689F38;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border-radius: 30px;
     max-width: 30%;
     text-align: left;
     color: #689F38;
 }
 
-
-
 .recipe-card img {
-    max-width: 150px;
+    max-width: 170px;
     border-radius: 30px;
     text-align: center;
     margin-top: -140px;
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-bottom: 10px;
 }
+
+.recipe-card .etoiles{
+width: 100px; 
+height: auto; 
+margin-top: 10px;
+margin-bottom: 20px;
+text-align: center;
+display: flex;
+
+}
+
 
 .recipe-card h3 {
     font-size: 20px;
@@ -238,7 +248,7 @@ nav ul li a:hover {
     font-weight: bold;
     text-align: center;
     color: #8BC34A;
-    margin-bottom: 30px
+    margin-bottom: 5px
 }
 
 
@@ -254,7 +264,7 @@ nav ul li a:hover {
 }
 
 .ingredients{
-font-size: 20px;
+font-size: 18px;
 font-weight: 200 ;
 text-align: left;
 font-style: italic;
