@@ -19,44 +19,39 @@
             <div class="recipe-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits">
                 <h3>Muesli aux fruits</h3>
-                <ul>
-                    <li>100g de floconsavoine</li>
-                    <li>50g d’amandes, de noisettes</li>
-                    <li>15g de miel</li>
-                    <li>Fruits frais (au choix)</li>
-                    <li>150g de yaourt frais</li>
-                    <li>2 cuillères à soupe de miel</li>
-                    <li>2 cuillères à soupe de miel</li>
-                    <li>1 pincée de canelle</li>
-                </ul>
+                    <p class="ingredients">100g de floconsavoine</p>
+                    <p class="ingredients">50g d’amandes, de noisettes</p>
+                    <p class="ingredients">15g de miel</p>
+                    <p class="ingredients">Fruits frais (au choix)</p>
+                    <p class="ingredients">150g de yaourt frais</p>
+                    <p class="ingredients">2 cuillères à soupe de miel</p>
+                    <p class="ingredients">2 cuillères à soupe de miel</p>
+                    <p class="ingredients">1 pincée de canelle</p>
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Curry de légumes</h3>
-                <ul>
-                    <li>400g de légumes assortis</li>
-                    <li>1 oignon</li>
-                    <li>2 gousses d'ail</li>
-                    <li>1 cuillère à café de gingembre</li>
-                    <li>2 tomates</li>
-                    <li>400ml de lait de coco</li>
-                    <li>3 cuillère de pâtes de curry</li>
-                </ul>
+                    <p class="ingredients">400g de légumes assortis</p>
+                    <p class="ingredients">1 oignon</p>
+                    <p class="ingredients">2 gousses d'ail</p>
+                    <p class="ingredients">1 cuillère à café de gingembre</p>
+                    <p class="ingredients">2 tomates</p>
+                    <p class="ingredients">400ml de lait de coco</p>
+                    <p class="ingredients">3 cuillère de pâtes de curry</p>
+
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
-                <ul>
-                    <li>1 grande tortilla de blé complet</li>
-                    <li>1/2 avocat mûr</li>
-                    <li>1/2 poivron rouge</li>
-                    <li>1 carotte rapée</li>
-                    <li>1 feuille de salade</li>
-                    <li>30g cuillère à soupe de houmous</li>
-                    <li>1 cuillère à soupe de jus de citron</li>
-                </ul>
+                    <p class="ingredients">1 grande tortilla de blé complet</p>
+                    <p class="ingredients">1/2 avocat mûr</p>
+                    <p class="ingredients">1/2 poivron rouge</p>
+                    <p class="ingredients">1 carotte rapée</p>
+                    <p class="ingredients">1 feuille de salade</p>
+                    <p class="ingredients">30g cuillère à soupe de houmous</p>
+                    <p class="ingredients">1 cuillère à soupe de jus de citron</p>
                 <p class="prep">Préparation : 15 min</p>
             </div>
         </div>
@@ -67,22 +62,22 @@
         <div class="services-list">
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-1.png" alt="Cuisiner comme un chef">
-                <h3>Cuisiner comme un chef</h3>
+                <h3 class="services">Cuisiner comme un chef</h3>
                 <p>Apprenez à préparer des petits plats faciles et savoureux. Découvrez des recettes simples pour manger sainement tout en vous régalant!</p>
             </div>
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-2.png" alt="Forum actif">
-                <h3>Forum actif</h3>
+                <h3 class="services">Forum actif</h3>
                 <p>Rejoignez notre forum interactif pour échanger avec une communauté passionnée de nutrition. Posez vos questions, partagez vos expériences et découvrez de nouveaux conseils pour une alimentation saine!</p>
             </div>
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-3.png" alt="Quizz ultime">
-                <h3>Quizz ultime</h3>
+                <h3 class="services">Quizz ultime</h3>
                 <p>Grâce à notre quiz personnalisé, découvrez quel régime est le mieux adapté à vos besoins. Répondez à quelques questions simples et obtenez des recommandations nutritionnelles sur mesure!</p>
             </div>
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-4.png" alt="Aperçu de son évolution">
-                <h3>Aperçu de son évolution</h3>
+                <h3 class="services">Aperçu de son évolution</h3>
                 <p>Découvrez des informations sur les divers régimes et apprenez-en davantage sur vous-même et votre régime grâce à nos outils interactifs. Adoptez une alimentation adaptée à vos besoins uniques!</p>
             </div>
         </div>

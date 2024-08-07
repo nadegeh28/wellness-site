@@ -236,7 +236,9 @@ nav ul li a:hover {
     font-weight: bold;
     text-align: center;
     color: #8BC34A;
+    margin-bottom: 30px
 }
+
 
 .prep{
     font-size: 10px;
@@ -249,11 +251,12 @@ nav ul li a:hover {
     list-style: none;
 }
 
-.recipe-card ul li {
+.ingredients{
 font-size: 16px;
 font-weight: 200 ;
 text-align: left;
 font-style: italic;
+margin-top: -17px;
 
 }
 
@@ -261,6 +264,7 @@ font-style: italic;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    color: #707070;
 }
 
 .service-item {
@@ -273,7 +277,10 @@ font-style: italic;
     margin-bottom: 20px;
 }
 
-
+.services{
+    color:#689F38;
+    margin-bottom: 0%;
+}
 
 .container {
     max-width: 1200px;
