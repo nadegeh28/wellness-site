@@ -252,7 +252,7 @@ nav ul li a:hover {
 }
 
 .ingredients{
-font-size: 16px;
+font-size: 20px;
 font-weight: 200 ;
 text-align: left;
 font-style: italic;
@@ -301,7 +301,7 @@ margin-top: -17px;
 }
 
 .app-promotion img {
-    width: 300px;
+    width: 400px;
     height: auto;
     margin-bottom: 20px;
     margin-right: 50px;
@@ -319,7 +319,7 @@ margin-top: -17px;
     margin: 30px 0;
     display: right;
     color: #707070;
-font-size: 18px ;
+    font-size: 20px ;
 
 }
 
@@ -342,8 +342,7 @@ font-size: 18px ;
 }
 
 .testimonial {
-
-    padding: 20px;
+    padding: 30px;
     margin: 10px;
     border-radius: 10px;
     width: 300px;
@@ -358,12 +357,12 @@ font-size: 18px ;
 }
 
 .testimonial .userpic {
-    width: 150px;
-    height: 200px;
+    width: 150px; /* Ajustez la largeur selon vos besoins */
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    border-radius: 50%; /* Cela rend l'image ronde */
     object-fit: cover;
-    margin-bottom: 50px;
-    margin-top: -100px;
-    border-radius: 70%;
+    margin-bottom: 20px;
+    margin-top: -70px;
 }
 
 
