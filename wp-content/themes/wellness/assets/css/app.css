@@ -187,8 +187,9 @@ color: #DCEDC8;
 
 
 .hero-image img {
-    max-width: 850px;
+    max-width: 800px;
     margin-right: -200px;
+    border-radius: 50px;
 
 }
 
@@ -253,7 +254,7 @@ color: #DCEDC8;
 }
 
 .recipe-card .etoiles{
-width: 100px; 
+width: 120px; 
 height: auto; 
 margin-top: 10px;
 margin-bottom: 30px;
@@ -416,7 +417,7 @@ margin-left: 0px;
 
 
 .testimonial .etoiles {
-    width: 100px; 
+    width: 120px; 
     height: auto; 
     max-width: 100%; 
     margin-bottom: 10px;
