@@ -97,7 +97,7 @@
         <br><br><br><br>
         <div class="testimonials-list">
             <div class="testimonial">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/user-1.jpg" alt="Marie Lopez" class="userpic">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user1.jpg" alt="Marie Lopez" class="userpic">
                 <h6 class="avistitlte">Marie Lopez</h6>
                 <h6 class="avistitlte">29 ans</h6>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/etoiles.png" alt="stars" class="etoiles">
