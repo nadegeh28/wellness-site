@@ -273,16 +273,19 @@ margin-top: -17px;
 
 .service-item img {
   width: 120px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
+
+
 
 .services{
     color:#689F38;
+    margin-top: -5px;
 
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 120px;
     margin: 0 auto;
     padding: 40px;
 }

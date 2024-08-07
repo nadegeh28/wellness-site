@@ -71,7 +71,7 @@
                 <p>Rejoignez notre forum interactif pour échanger avec une communauté passionnée de nutrition. Posez vos questions, partagez vos expériences et découvrez de nouveaux conseils pour une alimentation saine!</p>
             </div>
             <div class="service-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/quizzic2.png" alt="Quizz ultime">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/quizzic.png" alt="Quizz ultime" class="quizzic">
                 <h3 class="services">Quizz ultime</h3>
                 <p>Grâce à notre quiz personnalisé, découvrez quel régime est le mieux adapté à vos besoins. Répondez à quelques questions simples et obtenez des recommandations nutritionnelles sur mesure!</p>
             </div>
