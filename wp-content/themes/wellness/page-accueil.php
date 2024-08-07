@@ -94,25 +94,34 @@
 
     <section class="testimonials">
         <h2>Vos Avis</h2>
+        <br><br><br><br>
         <div class="testimonials-list">
             <div class="testimonial">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/user-1.jpg" alt="Marie Lopez">
-                <h3 class="avistitlte">Marie Lopez</h3>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/user-1.jpg" alt="Marie Lopez" class="userpic">
+                <h6 class="avistitlte">Marie Lopez</h6>
+                <h6 class="avistitlte">29 ans</h6>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/etoiles.png" alt="stars" class="etoiles">
+
                 <p>Le site de Wellness m’a aidé à trouver le régime parfait pour moi. Les recettes sont délicieuses et faciles à préparer, et j’adore la communauté du forum. J’ai également commencé à utiliser l’application mobile et je la trouve extrêmement pratique pour suivre ma progression.</p>
             </div>
             <div class="testimonial">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/user-2.jpg" alt="Tatiana Komba">
-                <h3 class="avistitlte">Tatiana Komba</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/user-1.jpg" alt="Marie Lopez" class="userpic">
+                <h6 class="avistitlte">Tatiana Komba</h6>
+                <h6 class="avistitlte">45 ans</h6>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p>Wellness est une véritable découverte pour moi. Les services offerts sont variés et très utiles, en particulier le quiz qui m’a permis de mieux comprendre mes besoins nutritionnels. Je recommande vivement!</p>
             </div>
             <div class="testimonial">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/user-3.jpg" alt="Alicia Martinez">
-                <h3 class="avistitlte">Alicia Martinez</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/user-1.jpg" alt="Marie Lopez" class="userpic">
+                <h6 class="avistitlte">Alicia Martinez</h6>
+                <h6 class="avistitlte">52 ans</h6>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p>J’ai été ravie de découvrir Wellness. La diversité des recettes et des conseils m’a beaucoup aidé à adopter une alimentation plus saine. L’application mobile est un plus indéniable pour suivre mon régime au quotidien.</p>
             </div>
         </div>
     </section>
 </div>
+
+<br><br><br><br><br><br><br><br><br>
 
 <?php get_footer();?>

@@ -357,21 +357,27 @@ font-size: 18px ;
     border-radius: 30px;
 }
 
-.testimonial img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+.testimonial .userpic {
+    width: 200px;
     object-fit: cover;
+    margin-bottom: 50px;
+    margin-top: -100px;
+    
+}
+
+
+.testimonial .etoiles {
+    width: 100px; 
+    height: auto; 
+    max-width: 100%; 
     margin-bottom: 10px;
 }
+    
 
-
-.etoiles{
-    width: -100px;
-}
 
 .avistitlte{
     color: #62891F;
+    margin-bottom: 5px;
 }
 
 
@@ -382,6 +388,8 @@ font-size: 18px ;
     color: #62891F;
     font-weight: 200;
 }
+
+
 
 
 
