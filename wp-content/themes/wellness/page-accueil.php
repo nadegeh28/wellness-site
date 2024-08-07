@@ -17,8 +17,9 @@
         <p class="textec">Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
         <div class="recipe-cards">
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="imgrecettes">
                 <h3>Muesli aux fruits</h3>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">100g de floconsavoine</p>
                     <p class="ingredients">50g d’amandes, de noisettes</p>
                     <p class="ingredients">15g de miel</p>
@@ -106,7 +107,7 @@
             </div>
             <div class="testimonial">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user2.jpg" alt="Marie Lopez" class="userpic">
-                <h6 class="avistitlte">Tatiana Komba</h6>
+                <h6 class="avistitlte">Tatiana Lauren</h6>
                 <h6 class="avistitlte">45 ans</h6>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p>Wellness est une véritable découverte pour moi. Les services offerts sont variés et très utiles, en particulier le quiz qui m’a permis de mieux comprendre mes besoins nutritionnels. Je recommande vivement!</p>
