@@ -66,17 +66,17 @@
                 <p>Apprenez à préparer des petits plats faciles et savoureux. Découvrez des recettes simples pour manger sainement tout en vous régalant!</p>
             </div>
             <div class="service-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/chef2.png" alt="Forum actif">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/forum2.png" alt="Forum actif">
                 <h3 class="services">Forum actif</h3>
                 <p>Rejoignez notre forum interactif pour échanger avec une communauté passionnée de nutrition. Posez vos questions, partagez vos expériences et découvrez de nouveaux conseils pour une alimentation saine!</p>
             </div>
             <div class="service-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-3.png" alt="Quizz ultime">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/quizzic2.png" alt="Quizz ultime">
                 <h3 class="services">Quizz ultime</h3>
                 <p>Grâce à notre quiz personnalisé, découvrez quel régime est le mieux adapté à vos besoins. Répondez à quelques questions simples et obtenez des recommandations nutritionnelles sur mesure!</p>
             </div>
             <div class="service-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service-icon-4.png" alt="Aperçu de son évolution">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/progricone.png" alt="Aperçu de son évolution">
                 <h3 class="services">Aperçu de son évolution</h3>
                 <p>Découvrez des informations sur les divers régimes et apprenez-en davantage sur vous-même et votre régime grâce à nos outils interactifs. Adoptez une alimentation adaptée à vos besoins uniques!</p>
             </div>
