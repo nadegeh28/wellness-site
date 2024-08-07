@@ -11,13 +11,13 @@ header {
     align-items: center;
     padding: 20px 20px;
     background-color: #ffff;
-    font-size: 17px;
+    font-size: 19px;
 }
 
 
 
 .logo img {
-  width: 900px;
+  width: 950px;
 }
 
 
@@ -148,39 +148,38 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-    margin-top: -60px;
+    margin-top: -120px;
 
 }
 
 
 
 
-.hero-text {
-    max-width: 150%;
-    margin-left: 60px;
 
-
-}
 
 
 
 .hero-text p {
     color: #707070;
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 20px;
 }
 
 .hero-button {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px 25px;
     background-color: #689F38;
     color: #fff;
     text-decoration: none;
     border-radius: 60px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-right: 20px;
 }
 
 .hero-image img {
-    max-width: 140%;
+    max-width: 850px;
+    margin-right: -200px;
 }
 
 .recipes, .services, .app-promotion, .testimonials {
@@ -202,34 +201,44 @@ nav ul li a:hover {
 
 .textec{
     color: #707070;
-    font-size: 20px;
-    margin-bottom: 200px;
+    font-size: 22px;
+    margin-bottom: 150px;
+    padding: 10px 200px;
+    margin-left: -30px;
 }
 
 .recipe-cards {
     display: flex;
     justify-content: space-around;
     margin-top: 70px;
+    justify-content: center;
+    gap: 5px;
 }
 
 .recipe-card {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
     background: #F2F2F2;
     border: 2px solid #689F38;
-    padding:10px 30px;
+    padding: 10px 20px;
     border-radius: 30px;
-    max-width: 30%;
-    text-align: left;
     color: #689F38;
-    margin-bottom: 70px;
+    margin-left: 30px;
 }
 
 .recipe-card img {
-    max-width: 170px;
-    border-radius: 30px;
+    max-width: 200px;
+    border-radius: 100px;
     text-align: center;
-    margin-top: -140px;
-    margin-left: 30px;
+    margin-top: -120px;
+    margin-left: 20px;
     margin-bottom: 10px;
+
 }
 
 .recipe-card .etoiles{
@@ -238,6 +247,7 @@ height: auto;
 margin-top: 10px;
 margin-bottom: 30px;
 text-align: center;
+margin-left: 75px;
 
 }
 
@@ -261,7 +271,7 @@ text-align: center;
 
 
 .ingredients{
-font-size: 18px;
+font-size: 14px;
 font-weight: 200 ;
 text-align: left;
 font-style: italic;
@@ -281,7 +291,7 @@ margin-left: 0px;
 
     color: #689F38;
     text-decoration: underline;
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: 600;
 }
 
@@ -298,7 +308,6 @@ margin-left: 0px;
 
 .service-item img {
   width: 120px;
-  margin-top: 60px;
 }
 
 
