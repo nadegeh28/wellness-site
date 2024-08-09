@@ -25,7 +25,7 @@
 
     <div class="diet-section reverse">
         <div class="diet-image2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-13.png" class="imgreg2" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-20.png" class="imgreg2" alt="Plat Vegan">
         </div>
         <div class="diet-content">
             <h2 class="diet-title diabetic">Diabétique</h2>
