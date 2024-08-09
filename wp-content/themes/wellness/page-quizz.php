@@ -20,7 +20,6 @@
         <span class="progress-dot"></span>
         <span class="progress-dot"></span>
         <span class="progress-dot"></span>
-        <span class="progress-dot"></span>
     </div>
 </div>
 

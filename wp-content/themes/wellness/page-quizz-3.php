@@ -17,9 +17,8 @@
 
     <div class="quizz-progress">
         <span class="progress-dot active"></span>
-        <span class="progress-dot"></span>
-        <span class="progress-dot"></span>
-        <span class="progress-dot"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
         <span class="progress-dot"></span>
     </div>
 </div>
