@@ -31,6 +31,7 @@ function debug_post_data() {
 }
 
 
-add_action('wp_footer', 'debug_post_data');
+
+
 
 

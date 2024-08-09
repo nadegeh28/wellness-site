@@ -3,7 +3,8 @@
 <div class="quizz-container">
     <h2>Quelle est votre principale source de protéines ?</h2>
     
-    <form method="post" action="#">
+    <form method="post" action="/wellness-site/index.php/quizz-3/">
+
         <ul class="quizz-options">
             <li><input type="radio" name="repas" id="2repas" value="2repas"><label for="2repas">Viande et poisson</label></li>
             <li><input type="radio" name="repas" id="3repas" value="3repas"><label for="3repas">Légumes et fruits</label></li>
@@ -12,7 +13,7 @@
             <li><input type="radio" name="repas" id="pasRegimeFixe" value="pasRegimeFixe"><label for="pasRegimeFixe">Mélange de sources variées</label></li>
         </ul>
         <br><br>
-        <a href="/wellness-site/index.php/quizz-3/" class="quizz-button">Suivant</a>
+        <button type="submit" class="quizz-button">Suivant</button>
 
     </form>
 
@@ -25,3 +26,6 @@
 </div>
 
 <?php get_footer(); ?>
+        
+        
+        
