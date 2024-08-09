@@ -12,7 +12,13 @@
             <li><input type="radio" name="repas" id="pasRegimeFixe" value="pasRegimeFixe"><label for="pasRegimeFixe">Pas de régime fixe</label></li>
         </ul>
         <br><br>
-        <button type="submit" class="quizz-button">Suivant</button>
+        <a href="/wellness-site/index.php/quizz-2/" class="quizz-button">Suivant</a>
+
+
+
+
+
+
     </form>
 
     <div class="quizz-progress">

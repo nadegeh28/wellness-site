@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="quizz-container">
-    <h2>Quelle est votre principale source de protéines</h2>
+    <h2>Quelle est votre principale source de protéines ?</h2>
     
     <form method="post" action="#">
         <ul class="quizz-options">
@@ -12,7 +12,8 @@
             <li><input type="radio" name="repas" id="pasRegimeFixe" value="pasRegimeFixe"><label for="pasRegimeFixe">Mélange de sources variées</label></li>
         </ul>
         <br><br>
-        <button type="submit" class="quizz-button">Suivant</button>
+        <a href="/wellness-site/index.php/quizz-3/" class="quizz-button">Suivant</a>
+
     </form>
 
     <div class="quizz-progress">

@@ -656,10 +656,10 @@ margin-left: 0px;
   }
 
   .quizz-container {
-    max-width: 600px;
+    max-width: 520px;
     margin: 0 auto;
     text-align: center;
-    padding: 50px 75px ;
+    padding: 50px 40px ;
 }
 
 .quizz-container h2 {
@@ -684,7 +684,7 @@ margin-left: 0px;
 
 .quizz-options label {
     display: block;
-    padding: 10px 10px;
+    padding: 10px 20px;
     border-radius: 25px;
     background-color: #DCEDC8;
     color:#62891F;
@@ -709,6 +709,8 @@ margin-left: 0px;
     margin-bottom: 70px;
     display: flex;
     float: right;
+
+
 }
 
 .quizz-button:hover {
@@ -735,5 +737,8 @@ margin-left: 0px;
     background-color: #62891F;
 }
 
-  
+.quizz .a {
+    text-decoration: none; /* Enlève le soulignement */
+
+}  
   
