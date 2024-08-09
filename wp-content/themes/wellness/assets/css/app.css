@@ -660,7 +660,12 @@ margin-left: 0px;
     margin: 0 auto;
     text-align: center;
     padding: 50px 40px ;
+
 }
+
+
+
+
 
 .quizz-container h2 {
     color: #689F38;
@@ -737,8 +742,5 @@ margin-left: 0px;
     background-color: #62891F;
 }
 
-.quizz .a {
-    text-decoration: none; /* Enlève le soulignement */
-
-}  
+ 
   
