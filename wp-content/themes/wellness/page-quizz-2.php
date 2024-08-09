@@ -13,7 +13,7 @@
             <li><input type="radio" name="repas2" id="sourcesVariees" value="sourcesVariees"><label for="sourcesVariees">Mélange de sources variées</label></li>
         </ul>
         <br><br>
-        <button type="submit" class="quizz-button">Suivant</button>
+        <a href="/wellness-site/index.php/quizz-3/" class="quizz-button">Suivant</a>
     </form>
 
     <div class="quizz-progress">

@@ -15,7 +15,7 @@
             <li><input type="radio" name="plats" id="platsFaiblesGlucides" value="platsFaiblesGlucides"><label for="platsFaiblesGlucides">Plats faibles en glucides</label></li>
         </ul>
         <br><br>
-        <button type="submit" class="quizz-button">Voir les résultats</button>
+        <a href="/wellness-site/index.php/resultats/" class="quizz-button">Suivant</a>
     </form>
 
     <div class="quizz-progress">

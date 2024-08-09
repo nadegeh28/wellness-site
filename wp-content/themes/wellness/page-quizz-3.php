@@ -14,7 +14,7 @@
             <li><input type="radio" name="objectif" id="regimePlantes" value="regimePlantes"><label for="regimePlantes">Adopter un régime basé sur les plantes</label></li>
         </ul>
         <br><br>
-        <button type="submit" class="quizz-button">Suivant</button>
+        <a href="/wellness-site/index.php/quizz-4/" class="quizz-button">Suivant</a>
     </form>
 
     <div class="quizz-progress">
