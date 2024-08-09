@@ -22,4 +22,15 @@ function enqueue_conditions_generales_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_conditions_generales_styles');
 
 
+function debug_post_data() {
+  if (isset($_POST) && !empty($_POST)) {
+      echo '<pre>';
+      print_r($_POST);
+      echo '</pre>';
+  }
+}
+
+
+add_action('wp_footer', 'debug_post_data');
+
 

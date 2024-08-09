@@ -1,26 +1,31 @@
+
 <?php get_header(); ?>
 
 <div class="quizz-container">
-    <h2>Quel est votre principal objectif de santé ?</h2>
+    <h2>Combien de repas prenez-vous par jour ?</h2>
     
-    <form method="post" action="quizz-2.php">
-        <input type="hidden" name="repas1" value="<?php echo htmlspecialchars($_POST['repas1']); ?>">
-        <input type="hidden" name="repas2" value="<?php echo htmlspecialchars($_POST['repas2']); ?>">
+    <form method="post" action="#">
         <ul class="quizz-options">
-            <li><input type="radio" name="objectif" id="reduireSucre" value="reduireSucre"><label for="reduireSucre">Réduire le sucre de mon alimentation</label></li>
-            <li><input type="radio" name="objectif" id="perdrePoids" value="perdrePoids"><label for="perdrePoids">Perdre du poids</label></li>
-            <li><input type="radio" name="objectif" id="ameliorerSante" value="ameliorerSante"><label for="ameliorerSante">Améliorer ma santé</label></li>
-            <li><input type="radio" name="objectif" id="gererDiabete" value="gererDiabete"><label for="gererDiabete">Gérer mon diabète</label></li>
-            <li><input type="radio" name="objectif" id="regimePlantes" value="regimePlantes"><label for="regimePlantes">Adopter un régime basé sur les plantes</label></li>
+            <li><input type="radio" name="repas" id="2repas" value="2repas"><label for="2repas">2 repas</label></li>
+            <li><input type="radio" name="repas" id="3repas" value="3repas"><label for="3repas">3 repas</label></li>
+            <li><input type="radio" name="repas" id="4repas" value="4repas"><label for="4repas">4 repas ou plus</label></li>
+            <li><input type="radio" name="repas" id="3repasCollations" value="3repasCollations"><label for="3repasCollations">3 repas avec des collations</label></li>
+            <li><input type="radio" name="repas" id="pasRegimeFixe" value="pasRegimeFixe"><label for="pasRegimeFixe">Pas de régime fixe</label></li>
         </ul>
         <br><br>
         <a href="/wellness-site/index.php/quizz-2/" class="quizz-button">Suivant</a>
+
+
+
+
+
+
     </form>
 
     <div class="quizz-progress">
         <span class="progress-dot active"></span>
-        <span class="progress-dot active"></span>
-        <span class="progress-dot active"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-dot"></span>
         <span class="progress-dot"></span>
     </div>
 </div>
