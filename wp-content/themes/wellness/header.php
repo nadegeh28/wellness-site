@@ -21,13 +21,24 @@
             </a>
         </div>
         <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/accueil/">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/forum'); ?>">Forum</a></li>
-                <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/regimes/">Régimes</a></li>
-                <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/quizz/">Quizz</a></li>
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/accueil/">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/forum'); ?>">Forum</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="http://localhost:8888/wellness-site/index.php/regimes/">Régimes</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Vegan</a></li>
+                <li><a href="#">Simple</a></li>
+                <li><a href="#">Sans sucre</a></li>
+                <li><a href="#">Diabétique</a></li>
+                <li><a href="#">Perte de poids</a></li>
+                <li><a href="#">MIND</a></li>
             </ul>
-        </nav>
+        </li>
+        
+        <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/quizz/">Quizz</a></li>
+    </ul>
+</nav>
         <div class="auth-buttons">
     <a href="<?php echo wp_login_url(); ?>" class="btn btn-login">Se connecter</a>
     <a href="<?php echo wp_registration_url(); ?>" class="btn btn-register">S'inscrire</a>

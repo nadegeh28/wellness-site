@@ -51,6 +51,44 @@ nav ul li a:hover {
     border-radius: 30px;
 }
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
+    color: #707070;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #DCEDC8;
+    color: #62891F;
+    font-weight: 500;
+    padding: 10px 15px; 
+}
+
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #F2F2F2;
+    color: #62891F;
+    border-radius: 20px;
+}
+
 
 
 .auth-buttons {
