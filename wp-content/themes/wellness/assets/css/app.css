@@ -15,7 +15,6 @@ header {
 }
 
 
-
 .logo img {
   width: 950px;
 }
@@ -225,7 +224,7 @@ color: #DCEDC8;
 
 
 .hero-image img {
-    max-width: 800px;
+    width: 870px;
     margin-right: -200px;
     border-radius: 50px;
 
@@ -266,6 +265,7 @@ color: #DCEDC8;
 }
 
 .recipe-card {
+    position: relative;
     padding: 5px;
     border-radius: 10px;
     width: 300px;
@@ -279,6 +279,31 @@ color: #DCEDC8;
     color: #689F38;
     margin-left: 30px;
     margin: 40px 20px;
+}
+
+.save-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px; 
+    height: 45px;
+    background-color: #DCEDC8; /* Couleur verte */
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 70%, 0% 100%, 0% 0%);
+    cursor: pointer;
+    border: 2px solid #F2F2F2; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 10;
+}
+
+.save-button.saved {
+    background-color: #8BC34A; 
+    clip-path: none; 
+    border-radius: 5px; 
+    width: auto; 
+    height: auto;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
 }
 
 .recipe-card img {
@@ -573,6 +598,8 @@ margin-left: 0px;
     margin-bottom: 80px;
 }
 
+
+
 .diet-content {
     padding: 20px;
 }
@@ -712,6 +739,8 @@ margin-left: 0px;
     margin-bottom: 60px;
 }
 
+
+
 .quizz-options {
     list-style: none;
     padding: 0;
@@ -779,6 +808,7 @@ margin-left: 0px;
 .progress-dot.active {
     background-color: #62891F;
 }
+
 
  
   
