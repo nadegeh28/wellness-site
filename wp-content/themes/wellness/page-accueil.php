@@ -17,7 +17,7 @@
         <p class="textec">Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
         <div class="recipe-cards">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe()"></button>
+            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
 <h3>Muesli aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">

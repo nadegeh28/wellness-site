@@ -33,11 +33,11 @@ function debug_post_data() {
 
 function my_custom_scripts() {
   wp_enqueue_script(
-      'custom-script', // Nom unique du script
-      get_template_directory_uri() . '/js/custom.js', // Chemin vers le fichier JS
-      array(), // Dépendances (laissez vide si aucune)
-      null, // Version du script
-      true // Charge le script dans le footer
+      'custom-script', 
+      get_template_directory_uri() . '/assets/js/app.js', 
+      array(), 
+      null, 
+      true 
   );
 }
 add_action('wp_enqueue_scripts', 'my_custom_scripts');
