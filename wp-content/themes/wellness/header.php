@@ -25,7 +25,7 @@
                 <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/accueil/">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/forum'); ?>">Forum</a></li>
                 <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/regimes/">Régimes</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo home_url('/quizz'); ?>">Quizz</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/quizz/">Quizz</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">
