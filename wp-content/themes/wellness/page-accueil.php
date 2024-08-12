@@ -1,5 +1,15 @@
 <?php get_header();?>
 
+<main>
+    <!-- Élément avec animation de fondu -->
+    <div class="fade-in"></div>
+
+    <!-- Élément avec animation de déplacement vers le haut -->
+    <div class="slide-up"></div>
+
+    <!-- Autres sections de la page -->
+</main>
+<div class="fade-in">
 <div class="home-container">
     <section class="hero">
         <div class="hero-text">
@@ -10,8 +20,10 @@
         <div class="hero-image">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo-page-accueil.png" alt="Salade">
         </div>
+        </div>
     </section>
 
+    <div class="fade-in">
     <section class="recipes">
         <h2>Nos Recettes</h2>
         <p class="textec">Découvrez une multitude de recettes personnalisées en fonction de votre régime, déterminé grâce à notre quiz interactif !</p>
@@ -60,8 +72,11 @@
                 <p class="prep">Préparation : 15 min</p>
             </div>
         </div>
-        <p class="phrasrecettes">Voir plus de recettes <a href="#" class="seereceipe">ici</a></p>
+     </div>   
+     
+     <p class="phrasrecettes">Voir plus de recettes <a href="#" class="seereceipe">ici</a></p>
     </section>
+
 
     <section class="services">
         <h2>Nos Services</h2>
@@ -129,5 +144,7 @@
 </div>
 
 <br><br><br><br><br><br><br><br><br>
+</div>
+</main>
 
 <?php get_footer();?>
