@@ -22,35 +22,56 @@
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
-<h3>Muesli aux fruits</h3>
+<h3>Flocons d'avoine aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                <p class="ingredients">100g de flocons avoine</p>
-                    <p class="ingredients">50g d’amandes, de noisettes</p>
-                    <p class="ingredients">15g de miel</p>
-                    <p class="ingredients">Fruits frais (au choix)</p>
-                    <p class="ingredients">150g de yaourt frais</p>
-                    <p class="ingredients">2 cuillères à soupe de miel</p>
-                    <p class="ingredients">1 pincée de canelle</p>
+                <p class="ingredients">90g de flocons d'avoine</p>
+                    <p class="ingredients">500ml de lait</p>
+                    <p class="ingredients">1 pincé de sel</p>
+                    <p class="ingredients">15ml</p>
+                    <p class="ingredients">75g de fruits frais (fraises,...)</p>
+                    <p class="ingredients">10g de fraines de chia</p>
+                    <p class="ingredients">0,5g de canelle ( falcutatif ) </p>
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
-                <h3>Curry de légumes</h3>
+                <h3>Smoothie vert</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">400g de légumes assortis</p>
-                    <p class="ingredients">1 oignon</p>
-                    <p class="ingredients">2 gousses d'ail</p>
-                    <p class="ingredients">1 cuillère à café de gingembre</p>
-                    <p class="ingredients">2 tomates</p>
-                    <p class="ingredients">400ml de lait de coco</p>
-                    <p class="ingredients">3 cuillère de pâtes de curry</p>
+                    <p class="ingredients">30g d'épinards frais</p>
+                    <p class="ingredients">1 banane</p>
+                    <p class="ingredients">1 pomme verte</p>
+                    <p class="ingredients">1/2 avocat</p>
+                    <p class="ingredients">1 kiwi</p>
+                    <p class="ingredients">250ml de lait d'amande</p>
+                    <p class="ingredients">1 cuillère à café de citron</p>
 
-                <p class="prep">Préparation : 30 min</p>
+                <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <h3>Tartine à l'avocat</h3>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
+                    <p class="ingredients">1 avocat mûr</p>
+                    <p class="ingredients">2 tranches de pain complet</p>
+                    <p class="ingredients">1 cuillère à soupe de jus de citron</p>
+                    <p class="ingredients">sel et poivre ( au goût )</p>
+                    <p class="ingredients">1 cuillère à soupe d'huile extra vierge</p>
+                    <p class="ingredients">30g cuillère à soupe de houmous</p>
+                    <p class="ingredients">1/4 de concombre</p>
+                    <p class="ingredients">1/2 tomate coupée en rondelles</p>
+                <p class="prep">Préparation : 10 min</p>
+            </div>
+        </div>
+     </div>  
+</section> 
+
+    <section class="recipes">
+     <div class="recipe-cards">
+            <div class="recipe-card">
+            <button class="save-button" onclick="saveRecipe(this)"></button>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">1 grande tortilla de blé complet</p>
@@ -62,36 +83,20 @@
                     <p class="ingredients">1 cuillère à soupe de jus de citron</p>
                 <p class="prep">Préparation : 15 min</p>
             </div>
-        </div>
-     </div>   
-
-     <div class="recipe-cards">
-            <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
-<h3>Muesli aux fruits</h3>
-<img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                <p class="ingredients">100g de flocons avoine</p>
-                    <p class="ingredients">50g d’amandes, de noisettes</p>
-                    <p class="ingredients">15g de miel</p>
-                    <p class="ingredients">Fruits frais (au choix)</p>
-                    <p class="ingredients">150g de yaourt frais</p>
-                    <p class="ingredients">2 cuillères à soupe de miel</p>
-                    <p class="ingredients">1 pincée de canelle</p>
-                <p class="prep">Préparation : 10 min</p>
-            </div>
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
-                <h3>Curry de légumes</h3>
+                <h3>Soupe de lentilles</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">400g de légumes assortis</p>
+                    <p class="ingredients">200g de lentilles brunes</p>
                     <p class="ingredients">1 oignon</p>
+                    <p class="ingredients">2 carottes</p>
+                    <p class="ingredients">2 branches de céleri</p>
                     <p class="ingredients">2 gousses d'ail</p>
-                    <p class="ingredients">1 cuillère à café de gingembre</p>
-                    <p class="ingredients">2 tomates</p>
-                    <p class="ingredients">400ml de lait de coco</p>
-                    <p class="ingredients">3 cuillère de pâtes de curry</p>
+                    <p class="ingredients">400g de tomates concassées en boîte</p>
+                    <p class="ingredients">1,5 litres de bouillon de légumes</p>
+                    <p class="ingredients">1 cuillère à soupe d'olive</p>
+                    <p class="ingredients">1 cuillère à café de paprika</p>
 
                 <p class="prep">Préparation : 30 min</p>
             </div>
@@ -100,66 +105,77 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">1 grande tortilla de blé complet</p>
-                    <p class="ingredients">1/2 avocat mûr</p>
-                    <p class="ingredients">1/2 poivron rouge</p>
-                    <p class="ingredients">1 carotte rapée</p>
-                    <p class="ingredients">1 feuille de salade</p>
-                    <p class="ingredients">30g cuillère à soupe de houmous</p>
-                    <p class="ingredients">1 cuillère à soupe de jus de citron</p>
+                    <p class="ingredients">400g de pois de chiches en boîte</p>
+                    <p class="ingredients">1 concombre</p>
+                    <p class="ingredients">1 poivron rouge</p>
+                    <p class="ingredients">1 tomate</p>
+                    <p class="ingredients">1 ognion</p>
+                    <p class="ingredients">1 avocat mûr</p>
+                    <p class="ingredients">1/2 de persil frais</p>
+                    <p class="ingredients">1/2 de coriandre fraiche</p>
+                    <p class="ingredients">2 cuillère à soupe de jus de citron</p>
                 <p class="prep">Préparation : 15 min</p>
             </div>
         </div>
      </div>  
+</section>
 
-
+     <section class="recipes">
      <div class="recipe-cards">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
-<h3>Muesli aux fruits</h3>
+<h3>Poke bowl végétalien</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                <p class="ingredients">100g de flocons avoine</p>
-                    <p class="ingredients">50g d’amandes, de noisettes</p>
-                    <p class="ingredients">15g de miel</p>
-                    <p class="ingredients">Fruits frais (au choix)</p>
-                    <p class="ingredients">150g de yaourt frais</p>
-                    <p class="ingredients">2 cuillères à soupe de miel</p>
-                    <p class="ingredients">1 pincée de canelle</p>
-                <p class="prep">Préparation : 10 min</p>
+                <p class="ingredients">150g de quinoa</p>
+                    <p class="ingredients">1 concombre</p>
+                    <p class="ingredients">1 carotte</p>
+                    <p class="ingredients">100g de radis</p>
+                    <p class="ingredients">100g de poivron rouge</p>
+                    <p class="ingredients">200g de tofu ferme</p>
+                    <p class="ingredients">2 cuillère à soupe de soja</p>
+                    <p class="ingredients">2 cuillère degraines de sésames</p>
+                    <p class="ingredients">1 avocat</p>
+                <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
-                <h3>Curry de légumes</h3>
+                <h3>Pad thaï aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">400g de légumes assortis</p>
-                    <p class="ingredients">1 oignon</p>
+                    <p class="ingredients">200g de nouilles de riz</p>
+                    <p class="ingredients">45ml de sauce soja</p>
+                    <p class="ingredients">1 cuillère à café d'huile de sésame</p>
+                    <p class="ingredients">1 carotte</p>
+                    <p class="ingredients">1 poivron rouge</p>
+                    <p class="ingredients">100g de brocolis</p>
+                    <p class="ingredients">100g de champignons</p>
+                    <p class="ingredients">2 cuillère d'ognions verts</p>
                     <p class="ingredients">2 gousses d'ail</p>
-                    <p class="ingredients">1 cuillère à café de gingembre</p>
-                    <p class="ingredients">2 tomates</p>
-                    <p class="ingredients">400ml de lait de coco</p>
-                    <p class="ingredients">3 cuillère de pâtes de curry</p>
 
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
-                <h3>Wrap végétalien</h3>
+                <h3>Risotto aux champignons</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">1 grande tortilla de blé complet</p>
-                    <p class="ingredients">1/2 avocat mûr</p>
-                    <p class="ingredients">1/2 poivron rouge</p>
-                    <p class="ingredients">1 carotte rapée</p>
-                    <p class="ingredients">1 feuille de salade</p>
-                    <p class="ingredients">30g cuillère à soupe de houmous</p>
-                    <p class="ingredients">1 cuillère à soupe de jus de citron</p>
-                <p class="prep">Préparation : 15 min</p>
+                    <p class="ingredients">200g de riz arborio</p>
+                    <p class="ingredients">1 litre de bouillon de légumes</p>
+                    <p class="ingredients">200g de champignons</p>
+                    <p class="ingredients">1 oignon</p>
+                    <p class="ingredients">2 gousses d'ail</p>
+                    <p class="ingredients">100g de petits pois</p>
+                    <p class="ingredients">15g de levure traditionnelle</p>
+                    <p class="ingredients">1 cuillère à soupe de sauce soja</p>
+                    <p class="ingredients">1 cuillère à soupe de persil frais</p>
+                <p class="prep">Préparation : 30 min</p>
             </div>
         </div>
      </div>   
      
     </section>
+
+
 
 <?php get_footer();?>

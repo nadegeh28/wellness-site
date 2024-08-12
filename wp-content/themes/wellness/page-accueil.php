@@ -72,9 +72,8 @@
                 <p class="prep">Préparation : 15 min</p>
             </div>
         </div>
-     </div>   
      
-     <p class="phrasrecettes">Voir plus de recettes <a href="#" class="seereceipe">ici</a></p>
+</div>   <p class="phrasrecettes">Voir plus de recettes <a href="#" class="seereceipe">ici</a></p>
     </section>
 
 

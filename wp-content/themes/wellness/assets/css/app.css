@@ -259,7 +259,7 @@ color: #DCEDC8;
 
 .recipes, .services, .app-promotion, .testimonials {
     text-align: center;
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .recipes h2, .services h2, .testimonials h2  {
@@ -288,7 +288,7 @@ color: #DCEDC8;
     justify-content: space-around;
     margin-top: 70px;
     justify-content: center;
-    gap: 5px;
+    gap: 2px;
 }
 
 .recipe-card {
@@ -839,15 +839,11 @@ margin-left: 0px;
     background-color: #62891F;
 }
 
-.vegan-section {
+.regime-section {
     padding: 40px 20px;
     text-align: left;
 }
 
-.vegan-section {
-    padding: 40px 20px;
-    text-align: left;
-}
 
 
 .section-title h2 {
@@ -884,6 +880,3 @@ margin-left: 0px;
     margin-top: -70px;
 }
  
-.recipes-section {
-margin-bottom: 100px;
-}
