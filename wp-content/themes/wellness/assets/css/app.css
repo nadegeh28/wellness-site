@@ -842,13 +842,13 @@ margin-left: 0px;
 .regime-section {
     padding: 40px 20px;
     text-align: left;
+
 }
 
 
 
 .section-title h2 {
     font-size: 26px;
-    margin-bottom: 50px;
     color: #689F38;
     background-color: #DCEDC8;
     font-weight: 600;
@@ -857,6 +857,7 @@ margin-left: 0px;
     margin-right: 620px ;
     padding: 7px 10px;
     text-align: center; 
+    margin-bottom: 100px;
 }
 
 .content {
@@ -864,6 +865,7 @@ margin-left: 0px;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .text {
@@ -875,8 +877,8 @@ margin-left: 0px;
 }
 
 .imgregime {
-    width: 520px;
+    width: 100%;
+    max-width: 520px;
     border-radius: 15px;
-    margin-top: -70px;
 }
  

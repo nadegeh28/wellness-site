@@ -2,16 +2,16 @@
 
 <section class="regime-section">
     <div class="section-title">
-        <h2>Simple</h2>
+        <h2>Sans Sucre</h2>
     </div>
     <div class="content">
         <div class="text">
-            <p>Un régime simple est un plan alimentaire qui se concentre sur des aliments naturels et non transformés. Il met l’accent sur la consommation d’aliments entiers tels que les fruits, les légumes, les grains entiers, les protéines maigres et les graisses saines comme les noix et les avocats.</p>
-            <p>Ce régime évite généralement les aliments transformés riches en sucres ajoutés, graisses peu saines et additifs. Plutôt que de se focaliser sur des règles strictes, il privilégie une approche équilibrée des portions et de la nutrition, offrant ainsi plus de flexibilité et de simplicité dans la planification des repas.</p>
-            <p>L’objectif principal est de favoriser la qualité des aliments plutôt que de se concentrer uniquement sur des restrictions caloriques strictes. Cela rend ce type de régime plus facile à suivre et à intégrer dans la vie quotidienne, favorisant ainsi une alimentation saine et durable sur le long terme.</p>
+            <p>Un régime sans sucre implique la réduction ou l’élimination des sucres ajoutés et des glucides simples de l’alimentation. Il met l’accent sur la consommation d’aliments naturels et non transformés, et limite les aliments transformés riches en sucres raffinés.</p>
+            <p>L’objectif principal est de réduire les pics de glycémie, de contrôler la consommation de sucre et de favoriser des sources de glucides plus sains et moins transformés. Cela peut inclure l’éviction des sucreries, des sodas, des pâtisseries et des aliments transformés riches en sucres ajoutés. À la place, on encourage la consommation de légumes à faible teneur en glucides, de fruits à faible indice glycémique et de céréales complètes.</p>
+            <p>Un régime sans sucre peut être suivi pour diverses raisons telles que la perte de poids, la gestion de la glycémie pour les diabétiques ou pour améliorer la santé métabolique. Cependant, il est important de maintenir un équilibre nutritionnel adéquat en veillant à obtenir tous les nutriments nécessaires et de consulter un professionnel de la santé pour un suivi approprié.</p>
         </div>
         <div class="image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-17.png" class="imgregime" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-15.png" class="imgregime" alt="Plat Vegan">
         </div>
     </div>
 
