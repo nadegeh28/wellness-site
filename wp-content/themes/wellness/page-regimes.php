@@ -17,7 +17,7 @@
 
         </div>
         <div class="diet-image1">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-14.png" class="imgreg1" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-14.png" class="imgreg1">
         </div>
     </div>
 
@@ -25,7 +25,7 @@
 
     <div class="diet-section reverse">
         <div class="diet-image2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-20.png" class="imgreg2" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-20.png" class="imgreg2">
         </div>
         <div class="diet-content">
             <h2 class="diet-title diabetic">Diabétique</h2>
@@ -44,7 +44,7 @@
 
         </div>
         <div class="diet-image1">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-15.png" class="imgreg1" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-15.png" class="imgreg1" >
         </div>
     </div>
 
@@ -52,7 +52,7 @@
 
     <div class="diet-section reverse">
         <div class="diet-image2">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-16.png" class="imgreg2" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-16.png" class="imgreg2">
         </div>
         <div class="diet-content">
             <h2 class="diet-title diabetic">Perte de poids</h2>
@@ -71,7 +71,7 @@
 
         </div>
         <div class="diet-image1">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-17.png" class="imgreg1" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-17.png" class="imgreg1">
         </div>
     </div>
 

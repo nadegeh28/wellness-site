@@ -2,16 +2,16 @@
 
 <section class="regime-section">
     <div class="section-title">
-        <h2>Sans Sucre</h2>
+        <h2>Diabétique</h2>
     </div>
     <div class="content">
         <div class="text">
-            <p>Un régime sans sucre implique la réduction ou l’élimination des sucres ajoutés et des glucides simples de l’alimentation. Il met l’accent sur la consommation d’aliments naturels et non transformés, et limite les aliments transformés riches en sucres raffinés.</p>
-            <p>L’objectif principal est de réduire les pics de glycémie, de contrôler la consommation de sucre et de favoriser des sources de glucides plus sains et moins transformés. Cela peut inclure l’éviction des sucreries, des sodas, des pâtisseries et des aliments transformés riches en sucres ajoutés. À la place, on encourage la consommation de légumes à faible teneur en glucides, de fruits à faible indice glycémique et de céréales complètes.</p>
-            <p>Un régime sans sucre peut être suivi pour diverses raisons telles que la perte de poids, la gestion de la glycémie pour les diabétiques ou pour améliorer la santé métabolique. Cependant, il est important de maintenir un équilibre nutritionnel adéquat en veillant à obtenir tous les nutriments nécessaires et de consulter un professionnel de la santé pour un suivi approprié.</p>
+            <p>Le régime pour les personnes diabétiques est conçu pour contrôler la glycémie (le sucre dans le sang). Cela implique de faire attention aux glucides, comme le pain, les pâtes et les sucreries, car ils affectent le niveau de sucre dans le sang. Il est recommandé de privilégier les aliments à faible indice glycémique comme les légumes, les fruits frais et les grains entiers.</p>
+            <p>Il est important de choisir des aliments sains et nutritifs. Cela signifie favoriser les légumes, les fruits, les protéines maigres comme le poulet ou le poisson, et les bonnes graisses provenant des noix, des avocats ou des huiles végétales.</p>
+            <p>Garder un poids santé est également crucial pour contrôler le diabète. Chaque personne est différente, donc il est recommandé de travailler avec un professionnel de la santé pour adapter le régime en fonction des besoins individuels. En suivant ce régime et en surveillant de près la glycémie, on peut aider à prévenir les problèmes de santé liés au diabète.</p>
         </div>
         <div class="image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-15.png" class="imgregime" alt="Plat Vegan">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-20.png" class="imgregime">
         </div>
     </div>
 

@@ -293,7 +293,7 @@ color: #DCEDC8;
 
 .recipe-card {
     position: relative;
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 10px;
     width: 300px;
     text-align: left;
