@@ -11,7 +11,7 @@
             <p>De plus, le mode de vie végan s'étend souvent au-delà de l'alimentation. Les végans évitent les produits testés sur les animaux, choisissent des vêtements et des produits cosmétiques fabriqués sans matières animales et encouragent des pratiques respectueuses de l'environnement dans tous les aspects de leur vie.</p>
         </div>
         <div class="image">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/vegan-dish.png" alt="Vegan dish">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-14.png" class="imgregime" alt="Plat Vegan">
         </div>
     </div>
 </section>

@@ -261,16 +261,16 @@ color: #DCEDC8;
     padding: 50px 0;
 }
 
-.recipes h2, .services h2, .testimonials h2 {
+.recipes h2, .services h2, .testimonials h2  {
     font-size: 26px;
     margin-bottom: 50px;
     color: #689F38;
     background-color: #DCEDC8;
     font-weight: 600;
     border-radius: 50px;
-    margin-left: 480px ;
-    margin-right: 470px ;
-    padding: 7px 12px;
+    margin-left: 600px ;
+    margin-right: 600px ;
+    padding: 7px 10px;
 
 }
 
@@ -845,18 +845,21 @@ margin-left: 0px;
 
 .vegan-section {
     padding: 40px 20px;
-    background-color: #EFFAF0;
-    text-align: center;
+    text-align: left;
 }
 
-.section-title h1,
+
 .section-title h2 {
-    background-color: #D9EDDA;
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 25px;
-    color: #3AAA35;
-    font-size: 24px;
+    font-size: 26px;
+    margin-bottom: 50px;
+    color: #689F38;
+    background-color: #DCEDC8;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-left: 620px ;
+    margin-right: 620px ;
+    padding: 7px 10px;
+    text-align: center; 
 }
 
 .content {
@@ -867,12 +870,15 @@ margin-left: 0px;
 }
 
 .text {
-    max-width: 600px;
+    max-width: 550px;
     text-align: left;
+    color: #707070;
+    font-weight: 500;
+    font-size: 18px;
 }
 
-.image img {
-    width: 300px;
+.imgregime {
+    width: 550px;
     border-radius: 15px;
 }
  
