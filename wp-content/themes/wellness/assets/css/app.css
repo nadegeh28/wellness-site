@@ -164,6 +164,7 @@ nav ul li a:hover {
     background-color: #689F38;
     color: white;
     font-size: 17px;
+    margin: 0px;
     
 }
 
@@ -878,8 +879,11 @@ margin-left: 0px;
 }
 
 .imgregime {
-    width: 550px;
+    width: 520px;
     border-radius: 15px;
+    margin-top: -70px;
 }
  
-  
+.recipes-section {
+margin-bottom: 100px;
+}
