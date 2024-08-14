@@ -67,7 +67,7 @@
 </div>   <p class="phrasrecettes">Voir plus de recettes <a href="#" class="seereceipe">ici</a></p>
     </section>
 
-
+    <div class="fade-in">
     <section class="services">
         <h2>Nos Services</h2>
         <div class="services-list">
@@ -92,8 +92,10 @@
                 <p>Découvrez des informations sur les divers régimes et apprenez-en davantage sur vous-même et votre régime grâce à nos outils interactifs. Adoptez une alimentation adaptée à vos besoins uniques!</p>
             </div>
         </div>
+</div>
     </section>
 
+    <div class="fade-in">
     <section class="app-promotion">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tel.png" alt="Mobile App">
         <div class="app-text">
@@ -101,9 +103,12 @@
             <p>Wellness App est bien plus qu’une simple application de nutrition. Découvrez un univers complet dédié à votre bien-être alimentaire. Trouvez des recettes adaptées à vos préférences et besoins nutritionnels spécifiques. Utilisez la version mobile afin de consulter votre progression et les recettes où que vous soyez!</p>
             <p><strong>Wellness App, votre allié pour une vie saine.</strong></p>
         </div>
+</div>
     </section>
 
+
     <section class="testimonials">
+    <div class="fade-in">
         <h2>Vos Avis</h2>
         <br><br>
         <div class="testimonials-list">
@@ -130,8 +135,9 @@
                 <p>J’ai été ravie de découvrir Wellness. La diversité des recettes et des conseils m’a beaucoup aidé à adopter une alimentation plus saine. L’application mobile est un plus indéniable pour suivre mon régime au quotidien.</p>
             </div>
         </div>
-    </section>
 </div>
+    </section>
+
 
 <br><br><br><br><br><br><br><br><br>
 </div>

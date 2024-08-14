@@ -403,13 +403,13 @@ margin-left: 0px;
 
 .service-item img {
   width: 120px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   
 }
 
 .services {
     color: #689F38;
-    margin-top: 0; 
+    margin-bottom: 15px; 
 }
 
 @media (max-width: 768px) {
