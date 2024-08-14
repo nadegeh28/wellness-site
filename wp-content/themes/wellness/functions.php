@@ -48,3 +48,12 @@ function my_theme_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 
+function enqueue_custom_script() {
+  wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/app.js', array('jquery'), null, true);
+
+  // Localiser le script avec le nonce pour l'API REST
+  wp_localize_script('custom-script', 'wpApiSettings', array(
+      'nonce' => wp_create_nonce('wp_rest')
+  ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');
