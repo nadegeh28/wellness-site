@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-<section class="regime-section">
+<section class="regime-section fade-in">
     <div class="section-title">
         <h2>Diabétique</h2>
     </div>
-    <div class="content">
+    <div class="content fade-in">
         <div class="text">
             <p>Le régime pour les personnes diabétiques est conçu pour contrôler la glycémie (le sucre dans le sang). Cela implique de faire attention aux glucides, comme le pain, les pâtes et les sucreries, car ils affectent le niveau de sucre dans le sang. Il est recommandé de privilégier les aliments à faible indice glycémique comme les légumes, les fruits frais et les grains entiers.</p>
             <p>Il est important de choisir des aliments sains et nutritifs. Cela signifie favoriser les légumes, les fruits, les protéines maigres comme le poulet ou le poisson, et les bonnes graisses provenant des noix, des avocats ou des huiles végétales.</p>
@@ -15,10 +15,11 @@
         </div>
     </div>
 
-    <section class="recipes">
+
+    <section class="recipes fade-in">
         <h2>Recettes</h2>
         <br><br>
-        <div class="recipe-cards">
+        <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
@@ -63,8 +64,8 @@
      </div>  
 </section> 
 
-    <section class="recipes">
-     <div class="recipe-cards">
+<section class="recipes fade-in">
+<div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
@@ -116,8 +117,9 @@
      </div>  
 </section>
 
-     <section class="recipes">
-     <div class="recipe-cards">
+
+<section class="recipes fade-in">
+<div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
