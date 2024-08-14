@@ -3,12 +3,13 @@
 <div class="forum-container">
     <h3 class="part1">N'hésitez pas à poser vos questions </h3> 
     <h3 class="part2">ou à partager vos connaissances avec les autres.</h3>
+    <br>
 
     <div class="forum-comments">
         <!-- Commentaire 1 -->
         <div class="comment-item">
             <div class="comment-author-avatar">
-                <img src="URL_DE_L'AVATAR_ALICIA" alt="Alicia Carmen" width="64" height="64">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user1.png" alt="Alicia Carmen">
             </div>
             <div class="comment-content">
                 <h3 class="comment-author-name">Alicia Carmen</h3>
@@ -19,7 +20,7 @@
         <!-- Commentaire 2 -->
         <div class="comment-item">
             <div class="comment-author-avatar">
-                <img src="URL_DE_L'AVATAR_LORIE" alt="Lorie Samba" width="64" height="64">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user2.png" alt="Lorie Samba">
             </div>
             <div class="comment-content">
                 <h3 class="comment-author-name">Lorie Samba</h3>
@@ -30,7 +31,7 @@
         <!-- Commentaire 3 -->
         <div class="comment-item">
             <div class="comment-author-avatar">
-                <img src="URL_DE_L'AVATAR_MATHY" alt="Mathy Eka" width="64" height="64">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user3.png" alt="Mathy Eka">
             </div>
             <div class="comment-content">
                 <h3 class="comment-author-name">Mathy Eka</h3>
@@ -41,7 +42,7 @@
         <!-- Commentaire 4 -->
         <div class="comment-item">
             <div class="comment-author-avatar">
-                <img src="URL_DE_L'AVATAR_MAEVA" alt="Maeva Martinez" width="64" height="64">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user4.png" alt="Maeva Martinez">
             </div>
             <div class="comment-content">
                 <h3 class="comment-author-name">Maeva Martinez</h3>
@@ -52,7 +53,7 @@
         <!-- Commentaire 5 -->
         <div class="comment-item">
             <div class="comment-author-avatar">
-                <img src="URL_DE_L'AVATAR_DANIELLE" alt="Danielle Evan" width="64" height="64">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user5.png" alt="Danielle Evan">
             </div>
             <div class="comment-content">
                 <h3 class="comment-author-name">Danielle Evan</h3>
@@ -63,7 +64,7 @@
         <!-- Commentaire 6 -->
         <div class="comment-item">
             <div class="comment-author-avatar">
-                <img src="URL_DE_L'AVATAR_KAYLA" alt="Kayla Rosa" width="64" height="64">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user6.png" alt="Kayla Rosa">
             </div>
             <div class="comment-content">
                 <h3 class="comment-author-name">Kayla Rosa</h3>

@@ -61,7 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Adresse URL de l'API REST de WordPress pour publier des commentaires
-        const apiUrl = '/wp-json/wp/v2/comments';
+        const apiUrl = 'http://localhost:8888/wellness-site/wp-json/wp/v2/comments';
+
 
         // Préparer les données à envoyer
         const data = {

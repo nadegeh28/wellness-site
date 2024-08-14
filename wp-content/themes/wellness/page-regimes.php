@@ -5,7 +5,7 @@
 <div class="container">
     <div class="header">
         <h1 class="part1">Explorez et adoptez le régime</h1>
-            <h1 class="part2">Qui vous correspond !</h1>
+            <h1 class="part2">qui vous correspond !</h1>
     </div>
 
     <div class="diet-section vegan-section">
