@@ -82,7 +82,8 @@ $table_prefix = 'wp_';
 define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
+define('WP_HOME', 'https://www.wellness.emu.isfsc.be');
+define('WP_SITEURL', 'https://www.wellness.emu.isfsc.be');
 
 
 /* That's all, stop editing! Happy publishing. */
