@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-<section class="regime-section">
+<section class="regime-section fade-in">
     <div class="section-title">
         <h2>Sans Sucre</h2>
     </div>
-    <div class="content">
+    <div class="content fade-in">
         <div class="text">
             <p>Un régime sans sucre implique la réduction ou l’élimination des sucres ajoutés et des glucides simples de l’alimentation. Il met l’accent sur la consommation d’aliments naturels et non transformés, et limite les aliments transformés riches en sucres raffinés.</p>
             <p>L’objectif principal est de réduire les pics de glycémie, de contrôler la consommation de sucre et de favoriser des sources de glucides plus sains et moins transformés. Cela peut inclure l’éviction des sucreries, des sodas, des pâtisseries et des aliments transformés riches en sucres ajoutés. À la place, on encourage la consommation de légumes à faible teneur en glucides, de fruits à faible indice glycémique et de céréales complètes.</p>
@@ -15,10 +15,10 @@
         </div>
     </div>
 
-    <section class="recipes">
+    <section class="recipes fade-in">
         <h2>Recettes</h2>
         <br><br>
-        <div class="recipe-cards">
+        <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
@@ -64,8 +64,8 @@
      </div>  
 </section> 
 
-    <section class="recipes">
-     <div class="recipe-cards">
+<section class="regime-section fade-in">
+<div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
@@ -115,8 +115,8 @@
      </div>  
 </section>
 
-     <section class="recipes">
-     <div class="recipe-cards">
+<section class="regime-section fade-in">
+<div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">

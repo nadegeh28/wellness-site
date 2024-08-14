@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-<section class="regime-section">
+<section class="regime-section fade-in">
     <div class="section-title">
         <h2>Perte de poids</h2>
     </div>
-    <div class="content">
+    <div class="content fade-in">
         <div class="text">
             <p>Un régime pour perdre du poids implique généralement une réduction contrôlée de l’apport calorique et une attention particulière aux choix alimentaires. L’objectif principal est de créer un déficit calorique, où l’on brûle plus de calories que l’on n’en consomme, ce qui incite le corps à utiliser les réserves de graisse pour l’énergie.</p>
             <p>On se concentre souvent sur la consommation d’aliments sains et riches en nutriments, comme les fruits, les légumes, les protéines maigres et les glucides complexes, tout en limitant les aliments transformés riches en sucres ajoutés, en gras saturés et en calories vides.</p>
@@ -15,10 +15,11 @@
         </div>
     </div>
 
-    <section class="recipes">
+    
+    <section class="recipes fade-in">
         <h2>Recettes</h2>
         <br><br>
-        <div class="recipe-cards">
+        <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
@@ -62,8 +63,8 @@
      </div>  
 </section> 
 
-    <section class="recipes">
-     <div class="recipe-cards">
+<section class="regime-section fade-in">
+    <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
@@ -115,8 +116,8 @@
      </div>  
 </section>
 
-     <section class="recipes">
-     <div class="recipe-cards">
+<section class="regime-section fade-in">
+     <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">

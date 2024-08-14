@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-<section class="regime-section">
+<section class="regime-section fade-in">
     <div class="section-title">
         <h2>MIND Régime</h2>
     </div>
-    <div class="content">
+    <div class="content fade-in">
         <div class="text">
 <p>Le régime MIND, qui signifie « Mediterranean-DASH Intervention for Neurodegenerative Delay » (intervention méditerranéenne-DASH pour le retard neurodégénératif), combine les principes du régime méditerranéen et du régime DASH (Dietary Approaches to Stop Hypertension). Son objectif principal est de soutenir la santé du cerveau et de réduire le risque de déclin cognitif lié à l’âge.</p>
 <p>Ce régime repose sur des recherches indiquant que certains aliments peuvent avoir des effets positifs sur la santé du cerveau, notamment en réduisant l’inflammation et en protégeant les cellules cérébrales. Il encourage une alimentation riche en nutriments essentiels, en antioxydants et en graisses saines pour soutenir la fonction cérébrale et la santé générale.</p>
@@ -15,10 +15,10 @@
         </div>
     </div>
 
-    <section class="recipes">
+    <section class="recipes fade-in">
         <h2>Recettes</h2>
         <br><br>
-        <div class="recipe-cards">
+        <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
@@ -62,8 +62,8 @@
      </div>  
 </section> 
 
-    <section class="recipes">
-     <div class="recipe-cards">
+<section class="regime-section fade-in">
+<div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
@@ -117,8 +117,8 @@
      </div>  
 </section>
 
-     <section class="recipes">
-     <div class="recipe-cards">
+<section class="regime-section fade-in">
+<div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">

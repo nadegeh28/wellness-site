@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-<section class="regime-section">
+<section class="regime-section fade-in">
     <div class="section-title">
         <h2>Simple</h2>
     </div>
-    <div class="content">
+    <div class="content fade-in">
         <div class="text">
             <p>Un régime simple est un plan alimentaire qui se concentre sur des aliments naturels et non transformés. Il met l’accent sur la consommation d’aliments entiers tels que les fruits, les légumes, les grains entiers, les protéines maigres et les graisses saines comme les noix et les avocats.</p>
             <p>Ce régime évite généralement les aliments transformés riches en sucres ajoutés, graisses peu saines et additifs. Plutôt que de se focaliser sur des règles strictes, il privilégie une approche équilibrée des portions et de la nutrition, offrant ainsi plus de flexibilité et de simplicité dans la planification des repas.</p>
@@ -15,10 +15,10 @@
         </div>
     </div>
 
-    <section class="recipes">
+    <section class="recipes fade-in">
         <h2>Recettes</h2>
         <br><br>
-        <div class="recipe-cards">
+        <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
@@ -67,7 +67,7 @@
 </section> 
 
     <section class="recipes">
-     <div class="recipe-cards">
+    <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
@@ -123,8 +123,8 @@
      </div>  
 </section>
 
-     <section class="recipes">
-     <div class="recipe-cards">
+<section class="regime-section fade-in">
+<div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">

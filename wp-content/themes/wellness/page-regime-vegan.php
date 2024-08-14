@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-<section class="vegan-section">
+<section class="regime-section fade-in">
     <div class="section-title">
         <h2>Vegan</h2>
     </div>
-    <div class="content">
+    <div class="content fade-in">
         <div class="text">
             <p>Le régime végan est bien plus qu'une simple alimentation, c'est un mode de vie qui exclut toute exploitation animale. Les végans ne consomment pas de viande, de poisson, de produits laitiers, d'œufs, de miel ou tout autre produit dérivé des animaux. À la place, ils se tournent vers une alimentation exclusivement végétale, privilégiant les fruits, légumes, céréales, légumineuses, noix et graines pour répondre à leurs besoins nutritionnels.</p>
             <p>Cette démarche est souvent motivée par des convictions éthiques profondes envers le respect de tous les êtres vivants, ainsi que par des préoccupations environnementales et de santé. En évitant les produits d'origine animale, les végans cherchent à réduire leur empreinte écologique et à promouvoir un mode de vie plus durable.</p>
@@ -15,10 +15,10 @@
         </div>
     </div>
 
-    <section class="recipes">
+    <section class="recipes fade-in">
         <h2>Recettes</h2>
         <br><br>
-        <div class="recipe-cards">
+        <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
@@ -68,7 +68,7 @@
 </section> 
 
     <section class="recipes">
-     <div class="recipe-cards">
+    <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
@@ -121,7 +121,7 @@
 </section>
 
      <section class="recipes">
-     <div class="recipe-cards">
+     <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
