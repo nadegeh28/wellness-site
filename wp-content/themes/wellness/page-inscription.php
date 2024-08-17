@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
         if (!is_wp_error($user_id)) {
             $confirmation_message = "Inscription réussie ! Vous pouvez maintenant accéder au quizz.";
             echo '<div class="inscription-success-message">' . esc_html($confirmation_message) . '</div>';
-            echo '<a href="http://localhost:8888/wellness-wordpress/quizz1/" class="accederquizz">Accéder au quizz</a>';
+            echo '<a href="http://localhost:8888/wellness-site/quizz/" class="accederquizz">Accéder au quizz</a>';
         } else {
             echo "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
             echo '<div class="erreur"></div>';
