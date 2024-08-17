@@ -1044,9 +1044,46 @@ margin-bottom: 40px;
 width: 180px;
 }
 
+/* Styles pour le conteneur des messages */
 #message-container {
-    margin-bottom: 20px; 
+    position: absolute; 
+    top: 180px; /* Ajuster la distance du haut pour qu'il soit au-dessus du formulaire */
+    left: 50%;
+    transform: translateX(-50%); /* Centrer horizontalement */
+    width: 80%; /* Largeur relative */
+    max-width: 500px; /* Largeur maximale */
+    z-index: 10; /* Assurer que le message est au-dessus des autres éléments */
+    display: none; /* Masquer initialement */
 }
+
+.error-message {
+    color: #D8000C;
+    background-color: #D8000C;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.success-message {
+    color: #8BC34A;
+    background-color: #8BC34A;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Styles pour les champs de formulaire */
+.input-error {
+    border: 1px solid #D8000C;
+}
+
+.input-valid {
+    border: 1px solid #8BC34A;
+}
+
 
 .error-message {
     border: 2px solid #D8000C; 

@@ -103,7 +103,6 @@ function validateField(input) {
         input.classList.remove('input-valid');
         input.classList.add('input-error');
     } else {
-        // Validation simple pour les e-mails
         if (input.type === 'email' && !/\S+@\S+\.\S+/.test(value)) {
             input.classList.remove('input-valid');
             input.classList.add('input-error');
@@ -114,21 +113,34 @@ function validateField(input) {
     }
 }
 
-// Fonction pour afficher les messages
-function displayMessage(message, type) {
-    const messageContainer = document.getElementById('message-container');
-    messageContainer.textContent = message;
-    messageContainer.className = type === 'error' ? 'error-message' : 'success-message';
-    messageContainer.style.display = 'block';
-}
-
 document.addEventListener('DOMContentLoaded', function() {
+    function validateField(input) {
+        const value = input.value.trim();
+        if (value === "") {
+            input.classList.remove('input-valid');
+            input.classList.add('input-error');
+        } else {
+            if (input.type === 'email' && !/\S+@\S+\.\S+/.test(value)) {
+                input.classList.remove('input-valid');
+                input.classList.add('input-error');
+            } else {
+                input.classList.remove('input-error');
+                input.classList.add('input-valid');
+            }
+        }
+    }
+
+    function displayMessage(message, type) {
+        const messageContainer = document.getElementById('message-container');
+        messageContainer.innerHTML = `<div class="${type}-message">${message}</div>`;
+        messageContainer.style.display = 'block';
+    }
+
     document.querySelectorAll('.form-input').forEach(input => {
-        input.addEventListener('blur', () => validateField(input)); // Vérifie le champ lorsque le focus est perdu
-        input.addEventListener('input', () => validateField(input)); // Vérifie le champ en temps réel
+        input.addEventListener('blur', () => validateField(input));
+        input.addEventListener('input', () => validateField(input));
     });
 
-    // Soumet le formulaire via AJAX
     document.getElementById('submit-button').addEventListener('click', function(event) {
         event.preventDefault(); // Empêche la soumission normale du formulaire
 
@@ -146,8 +158,11 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.success) {
                 displayMessage(data.message, 'success');
-                // Optionnel: Redirection après succès
-                // window.location.href = 'http://localhost:8888/wellness-site/index.php/quizz/';
+                if (data.redirect) {
+                    setTimeout(() => {
+                        window.location.href = data.redirect;
+                    }, 2000); // Redirection après 2 secondes pour permettre à l'utilisateur de lire le message
+                }
             } else {
                 displayMessage(data.message, 'error');
             }
@@ -157,5 +172,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
