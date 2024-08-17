@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
 <?php
-$error_message = '';
-$success_message = '';
-
+// Si le formulaire est soumis via AJAX
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['submit'] === 'inscription_form') {
     $nom = sanitize_text_field($_POST['nom']);
     $prenom = sanitize_text_field($_POST['prenom']);
@@ -11,8 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
     $motdepasse = $_POST['motdepasse'];
     $motdepasse_confirm = $_POST['motdepasse-confirm'];
 
+    // Tableau pour la réponse
+    $response = array();
+
+    // Vérifiez si les mots de passe correspondent
     if ($motdepasse !== $motdepasse_confirm) {
-        $error_message = 'Les mots de passe ne correspondent pas.';
+        $response['success'] = false;
+        $response['message'] = 'Les mots de passe ne correspondent pas.';
     } else {
         $user_data = array(
             'user_login' => $nom,
@@ -23,29 +26,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
 
         $user_id = wp_insert_user($user_data);
 
+        // Vérifiez s'il y a une erreur lors de la création de l'utilisateur
         if (is_wp_error($user_id)) {
-            $error_message = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
-            $error_message .= '<br>' . $user_id->get_error_message();
+            $response['success'] = false;
+            $response['message'] = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
+            $response['message'] .= '<br>' . $user_id->get_error_message(); // Ajoutez le message d'erreur spécifique
         } else {
-            $success_message = "Inscription réussie. Vous pouvez maintenant accéder à votre compte.";
+            $response['success'] = true;
+            $response['message'] = "Inscription réussie. Vous pouvez maintenant accéder à votre compte.";
         }
     }
+
+    // Répondre avec des données JSON
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    exit;
 }
 ?>
 
 <div class="container-form">
-    <?php if (!empty($error_message)) : ?>
-        <div class="error-message">
-            <?php echo $error_message; ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if (!empty($success_message)) : ?>
-        <div class="success-message">
-            <?php echo $success_message; ?>
-        </div>
-    <?php endif; ?>
-
+    <div id="message-container" style="display:none;"></div> 
     <form id="inscription-form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="formulaire-inscription">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="logo-inscr">
         <div class="form-group">

@@ -1044,6 +1044,10 @@ margin-bottom: 40px;
 width: 180px;
 }
 
+#message-container {
+    margin-bottom: 20px; 
+}
+
 .error-message {
     border: 2px solid #D8000C; 
     background-color: #f7c7c2; 

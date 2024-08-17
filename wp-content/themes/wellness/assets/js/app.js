@@ -114,16 +114,47 @@ function validateField(input) {
     }
 }
 
-// Ajoutez des gestionnaires d'événements aux champs de formulaire
+// Fonction pour afficher les messages
+function displayMessage(message, type) {
+    const messageContainer = document.getElementById('message-container');
+    messageContainer.textContent = message;
+    messageContainer.className = type === 'error' ? 'error-message' : 'success-message';
+    messageContainer.style.display = 'block';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.form-input').forEach(input => {
         input.addEventListener('blur', () => validateField(input)); // Vérifie le champ lorsque le focus est perdu
         input.addEventListener('input', () => validateField(input)); // Vérifie le champ en temps réel
     });
 
-    // Soumet le formulaire lorsque le bouton est cliqué
-    document.getElementById('submit-button').addEventListener('click', function() {
-        document.getElementById('inscription-form').submit();
+    // Soumet le formulaire via AJAX
+    document.getElementById('submit-button').addEventListener('click', function(event) {
+        event.preventDefault(); // Empêche la soumission normale du formulaire
+
+        const form = document.getElementById('inscription-form');
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                displayMessage(data.message, 'success');
+                // Optionnel: Redirection après succès
+                // window.location.href = 'http://localhost:8888/wellness-site/index.php/quizz/';
+            } else {
+                displayMessage(data.message, 'error');
+            }
+        })
+        .catch(error => {
+            displayMessage('Une erreur est survenue. Veuillez réessayer.', 'error');
+        });
     });
 });
 
