@@ -997,9 +997,9 @@ margin-left: 0px;
     padding: 12px 30px;
     border: 2px solid #689F38;
     border-radius: 30px; 
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
-    color: #8BC34A; 
+    color: #707070; 
     font-weight: lighter;
     background-color: #F2F2F2;
     outline: none;
@@ -1012,7 +1012,8 @@ margin-left: 0px;
 }
 
 .form-input:focus {
-    border-color: #558B2F; 
+    border-color: #62891F;
+    font-weight: bolder; 
 }
 
 .btn-inscription {
@@ -1035,7 +1036,7 @@ margin-left: 0px;
 }
 
 .btn-inscription:hover {
-    background-color: #62891F; /* Couleur plus sombre au survol */
+    background-color: #62891F; 
 }
 
 .logo-inscr {
@@ -1045,46 +1046,69 @@ width: 180px;
 
 
 
-/* Styles pour le formulaire */
 .login-form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
 
     border-radius: 10px;
 }
 
-/* Styles pour le champ d'e-mail */
 .email {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border: 2px solid #689F38;
+    border-radius: 30px; 
+    font-size: 15px;
+    text-align: center;
+    color: #8BC34A; 
+    font-weight: lighter;
+    background-color: #F2F2F2;
+    outline: none;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 
 .password {
     width: 100%;
-    padding: 10px;
+    padding: 12px 30px;
+    border: 2px solid #689F38;
+    border-radius: 30px; 
+    font-size: 15px;
+    text-align: center;
+    color: #8BC34A; 
+    font-weight: lighter;
+    background-color: #F2F2F2;
+    outline: none;
+    text-align: left;
     margin-bottom: 20px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
 }
 
 
 .login-button {
-    padding: 10px 20px;
+    padding: 5px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #8BC34A;
-    color: white;
+    color: #ffff;
+    font-size: 15px;
     cursor: pointer;
-    font-size: 16px;
-    width: 100%;
+    display: block;
+    margin: 5px 0 0 auto;
+    margin-bottom: 150px;
+    margin-right: 500px;
+    margin-top: -10px;
+    font-weight: bold;
+    display: block;
 }
 
 .login-button:hover {
-    background-color: #6fae35;
+    background-color: #62891F;
 }
 
+.logo-con {
+    margin-bottom: 40px;
+    width: 180px;
+    margin-left: 150px;
+    }
