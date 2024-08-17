@@ -57,3 +57,19 @@ function enqueue_custom_script() {
   ));
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script');
+
+
+function theme_enqueue_styles() {
+  // Charge le style principal (style.css) du thème
+  wp_enqueue_style('style', get_stylesheet_uri());
+
+  // Charge le style personnalisé (app.css)
+  wp_enqueue_style('custom-style', get_template_directory_uri() . '/app.css');
+
+  // Charge le script JavaScript pour la validation des champs
+  wp_enqueue_script('form-validation', get_template_directory_uri() . '/app.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+
+

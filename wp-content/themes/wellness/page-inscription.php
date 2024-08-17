@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
 <?php
+$error_message = '';
+$success_message = '';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['submit'] === 'inscription_form') {
     $nom = sanitize_text_field($_POST['nom']);
     $prenom = sanitize_text_field($_POST['prenom']);
@@ -9,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
     $motdepasse_confirm = $_POST['motdepasse-confirm'];
 
     if ($motdepasse !== $motdepasse_confirm) {
-        echo '<div class="mdp">Les mots de passe ne correspondent pas.</div>';
+        $error_message = 'Les mots de passe ne correspondent pas.';
     } else {
         $user_data = array(
             'user_login' => $nom,
@@ -20,19 +23,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
 
         $user_id = wp_insert_user($user_data);
 
-        if (!is_wp_error($user_id)) {
-            // Inscription réussie, redirection vers la page du quiz
-            wp_redirect('http://localhost:8888/wellness-site/index.php/quizz/');
-            exit; // Assurez-vous que le script s'arrête après la redirection
+        if (is_wp_error($user_id)) {
+            $error_message = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
+            $error_message .= '<br>' . $user_id->get_error_message();
         } else {
-            echo "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
-            echo '<div class="erreur"></div>';
+            $success_message = "Inscription réussie. Vous pouvez maintenant accéder à votre compte.";
         }
     }
 }
 ?>
 
 <div class="container-form">
+    <?php if (!empty($error_message)) : ?>
+        <div class="error-message">
+            <?php echo $error_message; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (!empty($success_message)) : ?>
+        <div class="success-message">
+            <?php echo $success_message; ?>
+        </div>
+    <?php endif; ?>
+
     <form id="inscription-form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="formulaire-inscription">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="logo-inscr">
         <div class="form-group">
@@ -50,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
         <div class="form-group">
             <input type="password" id="motdepasse-confirm" name="motdepasse-confirm" required class="form-input" placeholder="Confirmation du mot de passe">
         </div>
-        <!-- Notez que le bouton de soumission n'est pas à l'intérieur du formulaire -->
     </form>
 </div>
 
@@ -63,7 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
 </script>
 
 <?php get_footer(); ?>
-
 
 
 
