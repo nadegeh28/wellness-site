@@ -63,13 +63,16 @@ nav ul li a:hover {
 
 .dropdown-menu {
     display: none;
-    position: absolute;
-    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: absolute; /* Positionne le menu en fonction du conteneur parent */
+    top: 100%; /* Place le menu juste en dessous de l'élément parent */
     left: 0;
     list-style: none;
     padding: 0;
     margin: 0;
-    z-index: 1;
+    z-index: 9999;
 
 }
 
@@ -94,6 +97,8 @@ nav ul li a:hover {
 
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
+    opacity: 1;
+    visibility: visible;
     background-color: #F2F2F2;
     color: #62891F;
     border-radius: 20px;

@@ -66,6 +66,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
     </form>
 </div>
 
-<button type="button" class="btn-inscription" id="submit-button">Confirmer</button>
+<button type="button" class="btn-inscription fade-in" id="submit-button">Confirmer</button>
 
 <?php get_footer(); ?>

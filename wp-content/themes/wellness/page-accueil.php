@@ -6,7 +6,7 @@
         <div class="hero-text">
             <h1 class="part1">Revitalisez votre vie.</h1>  <h1 class="part2">Maintenant.</h1>
             <p>Une alimentation équilibrée constitue la santé d’une vie saine, offrant une vitalité renouvelée à chaque repas. De nombreux avantages pour la santé sont à l’esprit. Sentez-vous bien clair mental et aimé d'énergie constante.</p>
-            <a href="#" class="hero-button">Faites le quiz</a>
+            <a href="http://localhost:8888/wellness-site/index.php/inscription/" class="hero-button">Faites le quiz</a>
         </div>
         <div class="hero-image">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/photo-page-accueil.png" alt="Salade">
