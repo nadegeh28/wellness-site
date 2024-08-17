@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header(); ?>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['submit'] === 'inscription_form') {
@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
         $user_id = wp_insert_user($user_data);
 
         if (!is_wp_error($user_id)) {
-            $confirmation_message = "Inscription réussie ! Vous pouvez maintenant accéder au quizz.";
-            echo '<div class="inscription-success-message">' . esc_html($confirmation_message) . '</div>';
-            echo '<a href="http://localhost:8888/wellness-site/quizz/" class="accederquizz">Accéder au quizz</a>';
+            // Inscription réussie, redirection vers la page du quiz
+            wp_redirect('http://localhost:8888/wellness-site/index.php/quizz/');
+            exit; // Assurez-vous que le script s'arrête après la redirection
         } else {
             echo "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
             echo '<div class="erreur"></div>';
@@ -33,29 +33,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
 ?>
 
 <div class="container-form">
-<form method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="formulaire-inscription">
-<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="logo-inscr">
-    <div class="form-group">
-        <input type="text" id="nom" name="nom" required class="form-input" placeholder="Nom">
-    </div>
-    <div class="form-group">
-        <input type="text" id="prenom" name="prenom" required class="form-input" placeholder="Prénom">
-    </div>
-    <div class="form-group">
-        <input type="email" id="email" name="email" required class="form-input" placeholder="Adresse E-mail">
-    </div>
-    <div class="form-group">
-        <input type="password" id="motdepasse" name="motdepasse" required class="form-input" placeholder="Mot de passe">
-    </div>
-    <div class="form-group">
-        <input type="password" id="motdepasse-confirm" name="motdepasse-confirm" required class="form-input" placeholder="Confirmation du mot de passe">
-    </div>
-</form>
-
+    <form id="inscription-form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="formulaire-inscription">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="logo-inscr">
+        <div class="form-group">
+            <input type="text" id="nom" name="nom" required class="form-input" placeholder="Nom">
+        </div>
+        <div class="form-group">
+            <input type="text" id="prenom" name="prenom" required class="form-input" placeholder="Prénom">
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" required class="form-input" placeholder="Adresse E-mail">
+        </div>
+        <div class="form-group">
+            <input type="password" id="motdepasse" name="motdepasse" required class="form-input" placeholder="Mot de passe">
+        </div>
+        <div class="form-group">
+            <input type="password" id="motdepasse-confirm" name="motdepasse-confirm" required class="form-input" placeholder="Confirmation du mot de passe">
+        </div>
+        <!-- Notez que le bouton de soumission n'est pas à l'intérieur du formulaire -->
+    </form>
 </div>
 
-<button type="submit" class="btn-inscription" name="submit" value="inscription_form">Confirmer</button>
+<button type="button" class="btn-inscription" id="submit-button">Confirmer</button>
+
+<script>
+    document.getElementById('submit-button').addEventListener('click', function() {
+        document.getElementById('inscription-form').submit();
+    });
+</script>
+
+<?php get_footer(); ?>
 
 
 
-<?php get_footer();?>
+
