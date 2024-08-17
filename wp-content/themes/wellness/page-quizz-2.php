@@ -13,7 +13,7 @@
             <li><input type="radio" name="repas" id="pasRegimeFixe" value="pasRegimeFixe"><label for="pasRegimeFixe">Mélange de sources variées</label></li>
         </ul>
         <br><br>
-        <button type="submit" class="quizz-button fade-in">Suivant</button>
+        <a href="/wellness-site/index.php/quizz-3/" class="quizz-button">Suivant</a>
 
     </form>
 

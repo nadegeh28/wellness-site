@@ -64,7 +64,7 @@
             </div>
         </div>
      
-</div>   <p class="phrasrecettes">Voir plus de recettes <a href="#" class="seereceipe">ici</a></p>
+</div>   <p class="phrasrecettes">Voir plus de recettes <a href="http://localhost:8888/wellness-site/index.php/regime-vegan/" class="seereceipe">ici</a></p>
     </section>
 
     <div class="fade-in">

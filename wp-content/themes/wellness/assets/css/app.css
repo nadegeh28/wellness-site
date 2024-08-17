@@ -92,6 +92,7 @@ nav ul li a:hover {
     color: #62891F;
     font-weight: 500;
     padding: 10px 15px; 
+    border-radius: 20px;
 }
 
 
@@ -305,7 +306,7 @@ color: #DCEDC8;
     left: 10px;
     width: 30px; 
     height: 45px;
-    background-color: #DCEDC8; /* Couleur verte */
+    background-color: #DCEDC8; 
     clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 70%, 0% 100%, 0% 0%);
     cursor: pointer;
     border: 2px solid #F2F2F2; 
@@ -499,9 +500,9 @@ margin-left: 0px;
 }
 
 .testimonial .userpic {
-    width: 150px; /* Ajustez la largeur selon vos besoins */
-    height: 150px; /* Ajustez la hauteur selon vos besoins */
-    border-radius: 50%; /* Cela rend l'image ronde */
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
     object-fit: cover;
     margin-bottom: 20px;
     margin-top: -70px;
@@ -592,8 +593,8 @@ margin-left: 0px;
     display: block;
     margin-top: 20px;
     font-size: 16px;
-    color: #6fb365;
-    text-decoration: none;
+    color: #62891F;
+
 }
 
 .diet-section {
@@ -682,6 +683,7 @@ margin-left: 0px;
 .startbtn{
     padding: 5px 35px;
     background-color: #8BC34A;
+    
     color: white;
     font-weight: bold;
     border-radius: 20px;
@@ -810,6 +812,7 @@ margin-left: 0px;
     margin-bottom: 70px;
     display: flex;
     float: right;
+    text-decoration: none;
 
 
 }

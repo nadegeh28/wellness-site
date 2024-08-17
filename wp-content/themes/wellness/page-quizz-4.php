@@ -15,7 +15,7 @@
                 <li><input type="radio" name="repas" id="pasRegimeFixe" value="pasRegimeFixe"><label for="pasRegimeFixe">Plats faibles en glucides</label></li>
             </ul>
             <br><br>
-            <button type="submit" class="quizz-button">Suivant</button>
+            <a href="/wellness-site/index.php/resultats/" class="quizz-button">Suivant</a>
         </form>
     </div>
 
