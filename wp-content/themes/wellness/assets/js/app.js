@@ -96,5 +96,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Fonction pour vérifier si une valeur est valide
+function validateField(input) {
+    const value = input.value.trim();
+    if (value === "") {
+        input.classList.remove('input-valid');
+        input.classList.add('input-error');
+    } else {
+        // Validation simple pour les e-mails
+        if (input.type === 'email' && !/\S+@\S+\.\S+/.test(value)) {
+            input.classList.remove('input-valid');
+            input.classList.add('input-error');
+        } else {
+            input.classList.remove('input-error');
+            input.classList.add('input-valid');
+        }
+    }
+}
+
+// Ajoutez des gestionnaires d'événements aux champs de formulaire
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.form-input').forEach(input => {
+        input.addEventListener('blur', () => validateField(input)); // Vérifie le champ lorsque le focus est perdu
+        input.addEventListener('input', () => validateField(input)); // Vérifie le champ en temps réel
+    });
+
+    // Soumet le formulaire lorsque le bouton est cliqué
+    document.getElementById('submit-button').addEventListener('click', function() {
+        document.getElementById('inscription-form').submit();
+    });
+});
 
 

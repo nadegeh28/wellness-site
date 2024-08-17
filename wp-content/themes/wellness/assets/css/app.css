@@ -1045,8 +1045,8 @@ width: 180px;
 }
 
 .error-message {
-    color: #fff;
-    background-color: #D8000C;
+    border: 2px solid #D8000C; 
+    background-color: #f7c7c2; 
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -1055,14 +1055,28 @@ width: 180px;
 }
 
 .success-message {
-    color: #fff;
-    background-color: #8BC34A;
+    border: 2px solid #8BC34A; 
+    background-color: #DCEDC8; 
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     text-align: center;
     font-size: 16px;
 }
+
+
+
+.input-error {
+    border: 2px solid #D8000C; 
+    background-color: #f7c7c2; 
+}
+
+
+.input-valid {
+    border: 2px solid #8BC34A; 
+    background-color: #DCEDC8; 
+}
+
 
 
 

@@ -68,13 +68,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
 
 <button type="button" class="btn-inscription" id="submit-button">Confirmer</button>
 
-<script>
-    document.getElementById('submit-button').addEventListener('click', function() {
-        document.getElementById('inscription-form').submit();
-    });
-</script>
-
 <?php get_footer(); ?>
-
-
-
