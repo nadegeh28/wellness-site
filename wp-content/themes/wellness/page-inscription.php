@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
             'user_email' => $email,
             'user_pass'  => $motdepasse,
             'first_name' => $prenom,
-            'role'       => 'subscriber' // Définissez le rôle souhaité pour l'utilisateur
+            'role'       => 'subscriber'
         );
 
         $user_id = wp_insert_user($user_data);
@@ -29,24 +29,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
             $response['message'] = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
             $response['message'] .= '<br>' . $user_id->get_error_message();
         } else {
-            // Ajoutez des métadonnées utilisateur
             update_user_meta($user_id, 'nom_complet', $prenom . ' ' . $nom);
 
             $response['success'] = true;
             $response['message'] = "Inscription réussie. Vous pouvez maintenant accéder à votre compte.";
-            // Optionnel: Ajoutez une redirection ici si vous le souhaitez
-            // $response['redirect'] = 'http://localhost:8888/wellness-site/index.php/quizz/';
         }
     }
 
-    // Renvoyer la réponse au format JSON
     header('Content-Type: application/json');
     echo json_encode($response);
     exit;
 }
 ?>
 
-<div class="container-form">
+<div class="container-form fade-in">
     <!-- Conteneur pour les messages -->
     <div id="message-container"></div>
     

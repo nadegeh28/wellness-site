@@ -45,7 +45,7 @@
                 <li><a href="#">MIND</a></li>
             </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/quizz/">Quizz</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/inscription/">Quizz</a></li>
     </ul>
 </nav>
         <div class="auth-buttons">
