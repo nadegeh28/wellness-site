@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         input.addEventListener('input', () => validateField(input)); // Vérifie le champ en temps réel
     });
 
+    // Soumet le formulaire lorsque le bouton est cliqué
     document.getElementById('submit-button').addEventListener('click', function() {
         var form = document.getElementById('inscription-form');
         var formData = new FormData(form);
@@ -138,14 +139,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.success) {
                 // Affiche le message de succès
                 messageContainer.innerHTML = `<div class="success-message">Votre inscription a été réalisée avec succès ! Vous pouvez maintenant vous connecter.</div>`;
+                // Optionnel : Redirection après le succès
+                if (data.redirect) {
+                    window.location.href = data.redirect;
+                }
             } else {
                 // Affiche le message d'erreur
                 messageContainer.innerHTML = `<div class="error-message">${data.message}</div>`;
-            }
-
-            // Optionnel : Redirection après le succès
-            if (data.redirect) {
-                window.location.href = data.redirect;
             }
         })
         .catch(error => {

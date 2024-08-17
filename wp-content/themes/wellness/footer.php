@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <footer class="footer mt-auto py-3">
+    <footer class="footer mt-auto py-3 fade-in">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="img-fluid" style="width: 120px; border-radius: 100px;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="img-fluid" style="width: 120px; border-radius: 100px;">
                 </div>
                 <div class="col-md-3">
                     <h5>Help</h5>
@@ -42,8 +42,5 @@
             </div>
         </div>
     </footer>
-
-
-
 </body>
 </html>

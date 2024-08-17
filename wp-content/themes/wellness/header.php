@@ -9,11 +9,21 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
  
     <style>
+        /* Ajout du CSS pour l'effet fade-in */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
 
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body <?php body_class(); ?>>
-<header class="navbar-custom py-3">
+<header class="navbar-custom py-3 fade-in">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
             <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="img-fluid" style="width: 120px;">
@@ -35,23 +45,18 @@
                 <li><a href="#">MIND</a></li>
             </ul>
         </li>
-        
         <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/quizz/">Quizz</a></li>
     </ul>
 </nav>
         <div class="auth-buttons">
     <a href="<?php echo wp_login_url(); ?>" class="btn btn-login">Se connecter</a>
     <a href="<?php echo wp_registration_url(); ?>" class="btn btn-register">S'inscrire</a>
-
-
     </div>
 </header>
 <?php wp_footer(); ?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
 
 </body>
 </html>
