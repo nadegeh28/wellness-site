@@ -96,30 +96,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Fonction pour vérifier si une valeur est valide
-function validateField(input) {
-    const value = input.value.trim();
-    if (value === "") {
-        input.classList.remove('input-valid');
-        input.classList.add('input-error');
-    } else {
-        if (input.type === 'email' && !/\S+@\S+\.\S+/.test(value)) {
-            input.classList.remove('input-valid');
-            input.classList.add('input-error');
-        } else {
-            input.classList.remove('input-error');
-            input.classList.add('input-valid');
-        }
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
+    // Fonction pour vérifier si une valeur est valide
     function validateField(input) {
         const value = input.value.trim();
         if (value === "") {
             input.classList.remove('input-valid');
             input.classList.add('input-error');
         } else {
+            // Validation simple pour les e-mails
             if (input.type === 'email' && !/\S+@\S+\.\S+/.test(value)) {
                 input.classList.remove('input-valid');
                 input.classList.add('input-error');
@@ -130,45 +115,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function displayMessage(message, type) {
-        const messageContainer = document.getElementById('message-container');
-        messageContainer.innerHTML = `<div class="${type}-message">${message}</div>`;
-        messageContainer.style.display = 'block';
-    }
-
+    // Ajoutez des gestionnaires d'événements aux champs de formulaire
     document.querySelectorAll('.form-input').forEach(input => {
-        input.addEventListener('blur', () => validateField(input));
-        input.addEventListener('input', () => validateField(input));
+        input.addEventListener('blur', () => validateField(input)); // Vérifie le champ lorsque le focus est perdu
+        input.addEventListener('input', () => validateField(input)); // Vérifie le champ en temps réel
     });
 
-    document.getElementById('submit-button').addEventListener('click', function(event) {
-        event.preventDefault(); // Empêche la soumission normale du formulaire
-
-        const form = document.getElementById('inscription-form');
-        const formData = new FormData(form);
+    document.getElementById('submit-button').addEventListener('click', function() {
+        var form = document.getElementById('inscription-form');
+        var formData = new FormData(form);
 
         fetch(form.action, {
             method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
+            body: formData
         })
         .then(response => response.json())
         .then(data => {
+            var messageContainer = document.getElementById('message-container');
+            messageContainer.style.display = 'block'; // Assure que le conteneur est affiché
+
+            // Vérifie la réponse et affiche le message approprié
             if (data.success) {
-                displayMessage(data.message, 'success');
-                if (data.redirect) {
-                    setTimeout(() => {
-                        window.location.href = data.redirect;
-                    }, 2000); // Redirection après 2 secondes pour permettre à l'utilisateur de lire le message
-                }
+                // Affiche le message de succès
+                messageContainer.innerHTML = `<div class="success-message">Votre inscription a été réalisée avec succès ! Vous pouvez maintenant vous connecter.</div>`;
             } else {
-                displayMessage(data.message, 'error');
+                // Affiche le message d'erreur
+                messageContainer.innerHTML = `<div class="error-message">${data.message}</div>`;
+            }
+
+            // Optionnel : Redirection après le succès
+            if (data.redirect) {
+                window.location.href = data.redirect;
             }
         })
         .catch(error => {
-            displayMessage('Une erreur est survenue. Veuillez réessayer.', 'error');
+            console.error('Erreur:', error);
+            var messageContainer = document.getElementById('message-container');
+            messageContainer.style.display = 'block'; // Assure que le conteneur est affiché en cas d'erreur
+            messageContainer.innerHTML = '<div class="error-message">Une erreur s\'est produite. Veuillez réessayer.</div>';
         });
     });
 });

@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
 <?php
-// Permettre l'accès à ce fichier via AJAX
-add_action('wp_ajax_nopriv_process_registration', 'process_registration');
-add_action('wp_ajax_process_registration', 'process_registration');
-
-function process_registration() {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['submit'] === 'inscription_form') {
     $nom = sanitize_text_field($_POST['nom']);
     $prenom = sanitize_text_field($_POST['prenom']);
     $email = sanitize_email($_POST['email']);
@@ -22,7 +18,8 @@ function process_registration() {
             'user_login' => $nom,
             'user_email' => $email,
             'user_pass'  => $motdepasse,
-            'first_name' => $prenom
+            'first_name' => $prenom,
+            'role'       => 'subscriber' // Définissez le rôle souhaité pour l'utilisateur
         );
 
         $user_id = wp_insert_user($user_data);
@@ -32,23 +29,28 @@ function process_registration() {
             $response['message'] = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
             $response['message'] .= '<br>' . $user_id->get_error_message();
         } else {
+            // Ajoutez des métadonnées utilisateur
+            update_user_meta($user_id, 'nom_complet', $prenom . ' ' . $nom);
+
             $response['success'] = true;
             $response['message'] = "Inscription réussie. Vous pouvez maintenant accéder à votre compte.";
-            $response['redirect'] = 'http://localhost:8888/wellness-site/index.php/quizz/';
+            // Optionnel: Ajoutez une redirection ici si vous le souhaitez
+            // $response['redirect'] = 'http://localhost:8888/wellness-site/index.php/quizz/';
         }
     }
 
-    wp_send_json($response);
+    // Renvoyer la réponse au format JSON
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    exit;
 }
 ?>
-
-<?php get_header(); ?>
 
 <div class="container-form">
     <!-- Conteneur pour les messages -->
     <div id="message-container"></div>
     
-    <form id="inscription-form" method="post" action="<?php echo admin_url('admin-ajax.php'); ?>" class="formulaire-inscription">
+    <form id="inscription-form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="formulaire-inscription">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="logo-inscr">
         <div class="form-group">
             <input type="text" id="nom" name="nom" required class="form-input" placeholder="Nom">
