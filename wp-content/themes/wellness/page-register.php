@@ -5,24 +5,30 @@ get_header();
 <div class="container-form fade-in">
     <div id="message-container">
         <?php
-        // Affichage des messages d'erreur ou de succès basés sur les paramètres d'URL
+        // Affichage des messages basés sur les paramètres d'URL
         if (isset($_GET['error'])) {
-            if ($_GET['error'] === 'password_mismatch') {
-                echo '<div class="error-message">Les mots de passe ne correspondent pas. Veuillez réessayer.</div>';
-            } elseif ($_GET['error'] === 'user_exists') {
-                echo '<div class="error-message">Cet identifiant existe déjà. Veuillez choisir un autre identifiant.</div>';
-            }
-            if (isset($_GET['details'])) {
-                echo '<div class="error-message">Détails : ' . esc_html($_GET['details']) . '</div>';
-            }
-        }
+            $error_code = sanitize_text_field($_GET['error']);
+            $error_message = '';
 
-        if (isset($_GET['success']) && $_GET['success'] === 'registration_success') {
-            echo '<div class="success-message">Inscription réussie. Vous pouvez maintenant accéder à votre compte.</div>';
+            switch ($error_code) {
+                case 'password_mismatch':
+                    $error_message = 'Les mots de passe ne correspondent pas. Veuillez réessayer.';
+                    break;
+                case 'registration_failed':
+                    $error_message = 'Une erreur est survenue lors de l\'inscription. Veuillez réessayer.';
+                    break;
+                default:
+                    $error_message = 'Une erreur inconnue est survenue. Veuillez réessayer.';
+                    break;
+            }
+
+            echo '<div class="error-message">' . esc_html($error_message) . '</div>';
+        } elseif (isset($_GET['success']) && $_GET['success'] === 'registration_success') {
+            echo '<div class="success-message">Inscription réussie ! Vous pouvez maintenant accéder à votre compte.</div>';
         }
         ?>
     </div>
-    
+
     <form id="inscription-form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="formulaire-inscription">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="logo-inscr">
         <div class="form-group">
@@ -46,6 +52,3 @@ get_header();
 </div>
 
 <?php get_footer(); ?>
-
-
-
