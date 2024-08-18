@@ -97,53 +97,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Fonction pour vérifier si une valeur est valide
-    function validateField(input) {
-        const value = input.value.trim();
-        if (value === "") {
-            input.classList.remove('input-valid');
-            input.classList.add('input-error');
+    const form = document.getElementById('inscription-form');
+    const messageContainer = document.getElementById('message-container');
+    
+    // Fonction pour valider un champ individuel
+    function validateField(field) {
+        if (field.value.trim() === '') {
+            field.classList.remove('input-valid');
+            field.classList.add('input-error');
+            return false;
         } else {
-            // Validation simple pour les e-mails
-            if (input.type === 'email' && !/\S+@\S+\.\S+/.test(value)) {
-                input.classList.remove('input-valid');
-                input.classList.add('input-error');
-            } else {
-                input.classList.remove('input-error');
-                input.classList.add('input-valid');
-            }
+            field.classList.remove('input-error');
+            field.classList.add('input-valid');
+            return true;
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('inscription-form');
-        
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Empêcher l'envoi du formulaire
-    
-            const formData = new FormData(form);
-    
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => response.json())
-            .then(data => {
-                const messageContainer = document.getElementById('message-container');
-                
-                if (data.success) {
-                    // Afficher le message de succès et rediriger
-                    messageContainer.innerHTML = `<div class="success-message">${data.data.message}</div>`;
-                    setTimeout(() => {
-                        window.location.href = data.data.redirect_url;
-                    }, 2000); // Attendre 2 secondes avant la redirection
-                } else {
-                    // Afficher le message d'erreur
-                    messageContainer.innerHTML = `<div class="error-message">${data.data.message}</div>`;
-                }
-            })
-            .catch(error => console.error('Error:', error));
+    // Fonction pour valider les mots de passe
+    function validatePasswords(password, passwordConfirm) {
+        if (password.value !== passwordConfirm.value || password.value.trim() === '') {
+            password.classList.add('input-error');
+            passwordConfirm.classList.add('input-error');
+            return false;
+        } else {
+            password.classList.remove('input-error');
+            passwordConfirm.classList.remove('input-error');
+            password.classList.add('input-valid');
+            passwordConfirm.classList.add('input-valid');
+            return true;
+        }
+    }
+
+    form.addEventListener('submit', function(event) {
+        let isValid = true;
+        messageContainer.innerHTML = ''; // Clear previous messages
+
+        const fields = ['nom', 'prenom', 'email', 'motdepasse', 'motdepasse-confirm'].map(id => document.getElementById(id));
+
+        fields.forEach(field => {
+            if (!validateField(field)) {
+                isValid = false;
+            }
         });
+
+        if (!validatePasswords(fields[3], fields[4])) {
+            isValid = false;
+            messageContainer.innerHTML = '<div class="error-message">Les mots de passe ne correspondent pas ou sont vides.</div>';
+        }
+
+        if (!isValid) {
+            event.preventDefault(); // Empêche la soumission du formulaire si les validations échouent
+            messageContainer.style.display = 'block';
+        }
     });
-    
 });

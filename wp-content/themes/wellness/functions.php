@@ -39,6 +39,11 @@ function theme_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
+
+
+
+
+
 function handle_custom_login() {
     // Vérification du nonce
     if (!isset($_POST['custom_login_nonce_field']) || !wp_verify_nonce($_POST['custom_login_nonce_field'], 'custom_login_nonce')) {
@@ -102,3 +107,18 @@ function handle_custom_registration() {
   }
 }
 add_action('init', 'handle_custom_registration');
+
+
+
+function enqueue_custom_scripts() {
+  // Enqueue le script de gestion de formulaire
+  wp_enqueue_script(
+      'custom-form-handler',
+      get_template_directory_uri() . '/js/app.js', // Chemin vers votre fichier JavaScript
+      array('jquery'), // Dépendances (si nécessaire)
+      null,
+      true // Charger le script dans le footer
+  );
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
