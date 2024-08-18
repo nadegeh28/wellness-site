@@ -1128,6 +1128,7 @@ width: 180px;
 }
 
 
+
 .email, .password {
     width: 100%;
     padding: 12px 30px;
@@ -1135,7 +1136,7 @@ width: 180px;
     border-radius: 30px;
     font-size: 15px;
     text-align: left; 
-    color: #8BC34A;
+    color: #707070;
     background-color: #F2F2F2;
     outline: none;
     margin-bottom: 20px;
@@ -1162,7 +1163,7 @@ width: 180px;
     background-color: #62891F;
 }
 
-/* Styles pour le logo */
+
 .logo-con {
     margin-bottom: 40px;
     width: 180px;

@@ -1,7 +1,9 @@
-<?php get_header(); ?>
-
 <?php
+get_header();
+
+// Vérifier si la méthode de la requête est POST et si le formulaire d'inscription est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['submit'] === 'inscription_form') {
+    // Assainir les données du formulaire
     $nom = sanitize_text_field($_POST['nom']);
     $prenom = sanitize_text_field($_POST['prenom']);
     $email = sanitize_email($_POST['email']);
@@ -10,11 +12,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
 
     $response = array();
 
+    // Vérifier si les mots de passe correspondent
     if ($motdepasse !== $motdepasse_confirm) {
         $response['success'] = false;
         $response['message'] = 'Les mots de passe ne correspondent pas.';
+
+        // Afficher le message d'erreur sur la page au lieu de tenter une redirection
+        echo json_encode($response);
+        exit;
     } else {
-        // Utilisation de la fonction WordPress pour enregistrer l'utilisateur
+        // Préparer les données de l'utilisateur pour l'inscription
         $user_data = array(
             'user_login' => $nom,
             'user_email' => $email,
@@ -23,33 +30,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
             'role'       => 'subscriber'
         );
 
-        // Inscription de l'utilisateur via WordPress
+        // Inscrire l'utilisateur
         $user_id = wp_insert_user($user_data);
 
         if (is_wp_error($user_id)) {
             $response['success'] = false;
             $response['message'] = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
             $response['message'] .= '<br>' . $user_id->get_error_message();
+
+            // Afficher le message d'erreur sur la page au lieu de tenter une redirection
+            echo json_encode($response);
+            exit;
         } else {
-            // Mettre à jour les métadonnées utilisateur si nécessaire
+            // Mettre à jour les métadonnées utilisateur
             update_user_meta($user_id, 'nom_complet', $prenom . ' ' . $nom);
 
-            // Ajout de l'utilisateur à Profile Builder (si nécessaire)
+            // Utilisation de Profile Builder
             do_action('wppb_register_user', $user_id);
 
+            // Préparer la réponse pour l'inscription réussie
             $response['success'] = true;
             $response['message'] = "Inscription réussie. Vous pouvez maintenant accéder à votre compte.";
+
+            // Afficher la réponse en JSON avant la redirection
+            echo json_encode($response);
+            exit;
         }
     }
-
-    header('Content-Type: application/json');
-    echo json_encode($response);
-    exit;
 }
 ?>
 
 <div class="container-form fade-in">
-    <!-- Conteneur pour les messages -->
     <div id="message-container"></div>
     
     <form id="inscription-form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" class="formulaire-inscription">
@@ -69,7 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
         <div class="form-group">
             <input type="password" id="motdepasse-confirm" name="motdepasse-confirm" required class="form-input" placeholder="Confirmation du mot de passe">
         </div>
-        <!-- Ajout du champ caché pour la soumission -->
         <input type="hidden" name="submit" value="inscription_form">
         <button type="submit" class="btn-inscription fade-in" id="submit-button">Confirmer</button>
     </form>
