@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
         $response['success'] = false;
         $response['message'] = 'Les mots de passe ne correspondent pas.';
     } else {
+        // Utilisation de la fonction WordPress pour enregistrer l'utilisateur
         $user_data = array(
             'user_login' => $nom,
             'user_email' => $email,
@@ -22,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
             'role'       => 'subscriber'
         );
 
+        // Inscription de l'utilisateur via WordPress
         $user_id = wp_insert_user($user_data);
 
         if (is_wp_error($user_id)) {
@@ -29,7 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
             $response['message'] = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
             $response['message'] .= '<br>' . $user_id->get_error_message();
         } else {
+            // Mettre à jour les métadonnées utilisateur si nécessaire
             update_user_meta($user_id, 'nom_complet', $prenom . ' ' . $nom);
+
+            // Ajout de l'utilisateur à Profile Builder (si nécessaire)
+            do_action('wppb_register_user', $user_id);
 
             $response['success'] = true;
             $response['message'] = "Inscription réussie. Vous pouvez maintenant accéder à votre compte.";
@@ -63,9 +69,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
         <div class="form-group">
             <input type="password" id="motdepasse-confirm" name="motdepasse-confirm" required class="form-input" placeholder="Confirmation du mot de passe">
         </div>
+        <!-- Ajout du champ caché pour la soumission -->
+        <input type="hidden" name="submit" value="inscription_form">
+        <button type="submit" class="btn-inscription fade-in" id="submit-button">Confirmer</button>
     </form>
 </div>
 
-<button type="button" class="btn-inscription fade-in" id="submit-button">Confirmer</button>
-
 <?php get_footer(); ?>
+

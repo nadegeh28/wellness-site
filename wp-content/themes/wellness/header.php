@@ -40,8 +40,8 @@
     </ul>
 </nav>
         <div class="auth-buttons fade-in">
-    <a href="http://localhost:8888/wellness-site/index.php/connexion/" class="btn btn-login">Se connecter</a>
-    <a href="http://localhost:8888/wellness-site/index.php/inscription/" class="btn btn-register">S'inscrire</a>
+    <a href="http://localhost:8888/wellness-site/index.php/login/" class="btn btn-login">Se connecter</a>
+    <a href="http://localhost:8888/wellness-site/index.php/register/" class="btn btn-register">S'inscrire</a>
 
 
     </div>

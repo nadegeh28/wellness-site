@@ -11,8 +11,8 @@
     
     <?php wp_nonce_field('custom_login_nonce', 'custom_login_nonce_field'); ?>
     
-    
+    <input type="submit" value="Se connecter" class="login-button fade-in">   
 </form>
-<input type="submit" value="Se connecter" class="login-button fade-in">
+
 
 <?php get_footer(); ?>

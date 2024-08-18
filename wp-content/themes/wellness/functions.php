@@ -67,6 +67,30 @@ function theme_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
 
+function handle_custom_login() {
+  // Vérification du nonce
+  if (!isset($_POST['custom_login_nonce_field']) || !wp_verify_nonce($_POST['custom_login_nonce_field'], 'custom_login_nonce')) {
+      wp_redirect(home_url());
+      exit;
+  }
+
+  $creds = array(
+      'user_login'    => $_POST['user_email'],
+      'user_password' => $_POST['user_password'],
+      'remember'      => true,
+  );
+
+  $user = wp_signon($creds, false);
+
+  if (is_wp_error($user)) {
+      wp_redirect(home_url('/login?login=failed'));
+  } else {
+      wp_redirect(home_url('/dashboard'));
+  }
+  exit;
+}
+add_action('admin_post_nopriv_custom_login', 'handle_custom_login');
+add_action('admin_post_custom_login', 'handle_custom_login');
 
 
 
