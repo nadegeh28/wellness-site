@@ -64,4 +64,46 @@ function handle_custom_login() {
 add_action('admin_post_nopriv_custom_login', 'handle_custom_login');
 add_action('admin_post_custom_login', 'handle_custom_login');
 
+
+
+
+
+
+function handle_custom_registration() {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['submit'] === 'inscription_form') {
+        $nom = sanitize_text_field($_POST['nom']);
+        $prenom = sanitize_text_field($_POST['prenom']);
+        $email = sanitize_email($_POST['email']);
+        $motdepasse = $_POST['motdepasse'];
+        $motdepasse_confirm = $_POST['motdepasse-confirm'];
+
+        if ($motdepasse !== $motdepasse_confirm) {
+            // Redirection avec un message d'erreur
+            wp_redirect(home_url('/register/?error=password_mismatch'));
+            exit;
+        } else {
+            $user_data = array(
+                'user_login' => $nom,
+                'user_email' => $email,
+                'user_pass'  => $motdepasse,
+                'first_name' => $prenom,
+                'role'       => 'subscriber'
+            );
+
+            $user_id = wp_insert_user($user_data);
+
+            if (is_wp_error($user_id)) {
+                // Redirection avec un message d'erreur
+                wp_redirect(home_url('/register/?error=user_exists&details=' . urlencode($user_id->get_error_message())));
+                exit;
+            } else {
+                // Redirection après inscription réussie
+                wp_redirect(home_url('/edit-profile/?success=registration_success'));
+                exit;
+            }
+        }
+    }
+}
+add_action('init', 'handle_custom_registration');
+
 ?>

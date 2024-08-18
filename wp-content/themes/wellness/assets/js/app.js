@@ -115,44 +115,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Ajoutez des gestionnaires d'événements aux champs de formulaire
-    document.querySelectorAll('.form-input').forEach(input => {
-        input.addEventListener('blur', () => validateField(input)); // Vérifie le champ lorsque le focus est perdu
-        input.addEventListener('input', () => validateField(input)); // Vérifie le champ en temps réel
-    });
-
-    // Soumet le formulaire lorsque le bouton est cliqué
-    document.getElementById('submit-button').addEventListener('click', function() {
-        var form = document.getElementById('inscription-form');
-        var formData = new FormData(form);
-
-        fetch(form.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            var messageContainer = document.getElementById('message-container');
-            messageContainer.style.display = 'block'; // Assure que le conteneur est affiché
-
-            // Vérifie la réponse et affiche le message approprié
-            if (data.success) {
-                // Affiche le message de succès
-                messageContainer.innerHTML = `<div class="success-message">Votre inscription a été réalisée avec succès ! Vous pouvez maintenant vous connecter.</div>`;
-                // Optionnel : Redirection après le succès
-                if (data.redirect) {
-                    window.location.href = data.redirect;
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('inscription-form');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêcher l'envoi du formulaire
+    
+            const formData = new FormData(form);
+    
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageContainer = document.getElementById('message-container');
+                
+                if (data.success) {
+                    // Afficher le message de succès et rediriger
+                    messageContainer.innerHTML = `<div class="success-message">${data.data.message}</div>`;
+                    setTimeout(() => {
+                        window.location.href = data.data.redirect_url;
+                    }, 2000); // Attendre 2 secondes avant la redirection
+                } else {
+                    // Afficher le message d'erreur
+                    messageContainer.innerHTML = `<div class="error-message">${data.data.message}</div>`;
                 }
-            } else {
-                // Affiche le message d'erreur
-                messageContainer.innerHTML = `<div class="error-message">${data.message}</div>`;
-            }
-        })
-        .catch(error => {
-            console.error('Erreur:', error);
-            var messageContainer = document.getElementById('message-container');
-            messageContainer.style.display = 'block'; // Assure que le conteneur est affiché en cas d'erreur
-            messageContainer.innerHTML = '<div class="error-message">Une erreur s\'est produite. Veuillez réessayer.</div>';
+            })
+            .catch(error => console.error('Error:', error));
         });
     });
+    
 });
