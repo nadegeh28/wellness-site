@@ -13,6 +13,6 @@
     
     <input type="submit" value="Se connecter" class="login-button fade-in">   
 </form>
-
+<br><br><br><br><br><br><br><br>
 
 <?php get_footer(); ?>
