@@ -151,3 +151,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('quizz-form');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche la soumission du formulaire
+
+        // Obtenir la réponse sélectionnée
+        const selectedOption = form.querySelector('input[name="repas"]:checked');
+
+        if (selectedOption) {
+            const value = selectedOption.value;
+
+            // Déterminez le type de régime recommandé en fonction de la réponse
+            let resultText = '';
+
+            switch (value) {
+                case 'reduce-sugar':
+                    resultText = 'Nous vous recommandons le Régime Sans Sucre.';
+                    break;
+                case 'lose-weight':
+                    resultText = 'Nous vous recommandons le Régime Perte de poids.';
+                    break;
+                case 'improve-health':
+                    resultText = 'Nous vous recommandons le Régime MIND.';
+                    break;
+                case 'manage-diabetes':
+                    resultText = 'Nous vous recommandons le Régime Diabétique.';
+                    break;
+                case 'plant-based':
+                    resultText = 'Nous vous recommandons le Régime VEGAN.';
+                    break;
+                default:
+                    resultText = 'Veuillez sélectionner une option.';
+            }
+
+            // Afficher le résultat
+            resultDiv.textContent = resultText;
+        } else {
+            resultDiv.textContent = 'Veuillez sélectionner une option.';
+        }
+    });
+});

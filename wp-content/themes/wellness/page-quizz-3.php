@@ -6,16 +6,31 @@
     </div>
 
     <div class="quizz-form fade-in">
-        <form method="post" action="#">
+        <form id="quizz-form" method="post">
             <ul class="quizz-options">
-                <li><input type="radio" name="repas" id="2repas" value="2repas"><label for="2repas">Réduire le sucre de mon alimentation</label></li>
-                <li><input type="radio" name="repas" id="3repas" value="3repas"><label for="3repas">Perdre du poids</label></li>
-                <li><input type="radio" name="repas" id="4repas" value="4repas"><label for="4repas">Améliorer ma santé</label></li>
-                <li><input type="radio" name="repas" id="3repasCollations" value="3repasCollations"><label for="3repasCollations">Gérer mon diabète</label></li>
-                <li><input type="radio" name="repas" id="pasRegimeFixe" value="pasRegimeFixe"><label for="pasRegimeFixe">Adopter un régime basé sur les plantes</label></li>
+                <li>
+                    <input type="radio" name="repas" id="reduce-sugar" value="reduce-sugar">
+                    <label for="reduce-sugar">Réduire le sucre de mon alimentation</label>
+                </li>
+                <li>
+                    <input type="radio" name="repas" id="lose-weight" value="lose-weight">
+                    <label for="lose-weight">Perdre du poids</label>
+                </li>
+                <li>
+                    <input type="radio" name="repas" id="improve-health" value="improve-health">
+                    <label for="improve-health">Améliorer ma santé</label>
+                </li>
+                <li>
+                    <input type="radio" name="repas" id="manage-diabetes" value="manage-diabetes">
+                    <label for="manage-diabetes">Gérer mon diabète</label>
+                </li>
+                <li>
+                    <input type="radio" name="repas" id="plant-based" value="plant-based">
+                    <label for="plant-based">Adopter un régime basé sur les plantes</label>
+                </li>
             </ul>
             <br><br>
-            <a href="/wellness-site/index.php/quizz-4/" class="quizz-button">Suivant</a>
+            <button type="submit" id="submit-button" class="quizz-button">Suivant</button>
         </form>
     </div>
 
@@ -25,8 +40,9 @@
         <span class="progress-dot active"></span>
         <span class="progress-dot"></span>
     </div>
-</div>
+
 
 <?php get_footer(); ?>
+
 
 
