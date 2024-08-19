@@ -1,10 +1,18 @@
 <?php
 /* Template Name: Page Résultats */
 get_header(); ?>
+<?php
+/* Template Name: Page Résultats */
+get_header(); ?>
 
 <div class="quizz-results-container">
+
+    <div class="logo-container">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logowelleness.png" alt="Wellness Logo" class="img-fluid" style="width: 180px; border-radius: 100px;">
+    </div>
+<br>
     <div class="quizz-title fade-in">
-        <h2>Votre Résultat</h2>
+        <p class="titleresult">Votre Résultat</p>
     </div>
 
     <div class="quizz-form fade-in">
@@ -12,6 +20,9 @@ get_header(); ?>
         <div id="result"></div>
     </div>
 
+    <p class="phrreg">Voir plus plus d'information <a href="http://localhost:8888/wellness-site/index.php/regimes" class="voirreg">ici</a></p>
+   
+    
     <div class="quizz-progress fade-in">
         <span class="progress-dot active"></span>
         <span class="progress-dot active"></span>
@@ -19,6 +30,9 @@ get_header(); ?>
         <span class="progress-dot active"></span>
     </div>
 </div>
+
+<?php get_footer(); ?>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
