@@ -13,10 +13,10 @@ get_header(); ?>
     </div>
 
     <div class="quizz-progress fade-in">
-        <span class="progress-dot"></span>
-        <span class="progress-dot"></span>
-        <span class="progress-dot"></span>
-        <span class="progress-dot"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
+        <span class="progress-dot active"></span>
     </div>
 </div>
 
@@ -60,5 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <?php get_footer(); ?>
+
+
 
 

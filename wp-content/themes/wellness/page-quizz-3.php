@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Quiz Page */
+/* Template Name: Page de Quiz */
 get_header(); ?>
 
 <div class="quizz-container">
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const value = selectedOption.value;
 
             // Redirection vers la page des résultats avec le paramètre de réponse
-            window.location.href = `/page-résultats/?result=${encodeURIComponent(value)}`;
+            window.location.href = 'http://localhost:8888/wellness-site/index.php/resultats/?result=' + encodeURIComponent(value);
         } else {
             alert('Veuillez sélectionner une option.');
         }
@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <?php get_footer(); ?>
+
 
 
 

@@ -837,8 +837,56 @@ margin-left: 0px;
 
 }
 
+
+/* Styles pour la Page Résultats */
+
+.quizz-results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.quizz-title h2 {
+    font-size: 2em;
+    color: #707070;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.quizz-form {
+    margin-bottom: 30px;
+}
+
+#result {
+    font-size: 1.2em;
+    color: #707070;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 .progress-dot.active {
     background-color: #62891F;
+    margin-bottom: 50px;
 }
 
 .regime-section {
