@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+/* Template Name: Quiz Page */
+get_header(); ?>
 
 <div class="quizz-container">
     <div class="quizz-title fade-in">
@@ -28,6 +30,10 @@
                     <input type="radio" name="repas" id="plant-based" value="plant-based">
                     <label for="plant-based">Adopter un régime basé sur les plantes</label>
                 </li>
+                <li>
+                    <input type="radio" name="repas" id="healthy-simply" value="healthy-simply">
+                    <label for="healthy-simply">Manger sainement simplement</label>
+                </li>
             </ul>
             <br><br>
             <button type="submit" id="submit-button" class="quizz-button">Suivant</button>
@@ -40,9 +46,33 @@
         <span class="progress-dot active"></span>
         <span class="progress-dot"></span>
     </div>
+</div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('quizz-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche la soumission du formulaire
+
+        // Obtenir la réponse sélectionnée
+        const selectedOption = form.querySelector('input[name="repas"]:checked');
+
+        if (selectedOption) {
+            const value = selectedOption.value;
+
+            // Redirection vers la page des résultats avec le paramètre de réponse
+            window.location.href = `/page-résultats/?result=${encodeURIComponent(value)}`;
+        } else {
+            alert('Veuillez sélectionner une option.');
+        }
+    });
+});
+</script>
 
 <?php get_footer(); ?>
+
+
 
 
 

@@ -155,44 +155,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('quizz-form');
-    const resultDiv = document.getElementById('result');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Empêche la soumission du formulaire
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche la soumission du formulaire
 
-        // Obtenir la réponse sélectionnée
-        const selectedOption = form.querySelector('input[name="repas"]:checked');
+            // Obtenir la réponse sélectionnée
+            const selectedOption = form.querySelector('input[name="repas"]:checked');
 
-        if (selectedOption) {
-            const value = selectedOption.value;
+            if (selectedOption) {
+                const value = selectedOption.value;
 
-            // Déterminez le type de régime recommandé en fonction de la réponse
-            let resultText = '';
-
-            switch (value) {
-                case 'reduce-sugar':
-                    resultText = 'Nous vous recommandons le Régime Sans Sucre.';
-                    break;
-                case 'lose-weight':
-                    resultText = 'Nous vous recommandons le Régime Perte de poids.';
-                    break;
-                case 'improve-health':
-                    resultText = 'Nous vous recommandons le Régime MIND.';
-                    break;
-                case 'manage-diabetes':
-                    resultText = 'Nous vous recommandons le Régime Diabétique.';
-                    break;
-                case 'plant-based':
-                    resultText = 'Nous vous recommandons le Régime VEGAN.';
-                    break;
-                default:
-                    resultText = 'Veuillez sélectionner une option.';
+                // Redirection vers la page des résultats avec le paramètre de réponse
+                window.location.href = `/page-resultats/?result=${encodeURIComponent(value)}`;
+            } else {
+                alert('Veuillez sélectionner une option.');
             }
+        });
+    }
 
-            // Afficher le résultat
-            resultDiv.textContent = resultText;
-        } else {
-            resultDiv.textContent = 'Veuillez sélectionner une option.';
+    // Cette section est pour la page des résultats uniquement
+    const resultDiv = document.getElementById('result');
+    if (resultDiv) {
+        // Récupérer les données de la réponse depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultValue = urlParams.get('result');
+
+        // Déterminer le texte de résultat en fonction de la réponse
+        let resultText = '';
+
+        switch (resultValue) {
+            case 'reduce-sugar':
+                resultText = 'Nous vous recommandons le Régime Sans Sucre.';
+                break;
+            case 'lose-weight':
+                resultText = 'Nous vous recommandons le Régime Perte de poids.';
+                break;
+            case 'improve-health':
+                resultText = 'Nous vous recommandons le Régime MIND.';
+                break;
+            case 'manage-diabetes':
+                resultText = 'Nous vous recommandons le Régime Diabétique.';
+                break;
+            case 'plant-based':
+                resultText = 'Nous vous recommandons le Régime VEGAN.';
+                break;
+            case 'healthy-simply':
+                resultText = 'Nous vous recommandons le Régime Simple.';
+                break;
+            default:
+                resultText = 'Veuillez retourner au quiz et sélectionner une option.';
         }
-    });
+
+        // Afficher le texte de résultat
+        resultDiv.textContent = resultText;
+    }
 });
