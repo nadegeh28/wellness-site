@@ -23,7 +23,7 @@
         <nav class="fade-in">
     <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/accueil/">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/forum/">Forum</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost:8888/wellness-site/index.php/blog/">Blog</a></li>
         <li class="nav-item dropdown">
             <a class="nav-link" href="http://localhost:8888/wellness-site/index.php/regimes/">Régimes</a>
             <ul class="dropdown-menu">

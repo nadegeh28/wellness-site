@@ -1207,7 +1207,7 @@ section {
 }
 
 /* Pour s'assurer que les articles sont alignés correctement */
-.top-articles{}
+.top-articles
 .bottom-articles {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -1256,7 +1256,7 @@ section {
 }
 
 .special-article-1 img {
-    height: 220px; /* Hauteur de l'image plus grande */
+    height: 230px; /* Hauteur de l'image plus grande */
 }
 
 /* Styles spécifiques pour l'article 4 */
@@ -1275,4 +1275,14 @@ section {
 
 .special-article-5 img {
     height: 200px; /* Hauteur de l'image plus grande */
+}
+
+.part1, .part2 {
+    margin: 0; /* Supprime les marges par défaut pour éviter l'espacement */
+    padding: 0; /* Supprime le padding par défaut */
+    text-align: left;
+}
+
+.part2 {
+  margin-bottom: 100px; /* Ajustez la couleur selon vos préférences */
 }
