@@ -2,13 +2,14 @@
 
     <div class="container fade-in">
         <article>
-            <h3 class="titreblog fade-in">La Motivation pour Adopter un Régime : Stratégies et Conseils pour Réussir</h3>
+            <h3 class="titreblog fade-in">Les Bienfaits des Super-Aliments : Pourquoi Vous Devriez les Inclure 
+            dans Votre Régime</h3>
             <div class="image-container">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-2.jpg" alt="Article" class="imageblog2" height="500">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-3.jpg" alt="Article" class="imageblog2" height="500">
         
 
                 <p class="textblog fade-in">
-                Suivre un régime alimentaire peut être un défi important qui nécessite non seulement des ajustements physiques, mais aussi une forte dose de motivation. La motivation est la clé pour surmonter les obstacles et maintenir les changements nécessaires pour atteindre vos objectifs de santé. Dans cet article, nous examinerons comment maintenir votre motivation tout au long de votre parcours de régime.
+                Les régimes végétariens, qui excluent la consommation de viande et parfois d’autres produits d’origine animale, sont devenus de plus en plus populaires dans le monde entier. Que ce soit pour des raisons de santé, environnementales ou éthiques, de nombreuses personnes choisissent ce mode de vie alimentaire. Dans cet article, nous explorerons les différents types de régimes végétariens, leurs avantages, ainsi que des conseils pratiques pour suivre ce régime de manière équilibrée.
 
           </p>
 </div>
