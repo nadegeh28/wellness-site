@@ -1117,7 +1117,7 @@ width: 180px;
     font-size: 26px;
     color: #62891F;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     font-weight: bolder;
     text-align: left;
 }
@@ -1130,20 +1130,23 @@ width: 180px;
     margin-bottom: 30px;
 }
 
-.image-container img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 20px;
-}
+
 
 .image-container p {
     flex: 1;
-    font-size: 16px;
+    font-size: 20px;
     color: #707070;
     text-align: justify;
+    margin-right: 300px;
 }
 
+
+.imageblog{
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    margin-right: 30px;
+}
 
 .tilteblog {
     font-size: 20px;
@@ -1156,7 +1159,7 @@ width: 180px;
 
 .textblog {
     font-size: 16px;
-    color: #333;
+    color: #707070;
     margin-bottom: 20px;
     line-height: 1.8;
     text-align: justify;

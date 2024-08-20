@@ -1,14 +1,19 @@
 <?php get_header();?>
 
-    <div class="container">
+    <div class="container fade-in">
         <article>
             <h3 class="titreblog fade-in">Les Avantages et Défis du Régime Vegan : Une Analyse Approfondie</h3>
             <div class="image-container">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/article-1.jpg" alt="Article" class="imageblog">
+        
 
                 <p class="textblog fade-in">
                 Les régimes végétariens, qui excluent la consommation de viande et parfois d’autres produits d’origine animale, sont devenus de plus en plus populaires dans le monde entier. Que ce soit pour des raisons de santé, environnementales ou éthiques, de nombreuses personnes choisissent ce mode de vie alimentaire. Dans cet article, nous explorerons les différents types de régimes végétariens, leurs avantages, ainsi que des conseils pratiques pour suivre ce régime de manière équilibrée.
-                </p>
-            </div>
+
+          </p>
+</div>
+
+<br><br>
             
             <section class="fade-in">
                 <p class="tilteblog fade-in">Différents Types de Régimes Végétariens</p>
