@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header(); ?>
 
 <div class="forum-container fade-in">
     <h3 class="part1 fade-in">N'hésitez pas à poser vos questions</h3>
@@ -90,31 +90,14 @@
         <?php endforeach; ?>
     </div>
 
-    <!-- Formulaire de soumission de commentaires -->
+    <!-- Formulaire de soumission de commentaires avec wpDiscuz -->
     <div class="forum-comment-form fade-in">
         <?php
-        $comment_form_args = array(
-            'title_reply' => '',
-            'label_submit' => __('Envoyez', 'textdomain'),
-            'comment_field' => '<textarea id="comment" name="comment" aria-required="true" placeholder="Partagez votre ressenti" class="fade-in"></textarea>',
-            'fields' => array(
-                'author' => '<p class="comment-form-author fade-in"><input id="author" name="author" type="text" placeholder="Nom" size="30" required /></p>',
-                'email' => '<p class="comment-form-email fade-in"><input id="email" name="email" type="email" placeholder="Email" size="30" required /></p>',
-            ),
-            'class_submit' => 'custom-submit-button fade-in',
-        );
-
-        comment_form($comment_form_args);
+        if (function_exists('wpdiscuz')) {
+            wpdiscuz();
+        }
         ?>
     </div>
-
-    <!-- Bouton personnalisé pour soumettre les commentaires -->
-    <div class="submit-button-container fade-in">
-        <button type="submit" class="custom-submit-button">Envoyez</button>
-    </div>
-
 </div>
 
 <?php get_footer(); ?>
-
-
