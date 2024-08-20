@@ -78,6 +78,9 @@
                 </p>
 
 
+                <p class="textblog fade-in">
+                En conclusion, un régime végétarien peut offrir de nombreux avantages pour la santé et l’environnement, à condition qu’il soit bien planifié et équilibré. En suivant ces conseils, vous pouvez adopter un mode de vie végétarien tout en bénéficiant d’une alimentation saine et variée.
+
 
             </section>
             
