@@ -1143,7 +1143,7 @@ width: 180px;
 
 .imageblog{
     width: 300px;
-    height: auto;
+    height: 350px;
     border-radius: 30px;
     margin-right: 30px;
 }
@@ -1179,13 +1179,6 @@ section {
 }
 
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #4caf50;
-    color: white;
-    margin-top: 40px;
-}
 
 @media (max-width: 768px) {
     .image-container {
@@ -1199,13 +1192,87 @@ footer {
     }
 }
 
+.blog-container {
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 40px;
+}
 
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centre les éléments horizontalement */
+    grid-template-rows: auto; /* Assure que les lignes s'ajustent automatiquement */
+}
 
+/* Pour s'assurer que les articles sont alignés correctement */
+.top-articles{}
+.bottom-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centre les éléments horizontalement */
+    width: 100%; /* Assure que la largeur occupe toute la grille */
+    grid-column: 1 / -1;
+    margin-left: 350px; /* Fait en sorte que ces sections occupent toute la largeur de la grille */
+}
 
+/* Styles par défaut pour les cartes */
+.article-card {
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+}
 
+.article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
+.article-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+}
 
+.article-card p {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #62891F; /* Retire le soulignement des liens */
+}
 
+/* Styles spécifiques pour l'article 1 */
+.special-article-1 {
+    height: 350px; /* Hauteur plus grande */
+}
 
+.special-article-1 img {
+    height: 220px; /* Hauteur de l'image plus grande */
+}
 
+/* Styles spécifiques pour l'article 4 */
+.special-article-4 {
+    height: 350px; /* Hauteur plus grande */
+}
 
+.special-article-4 img {
+    height: 200px; /* Hauteur de l'image plus grande */
+}
+
+/* Styles spécifiques pour l'article 5 */
+.special-article-5 {
+    height: 350px; /* Hauteur plus grande */
+}
+
+.special-article-5 img {
+    height: 200px; /* Hauteur de l'image plus grande */
+}
