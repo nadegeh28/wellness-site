@@ -942,115 +942,6 @@ margin-left: 0px;
 }
  
 
-.forum-container {
-    max-width: 800px;
-    margin:auto;
-    padding: 20px ;
-}
-
-.forum-comments .comment-item {
-    display: flex;
-    align-items: flex-start;
-    border: 2px solid #62891F;
-    background-color: #F2F2F2;
-    margin-bottom: 30px;
-    padding: 20px 30px;
-    border-radius: 35px;
-}
-
-.comment-author-avatar img {
-    border-radius: 50%;
-    width: 80px;
-}
-
-.comment-content {
-    margin-left: 15px;
-}
-
-.comment-author-name {
-    font-weight: bold;
-    color: #62891F;
-    font-size: 20px;
-}
-
-.comment-text {
-    margin-top: 2px;
-    color: #707070;
-    font-weight: 500;
-}
-
-.forum-comment-form {
-
-    margin-top: 20px;
-    padding:40px 40px;
-    border: 2px solid #62891F;
-    background-color: #F2F2F2;
-    border-radius: 60px;
-    margin-top: 200px;
-
-    
-}
-
-.forum-comment-form textarea {
-    border: none;
-    font-size: 16px;
-    color: #62891F;
-    background-color: #F2F2F2;
-    font-weight: 100;
-    margin-left: 20px;
-    margin-top: 10px;
-    resize: none;
-    height: 100px;
-    outline: none;
-}
-
-.custom-submit-button {
-    padding: 5px 20px;
-    border: none;
-    border-radius: 30px;
-    background-color: #8BC34A;
-    color: #ffff;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    margin: 5px 0 0 auto;
-    margin-bottom: 150px;
-    margin-left: 650px;
-    margin-top: 20px;
-    font-weight: bold;
-    display: block;
-
-
-}
-.custom-submit-button:hover {
-    background-color: #62891F;
-}
-
-.comment-form-author input, 
-.comment-form-email input, 
-.comment-form-comment textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.custom-submit-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #8BC34A;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    margin: 20px 0;
-}
-
-
-
-
 
 
 .container-form {
@@ -1210,4 +1101,101 @@ width: 180px;
     margin-left: auto; 
     margin-right: auto; 
 }
+
+
+
+/* Mise en page du conteneur principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Style pour le titre principal du blog */
+.titreblog {
+    font-size: 26px;
+    color: #62891F;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+/* Conteneur de l'image et du texte explicatif */
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.image-container p {
+    flex: 1;
+    font-size: 16px;
+    color: #707070;
+    text-align: justify;
+}
+
+
+.tilteblog {
+    font-size: 20px;
+    color: #62891F;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+
+.textblog {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Ajouter un peu d'espace entre les différentes sections du texte */
+section {
+    margin-bottom: 40px;
+}
+
+/* Style du footer (si applicable) */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4caf50;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Adapter le conteneur de l'image pour les petits écrans */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-container img {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
