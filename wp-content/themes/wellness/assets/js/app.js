@@ -61,12 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Adresse URL de l'API REST de WordPress pour publier des commentaires
-        const apiUrl = 'http://localhost:8888/wellness-site/wp-json/wp/v2/comments';
-
+        const apiUrl = wpApiSettings.root + 'wp/v2/comments';
 
         // Préparer les données à envoyer
         const data = {
-            post: 1, // Remplacer par l'ID de l'article ou de la page
+            post: wpApiSettings.post_id, // Utiliser l'ID du post passé depuis PHP
             content: comment
         };
 
@@ -94,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {

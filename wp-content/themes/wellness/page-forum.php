@@ -6,7 +6,7 @@
     <br>
 
     <div class="forum-comments fade-in">
-        <!-- Commentaire 1 -->
+        <!-- Commentaires statiques -->
         <div class="comment-item fade-in">
             <div class="comment-author-avatar fade-in">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user1.png" alt="Alicia Carmen">
@@ -17,7 +17,6 @@
             </div>
         </div>
 
-        <!-- Commentaire 2 -->
         <div class="comment-item fade-in">
             <div class="comment-author-avatar fade-in">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user2.png" alt="Lorie Samba">
@@ -28,7 +27,6 @@
             </div>
         </div>
 
-        <!-- Commentaire 3 -->
         <div class="comment-item fade-in">
             <div class="comment-author-avatar fade-in">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user3.png" alt="Mathy Eka">
@@ -39,7 +37,6 @@
             </div>
         </div>
 
-        <!-- Commentaire 4 -->
         <div class="comment-item fade-in">
             <div class="comment-author-avatar fade-in">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user4.png" alt="Maeva Martinez">
@@ -50,7 +47,6 @@
             </div>
         </div>
 
-        <!-- Commentaire 5 -->
         <div class="comment-item fade-in">
             <div class="comment-author-avatar fade-in">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user5.png" alt="Danielle Evan">
@@ -61,7 +57,6 @@
             </div>
         </div>
 
-        <!-- Commentaire 6 -->
         <div class="comment-item fade-in">
             <div class="comment-author-avatar fade-in">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user6.png" alt="Kayla Rosa">
@@ -71,29 +66,55 @@
                 <p class="comment-text fade-in">Est-ce que je peux essayer les plats d’un régime MIND même si je suis un régime Simple ?</p>
             </div>
         </div>
+
+        <!-- Commentaires dynamiques venant de la base de données -->
+        <?php
+        // Fetch the comments for this page
+        $comments = get_comments(array(
+            'post_id' => get_the_ID(),
+            'status' => 'approve', // Only show approved comments
+        ));
+
+        // Display each comment
+        foreach ($comments as $comment) :
+        ?>
+            <div class="comment-item fade-in">
+                <div class="comment-author-avatar fade-in">
+                    <?php echo get_avatar($comment->comment_author_email, 64); ?>
+                </div>
+                <div class="comment-content fade-in">
+                    <h3 class="comment-author-name fade-in"><?php echo esc_html($comment->comment_author); ?></h3>
+                    <p class="comment-text fade-in"><?php echo esc_html($comment->comment_content); ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 
-    <!-- Formulaire de commentaire -->
+    <!-- Formulaire de soumission de commentaires -->
     <div class="forum-comment-form fade-in">
         <?php
         $comment_form_args = array(
             'title_reply' => '',
             'label_submit' => __('Envoyez', 'textdomain'),
             'comment_field' => '<textarea id="comment" name="comment" aria-required="true" placeholder="Partagez votre ressenti" class="fade-in"></textarea>',
-            'fields' => apply_filters('comment_form_default_fields', array(
-                'author' => '<p class="comment-form-author fade-in"><input id="author" name="author" type="text" placeholder="Nom" size="30" /></p>',
-                'email' => '<p class="comment-form-email fade-in"><input id="email" name="email" type="email" placeholder="Email" size="30" /></p>',
-            )),
-            'class_submit' => 'submit-button fade-in',
+            'fields' => array(
+                'author' => '<p class="comment-form-author fade-in"><input id="author" name="author" type="text" placeholder="Nom" size="30" required /></p>',
+                'email' => '<p class="comment-form-email fade-in"><input id="email" name="email" type="email" placeholder="Email" size="30" required /></p>',
+            ),
+            'class_submit' => 'custom-submit-button fade-in',
         );
 
         comment_form($comment_form_args);
         ?>
-        <div class="custom-comment-form fade-in">
-            <textarea class="custom-comment-field fade-in" placeholder="Partagez votre ressenti"></textarea>
-        </div>
     </div>
-    <button class="custom-submit-button fade-in">Envoyez</button>
+
+    <!-- Bouton personnalisé pour soumettre les commentaires -->
+    <div class="submit-button-container fade-in">
+        <button type="submit" class="custom-submit-button">Envoyez</button>
+    </div>
+
 </div>
 
-<?php get_footer();?>
+<?php get_footer(); ?>
+
+

@@ -1026,6 +1026,29 @@ margin-left: 0px;
     background-color: #62891F;
 }
 
+.comment-form-author input, 
+.comment-form-email input, 
+.comment-form-comment textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.custom-submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8BC34A;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px 0;
+}
+
+
 
 
 
