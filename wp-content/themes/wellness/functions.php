@@ -152,10 +152,9 @@ function my_enqueue_scripts() {
     wp_enqueue_script('my-custom-script', get_template_directory_uri() . '/js/app.js', array('jquery'), null, true);
 
     // Passer les variables PHP au JavaScript
-    wp_localize_script('my-custom-script', 'wpApiSettings', array(
-        'root'  => esc_url(rest_url()),
-        'nonce' => wp_create_nonce('wp_rest'),
-        'post_id' => get_the_ID(), // Passer l'ID du post
+    wp_localize_script('my-custom-script', 'ajax_params', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('ajax_nonce')
     ));
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
@@ -187,6 +186,9 @@ function save_journal_entry() {
         wp_send_json_error('Vous devez être connecté pour enregistrer un journal.');
         return;
     }
+
+    // Vérifiez le nonce pour la sécurité
+    check_ajax_referer('ajax_nonce', 'nonce');
 
     // Obtenez les données envoyées via AJAX
     if (isset($_POST['entry'])) {
@@ -221,5 +223,8 @@ function save_journal_entry() {
 // Enregistrez les actions AJAX
 add_action('wp_ajax_save_journal_entry', 'save_journal_entry');
 add_action('wp_ajax_nopriv_save_journal_entry', 'save_journal_entry'); // Non nécessaire si vous ne voulez pas que les utilisateurs non connectés puissent ajouter des entrées
+
+
+
 
 ?>

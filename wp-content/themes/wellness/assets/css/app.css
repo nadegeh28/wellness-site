@@ -133,7 +133,7 @@ nav ul li a:hover {
 
 .auth-buttons .btn-login:hover {
 
-    color: #689F38;
+    color: #8BC34A;
 }
 
 
@@ -148,6 +148,51 @@ nav ul li a:hover {
     text-decoration: none;
     color: #DCEDC8;
 }
+
+
+
+.auth-buttons .btn-profile {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #689F38; 
+    border-radius: 70px;
+    border: none;
+    transition:  0.3s ease;
+}
+
+.auth-buttons .btn-profile:hover {
+    background-color: #62891F;
+    color: #DCEDC8;
+}
+
+.auth-buttons .btn-logout {
+    display: inline-block;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: #62891F;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons .btn-logout:hover {
+    color: #8BC34A;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+    .btn-profile, .btn-logout {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
 
 
 

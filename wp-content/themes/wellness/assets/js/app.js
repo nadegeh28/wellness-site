@@ -163,3 +163,29 @@ document.addEventListener('DOMContentLoaded', function() {
         resultDiv.textContent = resultText;
     }
 });
+
+jQuery(document).ready(function($) {
+    $('#journal-entry').on('input', function() {
+        var entry = $(this).val();
+        $.ajax({
+            url: ajax_params.ajax_url, // Utilisation de la variable localisée
+            type: 'POST',
+            data: {
+                action: 'save_journal_entry', // Nom de l'action AJAX
+                nonce: ajax_params.nonce, // Ajout du nonce pour la sécurité
+                entry: entry
+            },
+            success: function(response) {
+                if (response.success) {
+                    $('#status-message').text('Enregistré');
+                } else {
+                    $('#status-message').text('Erreur lors de l\'enregistrement');
+                }
+            },
+            error: function() {
+                $('#status-message').text('Erreur lors de l\'enregistrement');
+            }
+        });
+    });
+});
+

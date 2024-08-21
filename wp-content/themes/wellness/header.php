@@ -36,7 +36,8 @@
         </nav>
         <div class="auth-buttons fade-in">
             <?php if (is_user_logged_in()) : ?>
-                <a href="<?php echo 'http://localhost:8888/wellness-site/index.php/author/' . $username; ?>" class="btn btn-profile">Mon Profil</a>
+                <?php $current_user = wp_get_current_user(); ?>
+                <a href="<?php echo 'http://localhost:8888/wellness-site/index.php/author/' . $current_user->user_login; ?>" class="btn btn-profile">Mon Profil</a>
                 <a href="<?php echo wp_logout_url('http://localhost:8888/wellness-site/index.php/accueil/'); ?>" class="btn btn-logout">Se déconnecter</a>
             <?php else : ?>
                 <a href="http://localhost:8888/wellness-site/index.php/login/" class="btn btn-login">Se connecter</a>
@@ -73,4 +74,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
 

@@ -92,10 +92,17 @@ if (is_user_logged_in()) {
 
 
     <div class="section-title fade-in">
-        <h2 class="tilteauthor">Journal</h2>
-
-    </div>
-    <div class="journal-container fade-in">
+    <h2 class="tilteauthor">Journal</h2>
+</div>
+<div class="journal-container fade-in">
+    <p class="profilph">Le journal nutritionnel vous permet de suivre vos habitudes alimentaires et de consigner vos repas pour mieux gérer votre nutrition et atteindre vos objectifs.</p>
+    <textarea id="journal-entry" rows="10" cols="50" placeholder="Écrivez ici..."></textarea>
+    <div id="status-message"></div>
+</div>
+<div class="section-title fade-in">
+    <h2 class="tilteauthor">Journal</h2>
+</div>
+<div class="journal-container fade-in">
     <p class="profilph">Le journal nutritionnel vous permet de suivre vos habitudes alimentaires et de consigner vos repas pour mieux gérer votre nutrition et atteindre vos objectifs.</p>
     <textarea id="journal-entry" rows="10" cols="50" placeholder="Écrivez ici..."></textarea>
     <div id="status-message"></div>
@@ -103,18 +110,23 @@ if (is_user_logged_in()) {
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(function() {
+    jQuery(document).ready(function($) {
         $('#journal-entry').on('input', function() {
             var entry = $(this).val();
             $.ajax({
-                url: '<?php echo admin_url('admin-ajax.php'); ?>', // URL de l'admin AJAX de WordPress
+                url: ajax_params.ajax_url, // Utilisation de la variable localisée
                 type: 'POST',
                 data: {
                     action: 'save_journal_entry', // Nom de l'action AJAX
+                    nonce: ajax_params.nonce, // Ajout du nonce pour la sécurité
                     entry: entry
                 },
                 success: function(response) {
-                    $('#status-message').text('Enregistré');
+                    if (response.success) {
+                        $('#status-message').text('Enregistré');
+                    } else {
+                        $('#status-message').text('Erreur lors de l\'enregistrement');
+                    }
                 },
                 error: function() {
                     $('#status-message').text('Erreur lors de l\'enregistrement');
@@ -123,6 +135,8 @@ if (is_user_logged_in()) {
         });
     });
 </script>
+
+
 
 
 

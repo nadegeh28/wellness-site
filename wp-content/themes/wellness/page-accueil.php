@@ -78,8 +78,8 @@
             </div>
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/forum2.png" alt="Forum actif">
-                <h3 class="services">Forum actif</h3>
-                <p>Rejoignez notre forum interactif pour échanger avec une communauté passionnée de nutrition. Posez vos questions, partagez vos expériences et découvrez de nouveaux conseils pour une alimentation saine!</p>
+                <h3 class="services">Blog intéressant</h3>
+                <p>Découvrez notre blog dédié à la nutrition pour des conseils précieux, des recettes savoureuses et des astuces pour une alimentation équilibrée. Lisez nos articles, posez vos questions, partagez vos expériences et enrichissez votre parcours vers une vie plus saine !</p>
             </div>
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/quizzic.png" alt="Quizz ultime" class="quizzic">
