@@ -93,7 +93,7 @@ if (is_user_logged_in()) {
 
 
     <div class="section-title fade-in">
-        <h2 class="tilteauthor">Objectif de nutrition</h2>
+        <h2 class="tilteauthor">Objectif</h2>
     </div>
 
     <?php
@@ -114,10 +114,10 @@ if (is_user_logged_in()) {
     ?>
 
     <form method="post" action="">
-        <label for="calorie_goal">Objectif Calorique :</label>
+        <label for="calorie_goal">But du régime :</label>
         <input type="text" id="calorie_goal" name="calorie_goal" value="<?php echo esc_attr($calorie_goal); ?>" required>
 
-        <label for="protein_goal">Objectif Protéines :</label>
+        <label for="protein_goal">Avancée du régime :</label>
         <input type="text" id="protein_goal" name="protein_goal" value="<?php echo esc_attr($protein_goal); ?>" required>
 
         <input type="submit" name="update_goals" value="Mettre à jour">
