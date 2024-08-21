@@ -125,6 +125,51 @@ if (is_user_logged_in()) {
 </script>
 
 
+
+<div class="blog-container fade-in">
+<h2 class="tilteauthor">Articles</h2>
+<p class="profilph1">Nous avons ajouté de nouveaux articles intéressants pour vous ! Découvrez-les ci-dessous et laissez-vous inspirer par nos dernières recommandations.</p>
+
+
+<div class="articles-grid-blog">
+<?php
+        $articles = [
+            
+            [
+                'link' => 'http://localhost:8888/wellness-site/index.php/article-2/',
+                'img_src' => get_template_directory_uri() . '/assets/img/article-2.jpg',
+                'alt' => 'La Motivation pour Adopter un Régime',
+                'title' => 'La Motivation pour Adopter un Régime : Stratégies et Conseils pour Réussir'
+            ],
+            [
+                'link' => 'http://localhost:8888/wellness-site/index.php/article-4/',
+                'img_src' => get_template_directory_uri() . '/assets/img/article-4.jpg',
+                'alt' => 'Les 7 Bienfaits de Faire un Régime',
+                'title' => 'Les 7 Bienfaits de Faire un Régime : Pourquoi Adopter une Alimentation Contrôlée ?'
+            ],
+            [
+                'link' => 'http://localhost:8888/wellness-site/index.php/article-3/',
+                'img_src' => get_template_directory_uri() . '/assets/img/article-3.jpg',
+                'alt' => 'Les Bienfaits des Super-Aliments',
+                'title' => 'Les Bienfaits des Super-Aliments : Pourquoi Vous Devriez les Inclure dans Votre Régime'
+            ],
+        ];
+
+        // Boucle à travers les articles et affichage
+        foreach ($articles as $article) {
+            $class = isset($article['class']) ? $article['class'] : '';
+            ?>
+            <a href="<?php echo $article['link']; ?>" class="article-card <?php echo $class; ?>">
+                <img src="<?php echo $article['img_src']; ?>" alt="<?php echo $article['alt']; ?>" class="imageblog2">
+                <p><?php echo $article['title']; ?></p>
+            </a>
+            <?php
+        }
+        ?>
+    </div>
+</div>
+
+
 <?php
 } else {
     // Si l'utilisateur n'est pas connecté, afficher un message
