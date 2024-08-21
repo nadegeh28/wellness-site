@@ -167,10 +167,32 @@ add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 // Ajouter une action AJAX pour les utilisateurs connectés
 add_action('wp_ajax_save_journal_entry', 'save_journal_entry');
 
+// Fonction pour créer la table du journal lors de l'activation du thème
+function create_journal_table() {
+    global $wpdb;
+
+    $table_name = $wpdb->prefix . 'journal';
+    $charset_collate = $wpdb->get_charset_collate();
+
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        user_id bigint(20) NOT NULL,
+        entry text NOT NULL,
+        created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+add_action('after_switch_theme', 'create_journal_table');
+
+// Fonction pour enregistrer une entrée de journal via AJAX
 function save_journal_entry() {
     // Assurez-vous que l'utilisateur est connecté
     if (!is_user_logged_in()) {
         wp_send_json_error('Vous devez être connecté pour enregistrer un journal.');
+        return;
     }
 
     // Obtenez les données envoyées via AJAX
@@ -203,27 +225,9 @@ function save_journal_entry() {
     }
 }
 
-function create_journal_table() {
-    global $wpdb;
-
-    $table_name = $wpdb->prefix . 'journal';
-
-    $charset_collate = $wpdb->get_charset_collate();
-
-    $sql = "CREATE TABLE $table_name (
-        id mediumint(9) NOT NULL AUTO_INCREMENT,
-        user_id bigint(20) NOT NULL,
-        entry text NOT NULL,
-        created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
-        PRIMARY KEY  (id)
-    ) $charset_collate;";
-
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($sql);
-}
-
-// Créer la table lors de l'activation du thème
-add_action('after_switch_theme', 'create_journal_table');
+// Enregistrez les actions AJAX
+add_action('wp_ajax_save_journal_entry', 'save_journal_entry');
+add_action('wp_ajax_nopriv_save_journal_entry', 'save_journal_entry'); // Non nécessaire si vous ne voulez pas que les utilisateurs non connectés puissent ajouter des entrées
 
 
 
