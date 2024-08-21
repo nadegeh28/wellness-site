@@ -14,6 +14,9 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-17.png" class="imgregime" alt="Plat Vegan">
         </div>
     </div>
+</section>
+
+
 
     <section class="recipes fade-in">
         <h2>Recettes</h2>

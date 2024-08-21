@@ -9,7 +9,7 @@ $user_meta = get_user_meta($author->ID);
 if (is_user_logged_in()) {
 ?>
     <!-- Section unique pour le profil -->
-    <div class="profile-container">
+    <div class="profile-container fade-in">
         <!-- Phrase de bienvenue au-dessus -->
         <h1>Bienvenue sur votre profil, <span class="user-name"><?php echo esc_html($author->display_name); ?></span></h1>
         
@@ -30,11 +30,11 @@ if (is_user_logged_in()) {
 
 
 
-    <div class="section-title">
+    <div class="section-title fade-in">
         <h2 class="tilteauthor">Favoris</h2>
     </div>
-    <p class="profilph1">Cette section affiche toutes les recettes que vous avez enregistrées,vous permettant ainsi de retrouver facilement vos plats préférés et de suivre vos choix culinaires.</p>
-    <section class="regime-section fade-in">
+    <p class="profilph1 fade-in">Cette section affiche toutes les recettes que vous avez enregistrées,vous permettant ainsi de retrouver facilement vos plats préférés et de suivre vos choix culinaires.</p>
+    <section class="regime-section">
 <div class="recipe-cards fade-in">
             <div class="recipe-card">
             <button class="save-button" onclick="saveRecipe(this)"></button>
@@ -91,11 +91,11 @@ if (is_user_logged_in()) {
 
 
 
-    <div class="section-title">
+    <div class="section-title fade-in">
         <h2 class="tilteauthor">Journal</h2>
 
     </div>
-    <div class="journal-container">
+    <div class="journal-container fade-in">
     <p class="profilph">Le journal nutritionnel vous permet de suivre vos habitudes alimentaires et de consigner vos repas pour mieux gérer votre nutrition et atteindre vos objectifs.</p>
     <textarea id="journal-entry" rows="10" cols="50" placeholder="Écrivez ici..."></textarea>
     <div id="status-message"></div>
@@ -127,11 +127,14 @@ if (is_user_logged_in()) {
 
 
 <div class="blog-container fade-in">
-<h2 class="tilteauthor">Articles</h2>
+<div class="section-title fade-in">
+        <h2 class="tilteauthor">Articles</h2>
+
+    </div>
+
 <p class="profilph1">Nous avons ajouté de nouveaux articles intéressants pour vous ! Découvrez-les ci-dessous et laissez-vous inspirer par nos dernières recommandations.</p>
 
-
-<div class="articles-grid-blog">
+<div class="articles-grid fade-in">
 <?php
         $articles = [
             
