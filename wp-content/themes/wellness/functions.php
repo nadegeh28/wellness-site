@@ -164,6 +164,70 @@ function my_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
 
+// Ajouter une action AJAX pour les utilisateurs connectés
+add_action('wp_ajax_save_journal_entry', 'save_journal_entry');
+
+function save_journal_entry() {
+    // Assurez-vous que l'utilisateur est connecté
+    if (!is_user_logged_in()) {
+        wp_send_json_error('Vous devez être connecté pour enregistrer un journal.');
+    }
+
+    // Obtenez les données envoyées via AJAX
+    if (isset($_POST['entry'])) {
+        global $wpdb;
+
+        // Nettoyez les données
+        $entry = sanitize_textarea_field($_POST['entry']);
+        $user_id = get_current_user_id();
+
+        // Préparez la requête pour insérer les données dans la base
+        $table_name = $wpdb->prefix . 'journal'; // Nom de la table
+        $wpdb->insert(
+            $table_name,
+            array(
+                'user_id' => $user_id,
+                'entry' => $entry,
+                'created_at' => current_time('mysql')
+            ),
+            array(
+                '%d',
+                '%s',
+                '%s'
+            )
+        );
+
+        wp_send_json_success('Enregistré');
+    } else {
+        wp_send_json_error('Aucune donnée reçue.');
+    }
+}
+
+function create_journal_table() {
+    global $wpdb;
+
+    $table_name = $wpdb->prefix . 'journal';
+
+    $charset_collate = $wpdb->get_charset_collate();
+
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        user_id bigint(20) NOT NULL,
+        entry text NOT NULL,
+        created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+
+// Créer la table lors de l'activation du thème
+add_action('after_switch_theme', 'create_journal_table');
+
+
+
+
 ?>
 
 
