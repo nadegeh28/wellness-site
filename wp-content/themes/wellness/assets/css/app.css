@@ -1328,12 +1328,7 @@ section {
 
 }
 
-/* Informations de l'utilisateur */
-.profile-details p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 10px;
-}
+
 
 
 
@@ -1347,11 +1342,23 @@ section {
     color: #62891F; /* Exemple: Bleu, change la couleur selon ton besoin */
     font-weight: bold;
     font-size: 24px; 
-    margin-bottom: 10px;/* Rendre le texte en gras si tu veux */
+    margin-bottom: 60px;
 }
 
 .regdef{
     color: #8BC34A;
-    font-size: 350px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+
 }
+
+
+.biodef{
+    font-size: 18px;
+    color: #707070;
+    font-style: italic;
+    margin-bottom: 70px;
+}
+
 

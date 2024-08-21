@@ -1,31 +1,64 @@
 <?php
-get_header(); // Inclure l'en-tête du thème
-
-// Récupérer les informations de l'auteur ou de l'utilisateur connecté
-$author = is_author() ? get_queried_object() : wp_get_current_user();
-$user_meta = get_user_meta($author->ID);
-
-// Vérifier si l'utilisateur est connecté
+// Assurez-vous que l'utilisateur est connecté
 if (is_user_logged_in()) {
 ?>
-    <!-- Section unique pour le profil -->
-    <div class="profile-container">
-        <!-- Phrase de bienvenue au-dessus -->
-        <h1>Bienvenue sur votre profil, <span class="user-name"><?php echo esc_html($author->display_name); ?></span></h1>
-        
-        <div class="profile-header">
-            <!-- Image et données côte à côte -->
-            <div class="profile-info">
-                <img src="<?php echo get_avatar_url($author->ID); ?>" alt="Profile Picture" class="profile-picture">
-            </div>
-            <div class="profile-details">
-            <span class="user-name2"><?php echo esc_html($author->display_name); ?></span></h1>
-                <p class="regdef">Régime : <?php echo isset($user_meta['regime'][0]) ? esc_html($user_meta['regime'][0]) : 'Non défini'; ?></p>
-                <p class="biodef">Bio : <?php echo esc_html(get_the_author_meta('description', $author->ID)); ?></p>
-                <!-- Citation inspirante -->
-            </div>
-        </div> <!-- Fin de profile-header -->
-    </div> <!-- Fin de profile-container -->
+
+<div class="section-title">
+    <h2 class="tilteauthor">Recettes enregistrées</h2>
+</div>
+
+<section class="regime-section fade-in">
+    <div class="recipe-cards fade-in">
+        <div class="recipe-card">
+            <button class="save-button" onclick="saveRecipe(this)"></button>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+            <h3>Curry de légumes</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
+            <p class="ingredients">400g de légumes assortis</p>
+            <p class="ingredients">1 oignon</p>
+            <p class="ingredients">2 gousses d'ail</p>
+            <p class="ingredients">1 cuillère à café de gingembre</p>
+            <p class="ingredients">2 tomates</p>
+            <p class="ingredients">400ml de lait de coco</p>
+            <p class="ingredients">3 cuillères de pâte de curry</p>
+            <p class="prep">Préparation : 30 min</p>
+        </div>
+
+        <div class="recipe-card">
+            <button class="save-button" onclick="saveRecipe(this)"></button>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Pâtes aux légumes">
+            <h3>Pâtes aux légumes</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
+            <p class="ingredients">200g de pâtes complètes</p>
+            <p class="ingredients">200g de tomates cerises</p>
+            <p class="ingredients">1 courgette</p>
+            <p class="ingredients">1 oignon</p>
+            <p class="ingredients">1 poivron</p>
+            <p class="ingredients">2 gousses d'ail</p>
+            <p class="ingredients">2 carottes</p>
+            <p class="ingredients">2 cuillères à soupe d'huile d'olive</p>
+            <p class="ingredients">10g de basilic</p>
+            <p class="prep">Préparation : 35 min</p>
+        </div>
+
+        <div class="recipe-card">
+            <button class="save-button" onclick="saveRecipe(this)"></button>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Riz frit aux crevettes">
+            <h3>Riz frit aux crevettes</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
+            <p class="ingredients">300g de riz cuit</p>
+            <p class="ingredients">2 gousses d'ail</p>
+            <p class="ingredients">250g de crevettes décortiquées</p>
+            <p class="ingredients">2 oignons verts</p>
+            <p class="ingredients">1 carotte</p>
+            <p class="ingredients">2 cuillères à soupe de sésame</p>
+            <p class="ingredients">1 poivron</p>
+            <p class="ingredients">2 cuillères à soupe de sauce tamarin</p>
+            <p class="ingredients">2 cuillères à café de graines de sésame</p>
+            <p class="prep">Préparation : 30 min</p>
+        </div>
+    </div>
+</section>
 
 <?php
 } else {
@@ -35,6 +68,7 @@ if (is_user_logged_in()) {
 
 get_footer(); // Inclure le pied de page du thème
 ?>
+
 
 
 
