@@ -91,50 +91,41 @@ if (is_user_logged_in()) {
 
 
 
+
     <div class="section-title fade-in">
-    <h2 class="tilteauthor">Journal</h2>
-</div>
-<div class="journal-container fade-in">
-    <p class="profilph">Le journal nutritionnel vous permet de suivre vos habitudes alimentaires et de consigner vos repas pour mieux gérer votre nutrition et atteindre vos objectifs.</p>
-    <textarea id="journal-entry" rows="10" cols="50" placeholder="Écrivez ici..."></textarea>
-    <div id="status-message"></div>
-</div>
-<div class="section-title fade-in">
-    <h2 class="tilteauthor">Journal</h2>
-</div>
-<div class="journal-container fade-in">
-    <p class="profilph">Le journal nutritionnel vous permet de suivre vos habitudes alimentaires et de consigner vos repas pour mieux gérer votre nutrition et atteindre vos objectifs.</p>
-    <textarea id="journal-entry" rows="10" cols="50" placeholder="Écrivez ici..."></textarea>
-    <div id="status-message"></div>
+        <h2 class="tilteauthor">Objectif de nutrition</h2>
+    </div>
+
+    <?php
+    if (isset($_POST['update_goals'])) {
+        $user_id = get_current_user_id();
+        $calorie_goal = sanitize_text_field($_POST['calorie_goal']);
+        $protein_goal = sanitize_text_field($_POST['protein_goal']);
+
+        update_user_meta($user_id, 'calorie_goal', $calorie_goal);
+        update_user_meta($user_id, 'protein_goal', $protein_goal);
+
+        echo '<p class="success-message">Objectifs mis à jour avec succès.</p>';
+    }
+
+    $user_id = get_current_user_id();
+    $calorie_goal = get_user_meta($user_id, 'calorie_goal', true);
+    $protein_goal = get_user_meta($user_id, 'protein_goal', true);
+    ?>
+
+    <form method="post" action="">
+        <label for="calorie_goal">Objectif Calorique :</label>
+        <input type="text" id="calorie_goal" name="calorie_goal" value="<?php echo esc_attr($calorie_goal); ?>" required>
+
+        <label for="protein_goal">Objectif Protéines :</label>
+        <input type="text" id="protein_goal" name="protein_goal" value="<?php echo esc_attr($protein_goal); ?>" required>
+
+        <input type="submit" name="update_goals" value="Mettre à jour">
+    </form>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    jQuery(document).ready(function($) {
-        $('#journal-entry').on('input', function() {
-            var entry = $(this).val();
-            $.ajax({
-                url: ajax_params.ajax_url, // Utilisation de la variable localisée
-                type: 'POST',
-                data: {
-                    action: 'save_journal_entry', // Nom de l'action AJAX
-                    nonce: ajax_params.nonce, // Ajout du nonce pour la sécurité
-                    entry: entry
-                },
-                success: function(response) {
-                    if (response.success) {
-                        $('#status-message').text('Enregistré');
-                    } else {
-                        $('#status-message').text('Erreur lors de l\'enregistrement');
-                    }
-                },
-                error: function() {
-                    $('#status-message').text('Erreur lors de l\'enregistrement');
-                }
-            });
-        });
-    });
-</script>
+
+
 
 
 

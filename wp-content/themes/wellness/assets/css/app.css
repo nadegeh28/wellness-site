@@ -1424,30 +1424,48 @@ section {
     margin-top: -50px; /* Distance uniforme pour la marge inférieure */
 }
 
-.journal-container {
-    max-width: 800px; /* Limite la largeur du conteneur */
-    margin: auto; /* Centre le conteneur horizontalement */
-    border-radius: 50px; /* Coins arrondis */
+
+
+
+.profile-container form {
+    display: flex;
+    flex-direction: column;
 }
 
-#journal-entry {
-    width: 100%; /* Prend toute la largeur du conteneur */
-    min-height: 800px; /* Hauteur minimale plus grande pour plus d'espace */
-    padding: 15px 30px; /* Espacement interne */
-    font-size: 1rem; /* Taille de la police */
-    border-radius: 50px; /* Coins arrondis */
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-    border: 2px solid #62891F; /* Bordure verte */
+.profile-container label {
+    margin-top: 10px;
+    border: 2px solid #62891F;
     background-color: #F2F2F2;
-    margin-top: 20px;
-    margin-bottom: 50px;
 }
 
-#status-message {
-    margin-top: 10px; /* Espacement au-dessus du message */
-    font-size: 1rem; /* Taille de la police */
-    color: #707070; /* Couleur du texte */
+.profile-container input[type="text"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #62891F;
+    background-color: #F2F2F2;
+    border-radius: 4px;
 }
+
+.profile-container input[type="submit"] {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile-container input[type="submit"]:hover {
+    background-color: #005177;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
 
 .articles-grid {
     display: flex;

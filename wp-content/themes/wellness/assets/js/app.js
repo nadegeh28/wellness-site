@@ -168,16 +168,18 @@ jQuery(document).ready(function($) {
     $('#journal-entry').on('input', function() {
         var entry = $(this).val();
         $.ajax({
-            url: ajax_params.ajax_url, // Utilisation de la variable localisée
+            url: ajax_params.ajax_url,
             type: 'POST',
             data: {
-                action: 'save_journal_entry', // Nom de l'action AJAX
-                nonce: ajax_params.nonce, // Ajout du nonce pour la sécurité
+                action: 'save_journal_entry',
+                nonce: ajax_params.nonce,
                 entry: entry
             },
             success: function(response) {
                 if (response.success) {
                     $('#status-message').text('Enregistré');
+                    // Afficher la nouvelle entrée directement dans le champ de texte
+                    $('#journal-entry').val('');
                 } else {
                     $('#status-message').text('Erreur lors de l\'enregistrement');
                 }
@@ -187,5 +189,37 @@ jQuery(document).ready(function($) {
             }
         });
     });
+
+    // Fonction pour récupérer et afficher les entrées du journal
+    function loadJournalEntries() {
+        $.ajax({
+            url: ajax_params.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'get_journal_entries',
+                nonce: ajax_params.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    // Afficher les entrées existantes dans le champ de texte
+                    var entries = response.data.entries;
+                    var content = '';
+                    entries.forEach(function(entry) {
+                        content += entry.entry + '\n\n'; // Séparer les entrées par une ligne vide
+                    });
+                    $('#journal-entry').val(content);
+                } else {
+                    $('#status-message').text('Erreur lors du chargement des entrées');
+                }
+            },
+            error: function() {
+                $('#status-message').text('Erreur lors du chargement des entrées');
+            }
+        });
+    }
+
+    // Charger les entrées au chargement de la page
+    loadJournalEntries();
 });
+
 
