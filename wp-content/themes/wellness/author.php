@@ -33,6 +33,7 @@ if (is_user_logged_in()) {
     <div class="section-title">
         <h2 class="tilteauthor">Favoris</h2>
     </div>
+    <p class="profilph1">Cette section affiche toutes les recettes que vous avez enregistrées,vous permettant ainsi de retrouver facilement vos plats préférés et de suivre vos choix culinaires.</p>
     <section class="regime-section fade-in">
 <div class="recipe-cards fade-in">
             <div class="recipe-card">
@@ -92,9 +93,10 @@ if (is_user_logged_in()) {
 
     <div class="section-title">
         <h2 class="tilteauthor">Journal</h2>
-    </div>
 
+    </div>
     <div class="journal-container">
+    <p class="profilph">Le journal nutritionnel vous permet de suivre vos habitudes alimentaires et de consigner vos repas pour mieux gérer votre nutrition et atteindre vos objectifs.</p>
     <textarea id="journal-entry" rows="10" cols="50" placeholder="Écrivez ici..."></textarea>
     <div id="status-message"></div>
 </div>
