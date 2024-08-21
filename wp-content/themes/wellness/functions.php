@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 
 // Enqueue les styles pour les conditions générales
 function enqueue_conditions_generales_styles() {
-    if (is_page_template('page-conditions-générales.php')) {
+    if (is_page_template('page-conditions-generales.php')) {
         wp_enqueue_style('conditions-generales-styles', get_template_directory_uri() . '/app.css');
     }
 }
@@ -62,7 +62,8 @@ function handle_custom_login() {
     if (is_wp_error($user)) {
         wp_redirect(home_url('/login?login=failed'));
     } else {
-        wp_redirect('http://localhost:8888/wellness-site/index.php/edit-profile/');
+        $username = $user->user_login;
+        wp_redirect('http://localhost:8888/wellness-site/index.php/author/' . $username);
     }
     exit;
 }
@@ -110,19 +111,17 @@ function handle_custom_registration() {
                 wp_redirect('http://localhost:8888/wellness-site/index.php/register/?error=registration_failed');
                 exit;
             } else {
-                // Construction de l'URL de redirection avec le nom d'utilisateur
-                $redirect_url = 'http://localhost:8888/wellness-site/index.php/author/' . $username . '/';
-                
-                wp_redirect($redirect_url);
+                // Connexion automatique après inscription
+                wp_set_auth_cookie($user_id);
+
+                // Redirection vers la page profil de l'utilisateur après inscription
+                wp_redirect('http://localhost:8888/wellness-site/index.php/author/' . $username);
                 exit;
             }
         }
     }
 }
 add_action('init', 'handle_custom_registration');
-
-
-
 
 // Enqueue les scripts personnalisés pour le quiz et les résultats
 function enqueue_custom_quiz_scripts() {
@@ -136,7 +135,7 @@ function enqueue_custom_quiz_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_quiz_scripts');
 
-// Enregistre les modèles de page personnalisés
+// Enregistrez les modèles de page personnalisés
 function register_custom_page_templates() {
     if (locate_template('page-quizz-3.php') && locate_template('page-resultats.php')) {
         add_filter('theme_page_templates', function($templates) {
@@ -148,9 +147,7 @@ function register_custom_page_templates() {
 }
 add_action('init', 'register_custom_page_templates');
 
-
-
-
+// Enqueue le script personnalisé avec des variables locales
 function my_enqueue_scripts() {
     wp_enqueue_script('my-custom-script', get_template_directory_uri() . '/js/app.js', array('jquery'), null, true);
 
@@ -162,10 +159,6 @@ function my_enqueue_scripts() {
     ));
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
-
-
-// Ajouter une action AJAX pour les utilisateurs connectés
-add_action('wp_ajax_save_journal_entry', 'save_journal_entry');
 
 // Fonction pour créer la table du journal lors de l'activation du thème
 function create_journal_table() {
@@ -229,10 +222,4 @@ function save_journal_entry() {
 add_action('wp_ajax_save_journal_entry', 'save_journal_entry');
 add_action('wp_ajax_nopriv_save_journal_entry', 'save_journal_entry'); // Non nécessaire si vous ne voulez pas que les utilisateurs non connectés puissent ajouter des entrées
 
-
-
-
 ?>
-
-
-
