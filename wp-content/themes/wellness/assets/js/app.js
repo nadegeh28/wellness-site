@@ -45,54 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const commentForm = document.querySelector('.custom-comment-form');
-    const commentField = document.querySelector('.custom-comment-field');
-    const submitButton = document.querySelector('.custom-submit-button');
-
-    submitButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Empêche le rechargement de la page
-
-        const comment = commentField.value.trim();
-
-        if (comment.length === 0) {
-            alert('Veuillez écrire un commentaire avant de soumettre.');
-            return;
-        }
-
-        // Adresse URL de l'API REST de WordPress pour publier des commentaires
-        const apiUrl = wpApiSettings.root + 'wp/v2/comments';
-
-        // Préparer les données à envoyer
-        const data = {
-            post: wpApiSettings.post_id, // Utiliser l'ID du post passé depuis PHP
-            content: comment
-        };
-
-        // Envoyer la requête POST avec fetch
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-WP-Nonce': wpApiSettings.nonce // Inclure le nonce pour la sécurité
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result && result.id) {
-                alert('Commentaire publié avec succès!');
-                commentField.value = ''; // Réinitialiser le champ de commentaire
-            } else {
-                alert('Une erreur est survenue. Veuillez réessayer.');
-            }
-        })
-        .catch(error => {
-            console.error('Erreur:', error);
-            alert('Une erreur est survenue. Veuillez réessayer.');
-        });
-    });
-});
 
 
 

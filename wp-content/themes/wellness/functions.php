@@ -72,37 +72,57 @@ add_action('admin_post_custom_login', 'handle_custom_login');
 // Gestion de l'inscription personnalisée
 function handle_custom_registration() {
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['submit'] === 'inscription_form') {
+        // Récupération et assainissement des champs
         $nom = sanitize_text_field($_POST['nom']);
         $prenom = sanitize_text_field($_POST['prenom']);
         $email = sanitize_email($_POST['email']);
         $motdepasse = $_POST['motdepasse'];
         $motdepasse_confirm = $_POST['motdepasse-confirm'];
 
+        // Vérification des mots de passe
         if ($motdepasse !== $motdepasse_confirm) {
             wp_redirect('http://localhost:8888/wellness-site/index.php/register/?error=password_mismatch');
             exit;
         } else {
+            // Création d'un nom d'utilisateur propre basé sur le prénom et nom
+            $username = sanitize_user($prenom . $nom);
+            $username = strtolower(str_replace(' ', '', $username)); // Enlever les espaces et mettre en minuscule
+
+            // S'assurer que le nom d'utilisateur est unique
+            if (username_exists($username)) {
+                $username .= rand(1000, 9999); // Ajouter un nombre aléatoire si le nom existe déjà
+            }
+
+            // Création de l'utilisateur
             $user_data = array(
-                'user_login' => $nom,
+                'user_login' => $username,
                 'user_email' => $email,
                 'user_pass'  => $motdepasse,
                 'first_name' => $prenom,
+                'last_name'  => $nom,
                 'role'       => 'subscriber'
             );
 
             $user_id = wp_insert_user($user_data);
 
+            // Gestion des erreurs
             if (is_wp_error($user_id)) {
                 wp_redirect('http://localhost:8888/wellness-site/index.php/register/?error=registration_failed');
                 exit;
             } else {
-                wp_redirect('http://localhost:8888/wellness-site/index.php/edit-profile/?success=registration_success');
+                // Construction de l'URL de redirection avec le nom d'utilisateur
+                $redirect_url = 'http://localhost:8888/wellness-site/index.php/author/' . $username . '/';
+                
+                wp_redirect($redirect_url);
                 exit;
             }
         }
     }
 }
 add_action('init', 'handle_custom_registration');
+
+
+
 
 // Enqueue les scripts personnalisés pour le quiz et les résultats
 function enqueue_custom_quiz_scripts() {
