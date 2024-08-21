@@ -21,7 +21,8 @@ if (is_user_logged_in()) {
             <div class="profile-details">
             <span class="user-name2"><?php echo esc_html($author->display_name); ?></span></h1>
                 <p class="regdef">Régime : <?php echo isset($user_meta['regime'][0]) ? esc_html($user_meta['regime'][0]) : 'Non défini'; ?></p>
-                <p class="biodef">Bio : <?php echo esc_html(get_the_author_meta('description', $author->ID)); ?></p>
+                <blockquote class="citation">« Ton corps est le reflet de ce que tu manges : nourris-le bien, respecte-le, et 
+                il te rendra plus fort chaque jour. »</blockquote>
                 <!-- Citation inspirante -->
             </div>
         </div> <!-- Fin de profile-header -->
@@ -93,36 +94,36 @@ if (is_user_logged_in()) {
 
 
     <div class="section-title fade-in">
-        <h2 class="tilteauthor">Objectif</h2>
-    </div>
-
-    <?php
-    if (isset($_POST['update_goals'])) {
-        $user_id = get_current_user_id();
-        $calorie_goal = sanitize_text_field($_POST['calorie_goal']);
-        $protein_goal = sanitize_text_field($_POST['protein_goal']);
-
-        update_user_meta($user_id, 'calorie_goal', $calorie_goal);
-        update_user_meta($user_id, 'protein_goal', $protein_goal);
-
-        echo '<p class="success-message">Objectifs mis à jour avec succès.</p>';
-    }
-
-    $user_id = get_current_user_id();
-    $calorie_goal = get_user_meta($user_id, 'calorie_goal', true);
-    $protein_goal = get_user_meta($user_id, 'protein_goal', true);
-    ?>
-
-    <form method="post" action="">
-        <label for="calorie_goal">But du régime :</label>
-        <input type="text" id="calorie_goal" name="calorie_goal" value="<?php echo esc_attr($calorie_goal); ?>" required>
-
-        <label for="protein_goal">Avancée du régime :</label>
-        <input type="text" id="protein_goal" name="protein_goal" value="<?php echo esc_attr($protein_goal); ?>" required>
-
-        <input type="submit" name="update_goals" value="Mettre à jour">
-    </form>
+    <h2 class="tilteauthor">Objectif</h2>
 </div>
+
+<?php
+if (isset($_POST['update_goals'])) {
+    $user_id = get_current_user_id();
+    $calorie_goal = sanitize_text_field($_POST['calorie_goal']);
+    $protein_goal = sanitize_text_field($_POST['protein_goal']);
+
+    update_user_meta($user_id, 'calorie_goal', $calorie_goal);
+    update_user_meta($user_id, 'protein_goal', $protein_goal);
+
+    echo '<p class="success-message fade-in">Objectifs mis à jour avec succès.</p>';
+}
+
+$user_id = get_current_user_id();
+$calorie_goal = get_user_meta($user_id, 'calorie_goal', true);
+$protein_goal = get_user_meta($user_id, 'protein_goal', true);
+?>
+
+<form method="post" action="" class="fade-in">
+    <label for="calorie_goal">But du régime :</label>
+    <input type="text" id="calorie_goal" name="calorie_goal" value="<?php echo esc_attr($calorie_goal); ?>" required>
+
+    <label for="protein_goal">Avancée du régime :</label>
+    <input type="text" id="protein_goal" name="protein_goal" value="<?php echo esc_attr($protein_goal); ?>" required>
+
+    <input type="submit" name="update_goals" value="Mettre à jour">
+</form>
+
 
 
 
