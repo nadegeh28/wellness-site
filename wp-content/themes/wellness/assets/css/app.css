@@ -1286,3 +1286,23 @@ section {
 .part2 {
   margin-bottom: 100px; /* Ajustez la couleur selon vos préférences */
 }
+
+
+.author-profile {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.author-profile h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.author-profile p {
+    font-size: 1.2em;
+    color: #666;
+}
