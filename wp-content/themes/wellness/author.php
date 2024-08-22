@@ -30,14 +30,13 @@ if (is_user_logged_in()) {
 
 
 
-
     <div class="section-title fade-in">
-        <h2 class="tilteauthor">Favoris</h2>
-    </div>
-    <p class="profilph1 fade-in">Cette section affiche toutes les recettes que vous avez enregistrées,vous permettant ainsi de retrouver facilement vos plats préférés et de suivre vos choix culinaires.</p>
-  
-  <?php 
-    $user_id = get_current_user_id(); // ID de l'utilisateur connecté
+    <h2 class="tilteauthor">Favoris</h2>
+</div>
+<p class="profilph1 fade-in">Cette section affiche toutes les recettes que vous avez enregistrées, vous permettant ainsi de retrouver facilement vos plats préférés et de suivre vos choix culinaires.</p>
+
+<?php 
+$user_id = get_current_user_id(); // ID de l'utilisateur connecté
 $saved_recipes = get_user_meta($user_id, 'saved_recipes', true);
 
 if ($saved_recipes) {
@@ -54,7 +53,6 @@ if ($saved_recipes) {
         while ($recipes->have_posts()) {
             $recipes->the_post();
             // Affichez chaque recette
-            // Exemple d'affichage :
             echo '<div class="recipe-card">';
             the_post_thumbnail(); // Affiche l'image de la recette
             the_title('<h3>', '</h3>'); // Affiche le titre de la recette
@@ -68,8 +66,8 @@ if ($saved_recipes) {
 } else {
     echo 'Vous n\'avez pas encore enregistré de recettes.';
 }
-
 ?>
+
 
 
 

@@ -21,7 +21,7 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" data-recipe-id="1" onclick="saveRecipe(this)"></button>
+            <button class="save-button" data-recipe-id="<?php the_ID(); ?>" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
 <h3>Flocons d'avoine aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">

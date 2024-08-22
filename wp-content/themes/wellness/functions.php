@@ -1,48 +1,35 @@
 <?php
 
-// Enqueue les styles personnalisés
-function ajouter_styles_personnalises() {
-    wp_enqueue_style(
-        'style-personnalise', 
-        get_template_directory_uri() . '/assets/css/app.css'
-    );
-}
-add_action('wp_enqueue_scripts', 'ajouter_styles_personnalises');
-
-// Enqueue Bootstrap CSS et JS
-function enqueue_bootstrap() {
+// Enqueue les styles et scripts principaux du thème
+function theme_enqueue_styles_and_scripts() {
+    // Enqueue les styles
+    wp_enqueue_style('style-personnalise', get_template_directory_uri() . '/assets/css/app.css');
     wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
-    wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array('jquery'), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 
-// Enqueue les styles pour les conditions générales
-function enqueue_conditions_generales_styles() {
-    if (is_page_template('page-conditions-generales.php')) {
-        wp_enqueue_style('conditions-generales-styles', get_template_directory_uri() . '/app.css');
+    // Enqueue les scripts
+    wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array('jquery'), null, true);
+    wp_enqueue_script('my-custom-script', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), null, true);
+
+    // Passer les variables PHP au JavaScript
+    wp_localize_script('my-custom-script', 'ajax_params', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('ajax_nonce'),
+        'user_id'  => get_current_user_id()
+    ));
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles_and_scripts');
+
+// Enregistrez les modèles de page personnalisés
+function register_custom_page_templates() {
+    if (locate_template('page-quizz-3.php') && locate_template('page-resultats.php')) {
+        add_filter('theme_page_templates', function($templates) {
+            $templates['page-quizz-3.php'] = 'Page de Quiz';
+            $templates['page-resultats.php'] = 'Page des Résultats';
+            return $templates;
+        });
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_conditions_generales_styles');
-
-// Enqueue le script personnalisé
-function my_custom_scripts() {
-    wp_enqueue_script(
-        'custom-script', 
-        get_template_directory_uri() . '/assets/js/app.js', 
-        array(), 
-        null, 
-        true 
-    );
-}
-add_action('wp_enqueue_scripts', 'my_custom_scripts');
-
-// Enqueue les styles et scripts principaux du thème
-function theme_enqueue_styles() {
-    wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_style('custom-style', get_template_directory_uri() . '/app.css');
-    wp_enqueue_script('form-validation', get_template_directory_uri() . '/app.js', array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+add_action('init', 'register_custom_page_templates');
 
 // Gestion de la connexion personnalisée
 function handle_custom_login() {
@@ -63,7 +50,7 @@ function handle_custom_login() {
         wp_redirect(home_url('/login?login=failed'));
     } else {
         $username = $user->user_login;
-        wp_redirect('http://localhost:8888/wellness-site/index.php/author/' . $username);
+        wp_redirect(home_url('/author/' . $username));
     }
     exit;
 }
@@ -82,7 +69,7 @@ function handle_custom_registration() {
 
         // Vérification des mots de passe
         if ($motdepasse !== $motdepasse_confirm) {
-            wp_redirect('http://localhost:8888/wellness-site/index.php/register/?error=password_mismatch');
+            wp_redirect(home_url('/register/?error=password_mismatch'));
             exit;
         } else {
             // Création d'un nom d'utilisateur propre basé sur le prénom et nom
@@ -108,14 +95,14 @@ function handle_custom_registration() {
 
             // Gestion des erreurs
             if (is_wp_error($user_id)) {
-                wp_redirect('http://localhost:8888/wellness-site/index.php/register/?error=registration_failed');
+                wp_redirect(home_url('/register/?error=registration_failed'));
                 exit;
             } else {
                 // Connexion automatique après inscription
                 wp_set_auth_cookie($user_id);
 
                 // Redirection vers la page profil de l'utilisateur après inscription
-                wp_redirect('http://localhost:8888/wellness-site/index.php/author/' . $username);
+                wp_redirect(home_url('/author/' . $username));
                 exit;
             }
         }
@@ -123,69 +110,50 @@ function handle_custom_registration() {
 }
 add_action('init', 'handle_custom_registration');
 
-// Enqueue les scripts personnalisés pour le quiz et les résultats
-function enqueue_custom_quiz_scripts() {
-    if (is_page_template('page-quizz-3.php')) {
-        wp_enqueue_script('quiz-js', get_template_directory_uri() . '/js/app.js', array(), null, true);
+// Gestion de la sauvegarde des recettes via AJAX
+function save_recipe_function() {
+    check_ajax_referer('ajax_nonce', 'nonce'); // Vérifier le nonce
+
+    $user_id = intval($_POST['user_id']);
+    $recipe_id = intval($_POST['recipe_id']);
+
+    if (!is_user_logged_in()) {
+        wp_send_json_error(array('message' => 'Utilisateur non connecté.'));
+        return;
     }
 
-    if (is_page_template('page-resultats.php')) {
-        wp_enqueue_script('resultats-js', get_template_directory_uri() . '/js/app.js', array(), null, true);
+    $saved_recipes = get_user_meta($user_id, 'saved_recipes', true);
+    $saved_recipes = $saved_recipes ? explode(',', $saved_recipes) : array();
+
+    if (!in_array($recipe_id, $saved_recipes)) {
+        $saved_recipes[] = $recipe_id;
+        update_user_meta($user_id, 'saved_recipes', implode(',', $saved_recipes));
+        wp_send_json_success();
+    } else {
+        wp_send_json_error(array('message' => 'Recette déjà enregistrée.'));
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_custom_quiz_scripts');
+add_action('wp_ajax_save_recipe', 'save_recipe_function');
+add_action('wp_ajax_nopriv_save_recipe', 'save_recipe_function'); // Pour les utilisateurs non connectés, si nécessaire
 
-// Enregistrez les modèles de page personnalisés
-function register_custom_page_templates() {
-    if (locate_template('page-quizz-3.php') && locate_template('page-resultats.php')) {
-        add_filter('theme_page_templates', function($templates) {
-            $templates['page-quizz-3.php'] = 'Page de Quiz';
-            $templates['page-resultats.php'] = 'Page des Résultats';
-            return $templates;
-        });
-    }
-}
-add_action('init', 'register_custom_page_templates');
 
-// Enqueue le script personnalisé avec des variables locales
+
+
+
 function my_enqueue_scripts() {
     wp_enqueue_script('my-custom-script', get_template_directory_uri() . '/js/app.js', array('jquery'), null, true);
 
     // Passer les variables PHP au JavaScript
     wp_localize_script('my-custom-script', 'ajax_params', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce'    => wp_create_nonce('ajax_nonce')
+        'nonce'    => wp_create_nonce('ajax_nonce'),
+        'user_id'  => get_current_user_id() // Ajouter l'ID utilisateur
     ));
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
-function saveRecipe(button) {
-    const recipeId = button.getAttribute('data-recipe-id');
+?>
 
-    // Exemple de données à envoyer
-    const data = {
-        action: 'save_recipe',
-        recipe_id: recipeId,
-        user_id: yourUserId  // Remplacez par l'ID de l'utilisateur, si nécessaire
-    };
 
-    fetch('/wp-admin/admin-ajax.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Recette enregistrée avec succès!');
-        } else {
-            alert('Erreur lors de l\'enregistrement de la recette.');
-        }
-    })
-    .catch(error => {
-        console.error('Erreur:', error);
-    });
-}
+
+

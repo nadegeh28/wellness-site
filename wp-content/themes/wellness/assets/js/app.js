@@ -222,34 +222,45 @@ jQuery(document).ready(function($) {
     loadJournalEntries();
 });
 
-function saveRecipe(button) {
-    const recipeId = button.getAttribute('data-recipe-id');
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.save-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const recipeId = this.getAttribute('data-recipe-id');
+            
+            // Vérifier que l'ID de la recette est présent
+            if (!recipeId) {
+                alert('ID de recette non trouvé.');
+                return;
+            }
 
-    // Exemple de données à envoyer
-    const data = {
-        action: 'save_recipe',
-        recipe_id: recipeId,
-        user_id: yourUserId  // Remplacez par l'ID de l'utilisateur, si nécessaire
-    };
-
-    fetch('/wp-admin/admin-ajax.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Recette enregistrée avec succès!');
-        } else {
-            alert('Erreur lors de l\'enregistrement de la recette.');
-        }
-    })
-    .catch(error => {
-        console.error('Erreur:', error);
+            // Envoyer les données via AJAX
+            fetch(ajax_params.ajax_url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-WP-Nonce': ajax_params.nonce
+                },
+                body: JSON.stringify({
+                    action: 'save_recipe',
+                    recipe_id: recipeId,
+                    user_id: ajax_params.user_id
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Mettre à jour l'état du bouton
+                    button.textContent = 'Recette enregistrée'; // Exemple de texte
+                    button.classList.add('saved'); // Ajouter une classe CSS
+                    button.disabled = true; // Désactiver le bouton
+                } else {
+                    alert('Erreur lors de l\'enregistrement de la recette: ' + data.data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+            });
+        });
     });
-}
-
+});
