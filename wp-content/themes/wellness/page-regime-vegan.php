@@ -149,7 +149,7 @@
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg9.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg9@2x.jpg" alt="Wrap végétalien">
                 <h3>Risotto aux champignons</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">200g de riz arborio</p>

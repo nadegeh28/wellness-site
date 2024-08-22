@@ -23,7 +23,7 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple2.jpg" alt="Muesli aux fruits" class="repas">
 <h3>Muesli aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p class="ingredients">100g de flocons avoine</p>
@@ -36,7 +36,7 @@
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple3.jpg" alt="Curry de légumes">
                 <h3>Smoothie bowl</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">1 banane</p>
@@ -50,7 +50,7 @@
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple4.jpg" alt="Wrap végétalien">
                 <h3>Pudding de chia</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">40g de graine chia</p>
@@ -69,7 +69,7 @@
     <section class="recipes">
     <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple5.jpg" alt="Wrap végétalien">
                 <h3>Salade de poulet grillée</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">400g de poitrine de poulet</p>
@@ -84,7 +84,7 @@
                 <p class="prep">Préparation : 15 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple6.jpg" alt="Curry de légumes">
                 <h3>Filet de poisson aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">400g de filets de cabillaud</p>
@@ -101,7 +101,7 @@
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple7.jpg" alt="Wrap végétalien">
                 <h3>Salade de thons aux haricots</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">300g de thon</p>
@@ -123,7 +123,7 @@
 <section class="regime-section fade-in">
 <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple8.jpg" alt="Muesli aux fruits" class="repas">
 <h3>Poulet rôti avec légumés grillés</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p class="ingredients">4 pièces de cuisses de poulets désossées</p>
@@ -138,7 +138,7 @@
                 <p class="prep">Préparation : 35 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-simple9.jpg" alt="Curry de légumes">
                 <h3>Côtelettes d'agneau aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">4 pièces de côtelettes d'agneau</p>
