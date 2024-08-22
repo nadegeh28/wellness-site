@@ -21,7 +21,7 @@ if (is_user_logged_in()) {
             </div>
             <div class="profile-details">
             <span class="user-name2"><?php echo esc_html($author->display_name); ?></span></h1>
-                <p class="regdef">Régime : <?php echo isset($user_meta['regime'][0]) ? esc_html($user_meta['regime'][0]) : 'Non défini'; ?></p>
+            <br><br>
                 <blockquote class="citation">« Ton corps est le reflet de ce que tu manges : nourris-le bien, respecte-le, et 
                 il te rendra plus fort chaque jour. »</blockquote>
                 <!-- Citation inspirante -->
