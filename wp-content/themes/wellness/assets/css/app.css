@@ -373,6 +373,12 @@ color: #DCEDC8;
     z-index: 10;
 }
 
+
+.save-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 .recipe-card img {
     max-width: 200px;
     border-radius: 100px;
@@ -1561,3 +1567,91 @@ form input[type="submit"]:hover {
     max-width: 100%; 
     height: auto;
 }
+
+
+
+
+/* Description du profil */
+.profile-description {
+    font-size: 18px; /* Taille de la police */
+    color: #666; /* Couleur du texte */
+    text-align: left; /* Centre le texte */
+    margin-bottom: 20px;
+    max-width: 600px;
+    max-height: 700px; /* Marge inférieure */
+}
+
+/* Conteneur du formulaire de ressentis */
+
+.feelings-form {
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    padding: 20px; 
+}
+
+/* Label des ressentis */
+.feelings-label {
+    max-width: 600px;
+    max-height: 700px;
+    display: block; /* Affiche le label comme un bloc */
+    font-weight: bolder; /* Gras */
+    margin-bottom: 8px; /* Marge inférieure */
+    color: #707070;
+     /* Couleur du texte */
+}
+
+/* Zone de texte pour les ressentis */
+.feelings-textarea {
+    width: 500px; 
+    height: 600px;/* Largeur complète du conteneur */
+    padding: 10px; /* Espacement interne */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    box-sizing: border-box; /* Inclut les bordures dans la largeur totale */
+    margin-bottom: 20px;
+    background-color: #ffff;
+    border: 1px solid #62891F;
+    
+}
+
+/* Bouton de soumission */
+.update-button {
+    background-color: #8BC34A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    display: block; /* Force le bouton à occuper toute la largeur disponible */
+    margin-left: 0; /* Réinitialiser les marges à gauche */
+    margin-right: auto; /* Pousse le bouton vers la gauche */
+    margin-top: 10px;
+}
+
+/* État de survol du bouton */
+.update-button:hover {
+    background-color: #689F38;
+    color: #DCEDC8; /* Couleur plus foncée au survol */
+}
+
+/* Message de retour */
+.feedback-message {
+    color: #62891F;
+    background-color: #DCEDC8;
+    border: 1px solid #62891F;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-left: 520px;
+    margin-right: 520px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+

@@ -31,48 +31,6 @@ if (is_user_logged_in()) {
 
 
     <div class="section-title fade-in">
-    <h2 class="tilteauthor">Favoris</h2>
-</div>
-<p class="profilph1 fade-in">Cette section affiche toutes les recettes que vous avez enregistrées, vous permettant ainsi de retrouver facilement vos plats préférés et de suivre vos choix culinaires.</p>
-
-<?php 
-$user_id = get_current_user_id(); // ID de l'utilisateur connecté
-$saved_recipes = get_user_meta($user_id, 'saved_recipes', true);
-
-if ($saved_recipes) {
-    $saved_recipes = explode(',', $saved_recipes);
-    
-    // Requêtes pour obtenir les détails des recettes enregistrées
-    $recipes = new WP_Query(array(
-        'post_type' => 'recipe', // Assurez-vous que votre type de publication est correct
-        'post__in' => $saved_recipes,
-        'posts_per_page' => -1
-    ));
-
-    if ($recipes->have_posts()) {
-        while ($recipes->have_posts()) {
-            $recipes->the_post();
-            // Affichez chaque recette
-            echo '<div class="recipe-card">';
-            the_post_thumbnail(); // Affiche l'image de la recette
-            the_title('<h3>', '</h3>'); // Affiche le titre de la recette
-            // Ajoutez plus de détails sur la recette ici
-            echo '</div>';
-        }
-        wp_reset_postdata();
-    } else {
-        echo 'Aucune recette enregistrée.';
-    }
-} else {
-    echo 'Vous n\'avez pas encore enregistré de recettes.';
-}
-?>
-
-
-
-
-
-    <div class="section-title fade-in">
     <h2 class="tilteauthor">Objectifs</h2>
 </div>
 <p class="profilph1 fade-in">Pour vous aider à atteindre vos objectifs de santé et de bien-être, Wellness vous offre la possibilité de définir et suivre vos objectifs hebdomadaires.</p>
@@ -123,6 +81,45 @@ $meal_plan_goal = get_user_meta($user_id, 'meal_plan_goal', true);
 
     <input type="submit" name="update_goals" value="Mettre à jour">
 </form>
+
+
+
+
+
+
+
+
+<?php
+if (isset($_POST['update_feelings'])) {
+    $user_id = get_current_user_id();
+    $feelings = sanitize_text_field($_POST['feelings']);
+
+    // Mise à jour des ressentis dans la base de données
+    update_user_meta($user_id, 'feelings', $feelings);
+
+    $success_message = '<p class="feedback-message fade-in">Journal mis à jour avec succès.</p>';
+}
+
+// Récupération des ressentis existants
+$user_id = get_current_user_id();
+$feelings = get_user_meta($user_id, 'feelings', true);
+?>
+
+<div class="blog-container fade-in">
+    <div class="section-title fade-in">
+        <h2 class="tilteauthor">Journal</h2>
+        <p class="profilph1 fade-in">Indiquez comment vous vous sentez aujourd'hui pour suivre votre bien-être général.</p>
+    </div>
+
+    <?php if (isset($success_message)) echo $success_message; ?>
+
+    <form method="post" action="" class="feelings-form fade-in">
+        <label for="feelings" class="feelings-label">Comment je me sens :</label>
+        <textarea id="feelings" name="feelings" rows="4" placeholder="Écrivez ici..." class="feelings-textarea" required><?php echo esc_textarea($feelings); ?></textarea>
+        <input type="submit" name="update_feelings" value="Mettre à jour" class="update-button">
+    </form>
+</div>
+
 
 
 

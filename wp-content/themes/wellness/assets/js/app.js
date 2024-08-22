@@ -222,45 +222,6 @@ jQuery(document).ready(function($) {
     loadJournalEntries();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.save-button').forEach(button => {
-        button.addEventListener('click', function() {
-            const recipeId = this.getAttribute('data-recipe-id');
-            
-            // Vérifier que l'ID de la recette est présent
-            if (!recipeId) {
-                alert('ID de recette non trouvé.');
-                return;
-            }
 
-            // Envoyer les données via AJAX
-            fetch(ajax_params.ajax_url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-WP-Nonce': ajax_params.nonce
-                },
-                body: JSON.stringify({
-                    action: 'save_recipe',
-                    recipe_id: recipeId,
-                    user_id: ajax_params.user_id
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Mettre à jour l'état du bouton
-                    button.textContent = 'Recette enregistrée'; // Exemple de texte
-                    button.classList.add('saved'); // Ajouter une classe CSS
-                    button.disabled = true; // Désactiver le bouton
-                } else {
-                    alert('Erreur lors de l\'enregistrement de la recette: ' + data.data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Erreur:', error);
-            });
-        });
-    });
-});
+
+
