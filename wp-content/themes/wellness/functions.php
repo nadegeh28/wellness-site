@@ -159,3 +159,33 @@ function my_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
+function saveRecipe(button) {
+    const recipeId = button.getAttribute('data-recipe-id');
+
+    // Exemple de données à envoyer
+    const data = {
+        action: 'save_recipe',
+        recipe_id: recipeId,
+        user_id: yourUserId  // Remplacez par l'ID de l'utilisateur, si nécessaire
+    };
+
+    fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Recette enregistrée avec succès!');
+        } else {
+            alert('Erreur lors de l\'enregistrement de la recette.');
+        }
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+    });
+}

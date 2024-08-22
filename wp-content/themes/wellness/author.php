@@ -35,66 +35,47 @@ if (is_user_logged_in()) {
         <h2 class="tilteauthor">Favoris</h2>
     </div>
     <p class="profilph1 fade-in">Cette section affiche toutes les recettes que vous avez enregistrées,vous permettant ainsi de retrouver facilement vos plats préférés et de suivre vos choix culinaires.</p>
-    <section class="regime-section">
-<div class="recipe-cards fade-in">
-            <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
-                <h3>Curry de légumes</h3>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">400g de légumes assortis</p>
-                    <p class="ingredients">1 oignon</p>
-                    <p class="ingredients">2 gousses d'ail</p>
-                    <p class="ingredients">1 cuillère à café de gingembre</p>
-                    <p class="ingredients">2 tomates</p>
-                    <p class="ingredients">400ml de lait de coco</p>
-                    <p class="ingredients">3 cuillère de pâtes de curry</p>
+  
+  <?php 
+    $user_id = get_current_user_id(); // ID de l'utilisateur connecté
+$saved_recipes = get_user_meta($user_id, 'saved_recipes', true);
 
-                <p class="prep">Préparation : 30 min</p>
-            </div>
-            <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
-                <h3>Pâtes aux légumes</h3>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">200g de pâtes complètes</p>
-                    <p class="ingredients">200g de tomates cerises</p>
-                    <p class="ingredients">1 courgette</p>
-                    <p class="ingredients">1 oignon</p>
-                    <p class="ingredients">1 poivron</p>
-                    <p class="ingredients">2 gousses d'ail</p>
-                    <p class="ingredients">2 carottes</p>
-                    <p class="ingredients">2 carottes</p>
-                    <p class="ingredients">2 cuillères à soupe d'olive</p>
-                    <p class="ingredients">10g de basilic</p>
-             <p class="prep">Préparation : 35 min</p>
-            </div>
-            <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
-                <h3>Riz frits aux crevettes</h3>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
-                    <p class="ingredients">300g de riz cuit</p>
-                    <p class="ingredients">2 gousses d'ail</p>
-                    <p class="ingredients">250g de crevettes décortiquées</p>
-                    <p class="ingredients">2 oignons verts</p>
-                    <p class="ingredients">1 carotte</p>
-                    <p class="ingredients">2 cuillères à soupe de sésame</p>
-                    <p class="ingredients">1 poivron</p>
-                    <p class="ingredients">2 cuillère à soupe de sauce tamarin</p>
-                    <p class="ingredients">2 cuillères à café de graines de sésame</p>
-                <p class="prep">Préparation : 30 min</p>
-            </div>
-        </div>
-     </div>   
-     
-    </section>
+if ($saved_recipes) {
+    $saved_recipes = explode(',', $saved_recipes);
+    
+    // Requêtes pour obtenir les détails des recettes enregistrées
+    $recipes = new WP_Query(array(
+        'post_type' => 'recipe', // Assurez-vous que votre type de publication est correct
+        'post__in' => $saved_recipes,
+        'posts_per_page' => -1
+    ));
+
+    if ($recipes->have_posts()) {
+        while ($recipes->have_posts()) {
+            $recipes->the_post();
+            // Affichez chaque recette
+            // Exemple d'affichage :
+            echo '<div class="recipe-card">';
+            the_post_thumbnail(); // Affiche l'image de la recette
+            the_title('<h3>', '</h3>'); // Affiche le titre de la recette
+            // Ajoutez plus de détails sur la recette ici
+            echo '</div>';
+        }
+        wp_reset_postdata();
+    } else {
+        echo 'Aucune recette enregistrée.';
+    }
+} else {
+    echo 'Vous n\'avez pas encore enregistré de recettes.';
+}
+
+?>
 
 
 
 
     <div class="section-title fade-in">
-    <h2 class="tilteauthor">Objectif</h2>
+    <h2 class="tilteauthor">Objectifs</h2>
 </div>
 <p class="profilph1 fade-in">Pour vous aider à atteindre vos objectifs de santé et de bien-être, Wellness vous offre la possibilité de définir et suivre vos objectifs hebdomadaires.</p>
 

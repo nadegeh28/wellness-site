@@ -21,7 +21,7 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
+            <button class="save-button" data-recipe-id="1" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
 <h3>Flocons d'avoine aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -35,7 +35,7 @@
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
+            <button class="save-button" data-recipe-id="1" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Smoothie vert</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -50,7 +50,7 @@
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
+            <button class="save-button" data-recipe-id="1" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Tartine à l'avocat</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
