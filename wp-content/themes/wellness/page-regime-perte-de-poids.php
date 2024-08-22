@@ -21,7 +21,7 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp1.jpg" alt="Muesli aux fruits" class="repas">
 <h3>Pancakes à la farine d'avoine</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p class="ingredients">150g de farine d'avoine</p>
@@ -33,7 +33,7 @@
                 <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp2.jpg" alt="Curry de légumes">
                 <h3>Bagel à l'avocat et au saumon fumé</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">1 bagel complet</p>
@@ -45,7 +45,7 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp3.jpg" alt="Wrap végétalien">
                 <h3>Bowl de fruits avec de la menthe fraiche</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">100g de fraises</p>
@@ -63,7 +63,7 @@
 <section class="regime-section fade-in">
     <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp4.jpg" alt="Wrap végétalien">
                 <h3>Sandwich à la dinde avec de la salade</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">2 tranches de pain complet</p>
@@ -76,7 +76,7 @@
                 <p class="prep">Préparation : 15 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp5.jpg" alt="Curry de légumes">
                 <h3>Omelette aux légumes et au fromage</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">3 œufs</p>
@@ -90,7 +90,7 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp6.jpg" alt="Wrap végétalien">
                 <h3>Salade de poulet</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">150g de blanc de poulet</p>
@@ -113,7 +113,7 @@
 <section class="regime-section fade-in">
      <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp7.jpg" alt="Curry de légumes">
                 <h3>Nouilles de courgettes sautées au poulet</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">250g de courgettes spiralés en nouilles</p>
@@ -129,7 +129,7 @@
                 <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp8.jpg" alt="Curry de légumes">
                 <h3>Soupe mis avec tofu et algues</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">3 cuillère à soupe de pâte miso</p>
@@ -143,7 +143,7 @@
              <p class="prep">Préparation : 35 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-pdp9.jpg" alt="Wrap végétalien">
                 <h3>Poulet rôti avec salade</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">300g de blanc de poulet</p>

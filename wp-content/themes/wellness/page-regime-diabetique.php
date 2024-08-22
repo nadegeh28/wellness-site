@@ -21,7 +21,7 @@
     <br><br>
     <div class="recipe-cards fade-in">
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia1.jpg" alt="Muesli aux fruits" class="repas">
             <h3>Omelette aux légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">3 œufs</p>
@@ -35,7 +35,7 @@
             <p class="prep">Préparation : 20 min</p>
         </div>
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia2.jpg" alt="Curry de légumes">
             <h3>Pancakes à la farine d'amande</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">100g de farine d'amande</p>
@@ -47,7 +47,7 @@
             <p class="prep">Préparation : 20 min</p>
         </div>
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia3.jpg" alt="Wrap végétalien">
             <h3>Œufs pochés sur épinards sautées</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">2 œufs</p>
@@ -63,7 +63,7 @@
 <section class="recipes fade-in">
     <div class="recipe-cards fade-in">
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia4.jpg" alt="Curry de légumes">
             <h3>Quiche aux légumes avec salade</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">150g de farine d'amande</p>
@@ -78,7 +78,7 @@
             <p class="prep">Préparation : 20 min</p>
         </div>
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia5.jpg" alt="Wrap végétalien">
             <h3>Soupe d'haricots et légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">200g d'haricots blancs</p>
@@ -92,7 +92,7 @@
             <p class="prep">Préparation : 25 min</p>
         </div>
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia6.jpg" alt="Curry de légumes">
             <h3>Tofu sauté avec légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">300g de tofu ferme</p>
@@ -112,7 +112,7 @@
 <section class="recipes fade-in">
     <div class="recipe-cards fade-in">
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia7.jpg" alt="Curry de légumes">
             <h3>Curry de légumes avec du riz basmati</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">400g de légumes variés (au choix)</p>
@@ -127,7 +127,7 @@
             <p class="prep">Préparation : 35 min</p>
         </div>
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia8.jpg" alt="Wrap végétalien">
             <h3>Poulet grillé avec salade d'épinards</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">2 blancs de poulet</p>
@@ -141,7 +141,7 @@
             <p class="prep">Préparation : 30 min</p>
         </div>
         <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-dia9.jpg" alt="Wrap végétalien">
             <h3>Bœuf sauté aux légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
             <p class="ingredients">300g de bœuf maigre</p>
