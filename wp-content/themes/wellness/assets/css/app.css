@@ -1418,8 +1418,8 @@ section {
     font-size: 20px;
     padding: 5px 5px;
     color: #707070;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 250px;
+    margin-right: 250px;
     margin-bottom: 20px;
     margin-top: -50px; /* Distance uniforme pour la marge inférieure */
 }
@@ -1459,6 +1459,25 @@ form label[for="protein_goal"] {
     color: #62891F; 
     font-weight: bolder; /* Changez cette couleur selon votre préférence */
 }
+
+
+form label[for="diet_goal"] {
+    color: #62891F; 
+    font-weight: bolder; /* Changez cette couleur selon votre préférence */
+}
+
+form label[for="health_goal"] {
+    color: #62891F; 
+    font-weight: bolder; /* Changez cette couleur selon votre préférence */
+}
+
+
+form label[for="meal_plan_goal"] {
+    color: #62891F; 
+    font-weight: bolder; /* Changez cette couleur selon votre préférence */
+}
+
+
 
 form input[type="text"] {
     width: calc(100% - 20px);

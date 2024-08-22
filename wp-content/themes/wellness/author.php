@@ -96,30 +96,51 @@ if (is_user_logged_in()) {
     <div class="section-title fade-in">
     <h2 class="tilteauthor">Objectif</h2>
 </div>
+<p class="profilph1 fade-in">Pour vous aider à atteindre vos objectifs de santé et de bien-être, Wellness vous offre la possibilité de définir et suivre vos objectifs hebdomadaires.</p>
 
 <?php
 if (isset($_POST['update_goals'])) {
     $user_id = get_current_user_id();
     $calorie_goal = sanitize_text_field($_POST['calorie_goal']);
     $protein_goal = sanitize_text_field($_POST['protein_goal']);
+    $diet_goal = sanitize_text_field($_POST['diet_goal']);
+    $health_goal = sanitize_text_field($_POST['health_goal']);
+    $meal_plan_goal = sanitize_text_field($_POST['meal_plan_goal']);
 
+    // Mise à jour des différents objectifs dans la base de données
     update_user_meta($user_id, 'calorie_goal', $calorie_goal);
     update_user_meta($user_id, 'protein_goal', $protein_goal);
+    update_user_meta($user_id, 'diet_goal', $diet_goal);
+    update_user_meta($user_id, 'health_goal', $health_goal);
+    update_user_meta($user_id, 'meal_plan_goal', $meal_plan_goal);
 
     echo '<p class="success-message fade-in">Objectifs mis à jour avec succès.</p>';
 }
 
+// Récupération des objectifs existants
 $user_id = get_current_user_id();
 $calorie_goal = get_user_meta($user_id, 'calorie_goal', true);
 $protein_goal = get_user_meta($user_id, 'protein_goal', true);
+$diet_goal = get_user_meta($user_id, 'diet_goal', true);
+$health_goal = get_user_meta($user_id, 'health_goal', true);
+$meal_plan_goal = get_user_meta($user_id, 'meal_plan_goal', true);
 ?>
 
 <form method="post" action="" class="fade-in">
-    <label for="calorie_goal">But du régime :</label>
+    <label for="calorie_goal">But alimentaire :</label>
     <input type="text" id="calorie_goal" name="calorie_goal" value="<?php echo esc_attr($calorie_goal); ?>" required>
 
-    <label for="protein_goal">Avancée du régime :</label>
+    <label for="protein_goal">Objectif nutritionnel :</label>
     <input type="text" id="protein_goal" name="protein_goal" value="<?php echo esc_attr($protein_goal); ?>" required>
+
+    <label for="diet_goal">Cible de régime :</label>
+    <input type="text" id="diet_goal" name="diet_goal" value="<?php echo esc_attr($diet_goal); ?>" required>
+
+    <label for="health_goal">Objectif de santé :</label>
+    <input type="text" id="health_goal" name="health_goal" value="<?php echo esc_attr($health_goal); ?>" required>
+
+    <label for="meal_plan_goal">Plan de repas :</label>
+    <input type="text" id="meal_plan_goal" name="meal_plan_goal" value="<?php echo esc_attr($meal_plan_goal); ?>" required>
 
     <input type="submit" name="update_goals" value="Mettre à jour">
 </form>
