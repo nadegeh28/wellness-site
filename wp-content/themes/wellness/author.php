@@ -16,7 +16,8 @@ if (is_user_logged_in()) {
         <div class="profile-header">
             <!-- Image et données côte à côte -->
             <div class="profile-info">
-                <img src="<?php echo get_avatar_url($author->ID); ?>" alt="Profile Picture" class="profile-picture">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/usercolor.png" alt="Profile Picture" class="profile-picture">
+
             </div>
             <div class="profile-details">
             <span class="user-name2"><?php echo esc_html($author->display_name); ?></span></h1>
