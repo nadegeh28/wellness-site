@@ -63,7 +63,7 @@ $health_goal = get_user_meta($user_id, 'health_goal', true);
 $meal_plan_goal = get_user_meta($user_id, 'meal_plan_goal', true);
 ?>
 
-<form method="post" action="" class="fade-in">
+<form method="post" action="" class="goal fade-in">
     <label for="calorie_goal">But alimentaire :</label>
     <input type="text" id="calorie_goal" name="calorie_goal" value="<?php echo esc_attr($calorie_goal); ?>" required>
 

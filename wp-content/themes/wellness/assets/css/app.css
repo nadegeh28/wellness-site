@@ -1440,7 +1440,7 @@ section {
 
 
 /* Formulaire */
-form {
+.goal{
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -1587,6 +1587,9 @@ form input[type="submit"]:hover {
     max-width: 600px; /* Largeur maximale du formulaire */
     margin: 0 auto; /* Centre le formulaire horizontalement */
     padding: 20px; 
+    border: 1px solid #62891F;
+    border-radius: 8px;
+    background-color: #F2F2F2;
 }
 
 /* Label des ressentis */
