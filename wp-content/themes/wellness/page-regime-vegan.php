@@ -21,7 +21,7 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">  
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg1.png" alt="Muesli aux fruits" class="repas">
 <h3>Flocons d'avoine aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p class="ingredients">90g de flocons d'avoine</p>
@@ -34,7 +34,7 @@
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg2.png" alt="Curry de légumes">
                 <h3>Smoothie vert</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">30g d'épinards frais</p>
@@ -48,7 +48,7 @@
                 <p class="prep">Préparation : 10 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg3.png" alt="Wrap végétalien">
                 <h3>Tartine à l'avocat</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">1 avocat mûr</p>
@@ -68,7 +68,7 @@
     <section class="recipes">
     <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg4.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">1 grande tortilla de blé complet</p>
@@ -81,7 +81,7 @@
                 <p class="prep">Préparation : 15 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg5.png" alt="Curry de légumes">
                 <h3>Soupe de lentilles</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">200g de lentilles brunes</p>
@@ -97,7 +97,7 @@
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg6.png" alt="Wrap végétalien">
                 <h3>Wrap végétalien</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">400g de pois de chiches en boîte</p>
@@ -118,7 +118,7 @@
      <section class="recipes">
      <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg7.png" alt="Muesli aux fruits" class="repas">
 <h3>Poke bowl végétalien</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p class="ingredients">150g de quinoa</p>
@@ -133,7 +133,7 @@
                 <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg8.png" alt="Curry de légumes">
                 <h3>Pad thaï aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">200g de nouilles de riz</p>
@@ -149,7 +149,7 @@
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-veg9.png" alt="Wrap végétalien">
                 <h3>Risotto aux champignons</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">200g de riz arborio</p>
