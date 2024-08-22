@@ -23,7 +23,7 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss1.jpg" alt="Muesli aux fruits" class="repas">
 <h3>Pancakes aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                 <p class="ingredients">100g de flocons avoines</p>
@@ -36,7 +36,7 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss2.jpg" alt="Curry de légumes">
                 <h3>Œufs brouillés aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">4 œufs</p>
@@ -49,7 +49,7 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss3.jpg" alt="Wrap végétalien">
                 <h3>Porridge de riz</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">180g de riz complet</p>
@@ -67,7 +67,7 @@
 <section class="regime-section fade-in">
 <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss4.jpg" alt="Wrap végétalien">
                 <h3>Nouilles sautées aux crevettes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">200g de nouilles complètes</p>
@@ -81,7 +81,7 @@
                 <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss5.jpg" alt="Curry de légumes">
                 <h3>Salade de fruits de mer</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">300g de mélange de fruits de mer</p>
@@ -95,7 +95,7 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss6.jpg" alt="Wrap végétalien">
                 <h3>Soupe de légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">2 carottes</p>
@@ -115,7 +115,7 @@
 <section class="regime-section fade-in">
 <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss7.jpg" alt="Curry de légumes">
                 <h3>Curry de légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">400g de légumes assortis</p>
@@ -129,7 +129,7 @@
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss8.jpg" alt="Curry de légumes">
                 <h3>Pâtes aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">200g de pâtes complètes</p>
@@ -145,7 +145,7 @@
              <p class="prep">Préparation : 35 min</p>
             </div>
             <div class="recipe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-ss9.jpg" alt="Wrap végétalien">
                 <h3>Riz frits aux crevettes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
                     <p class="ingredients">300g de riz cuit</p>
