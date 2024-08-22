@@ -21,7 +21,6 @@
     <br><br>
     <div class="recipe-cards fade-in">
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
             <h3>Omelette aux légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -36,7 +35,6 @@
             <p class="prep">Préparation : 20 min</p>
         </div>
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
             <h3>Pancakes à la farine d'amande</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -49,7 +47,6 @@
             <p class="prep">Préparation : 20 min</p>
         </div>
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
             <h3>Œufs pochés sur épinards sautées</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -66,7 +63,6 @@
 <section class="recipes fade-in">
     <div class="recipe-cards fade-in">
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
             <h3>Quiche aux légumes avec salade</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -82,7 +78,6 @@
             <p class="prep">Préparation : 20 min</p>
         </div>
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
             <h3>Soupe d'haricots et légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -97,7 +92,6 @@
             <p class="prep">Préparation : 25 min</p>
         </div>
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
             <h3>Tofu sauté avec légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -118,7 +112,6 @@
 <section class="recipes fade-in">
     <div class="recipe-cards fade-in">
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
             <h3>Curry de légumes avec du riz basmati</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -134,7 +127,6 @@
             <p class="prep">Préparation : 35 min</p>
         </div>
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
             <h3>Poulet grillé avec salade d'épinards</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -149,7 +141,6 @@
             <p class="prep">Préparation : 30 min</p>
         </div>
         <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
             <h3>Bœuf sauté aux légumes</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">

@@ -21,7 +21,6 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
 <h3>Pancakes à la farine d'avoine</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -34,7 +33,6 @@
                 <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Bagel à l'avocat et au saumon fumé</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -47,7 +45,6 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Bowl de fruits avec de la menthe fraiche</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -66,7 +63,6 @@
 <section class="regime-section fade-in">
     <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Sandwich à la dinde avec de la salade</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -80,7 +76,6 @@
                 <p class="prep">Préparation : 15 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Omelette aux légumes et au fromage</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -95,7 +90,6 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Salade de poulet</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -119,7 +113,6 @@
 <section class="regime-section fade-in">
      <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Nouilles de courgettes sautées au poulet</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -136,7 +129,6 @@
                 <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Soupe mis avec tofu et algues</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -151,7 +143,6 @@
              <p class="prep">Préparation : 35 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Poulet rôti avec salade</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">

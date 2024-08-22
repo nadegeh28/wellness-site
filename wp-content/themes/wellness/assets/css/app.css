@@ -1609,6 +1609,8 @@ form input[type="submit"]:hover {
     font-size: 16px; /* Taille de la police */
     box-sizing: border-box; /* Inclut les bordures dans la largeur totale */
     margin-bottom: 20px;
+    color: #707070;
+    font-weight:200;
     background-color: #ffff;
     border: 1px solid #62891F;
     
@@ -1632,6 +1634,7 @@ form input[type="submit"]:hover {
     margin-left: 0; /* Réinitialiser les marges à gauche */
     margin-right: auto; /* Pousse le bouton vers la gauche */
     margin-top: 10px;
+    margin-right: 370px;
 }
 
 /* État de survol du bouton */

@@ -23,7 +23,6 @@
         <br><br>
         <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-11.png" alt="Muesli aux fruits" class="repas">
 <h3>Pancakes aux fruits</h3>
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -37,7 +36,6 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Œufs brouillés aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -51,7 +49,6 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Porridge de riz</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -70,7 +67,6 @@
 <section class="regime-section fade-in">
 <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Nouilles sautées aux crevettes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -85,7 +81,6 @@
                 <p class="prep">Préparation : 25 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Salade de fruits de mer</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -100,7 +95,6 @@
                 <p class="prep">Préparation : 20 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Soupe de légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -121,7 +115,6 @@
 <section class="regime-section fade-in">
 <div class="recipe-cards fade-in">
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Curry de légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -136,7 +129,6 @@
                 <p class="prep">Préparation : 30 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-10.png" alt="Curry de légumes">
                 <h3>Pâtes aux légumes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
@@ -153,7 +145,6 @@
              <p class="prep">Préparation : 35 min</p>
             </div>
             <div class="recipe-card">
-            <button class="save-button" onclick="saveRecipe(this)"></button>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-12.png" alt="Wrap végétalien">
                 <h3>Riz frits aux crevettes</h3>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/stars.png" alt="stars" class="etoiles">
