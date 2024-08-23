@@ -88,8 +88,8 @@
             </div>
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/progricone.png" alt="Aperçu de son évolution">
-                <h3 class="services">Aperçu de son évolution</h3>
-                <p>Découvrez des informations sur les divers régimes et apprenez-en davantage sur vous-même et votre régime grâce à nos outils interactifs. Adoptez une alimentation adaptée à vos besoins uniques!</p>
+                <h3 class="services">objectif cible</h3>
+                <p>Grâce à notre fonctionnalité de suivi, fixez des objectifs personnalisés adaptés à vos besoins. Définissez vos priorités et suivez vos progrès pour rester motivé et atteindre vos ambitions !</p>
             </div>
         </div>
 </div>

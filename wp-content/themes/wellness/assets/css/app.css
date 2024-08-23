@@ -1214,6 +1214,8 @@ section {
     }
 }
 
+
+
 .blog-container {
     text-align: center;
     padding: 50px;
@@ -1224,8 +1226,8 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center; /* Centre les éléments horizontalement */
-    grid-template-rows: auto; /* Assure que les lignes s'ajustent automatiquement */
+    justify-content: center; 
+    grid-template-rows: auto; 
 }
 
 
@@ -1239,7 +1241,7 @@ section {
     color: inherit;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 400px;
 }
 
 .article-card:hover {
@@ -1250,51 +1252,51 @@ section {
 .article-card img {
     width: 100%;
     height: auto;
+    object-fit: cover; 
     border-radius: 15px 15px 0 0;
+
 }
 
 .article-card p {
     padding: 15px;
     font-size: 14px;
     font-weight: 700;
-    color: #62891F; /* Retire le soulignement des liens */
+    color: #62891F; 
 }
 
-/* Styles spécifiques pour l'article 1 */
-.special-article-1 {
-    height: 350px; /* Hauteur plus grande */
-}
+
+
+
 
 .special-article-1 img {
-    height: 230px; /* Hauteur de l'image plus grande */
+    height: 190px;
+ 
+ 
+ }
+
+.special-article-1 img {
+   height: 190px;
+
+
 }
 
-/* Styles spécifiques pour l'article 4 */
-.special-article-4 {
-    height: 350px; /* Hauteur plus grande */
-}
 
-.special-article-4 img {
-    height: 200px; /* Hauteur de l'image plus grande */
-}
-
-/* Styles spécifiques pour l'article 5 */
 .special-article-5 {
-    height: 350px; /* Hauteur plus grande */
+    height: 350px; 
 }
 
 .special-article-5 img {
-    height: 200px; /* Hauteur de l'image plus grande */
+    max-height: 200px; 
 }
 
 .part1, .part2 {
-    margin: 0; /* Supprime les marges par défaut pour éviter l'espacement */
-    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; 
+    padding: 0; 
     text-align: left;
 }
 
 .part2 {
-  margin-bottom: 100px; /* Ajustez la couleur selon vos préférences */
+  margin-bottom: 100px; 
 }
 
 
@@ -1386,7 +1388,7 @@ section {
     padding: 5px 5px;
     color: #707070;
     margin-bottom: 20px;
-    margin-top: -70px; /* Distance uniforme pour la marge inférieure */
+    margin-top: -70px; 
 }
 
 .profilph1 {
@@ -1397,7 +1399,7 @@ section {
     margin-left: 250px;
     margin-right: 250px;
     margin-bottom: 20px;
-    margin-top: -50px; /* Distance uniforme pour la marge inférieure */
+    margin-top: -50px; 
 }
 
 
@@ -1428,29 +1430,29 @@ section {
 
 .goal label[for="calorie_goal"] {
     color: #62891F; 
-    font-weight: bolder;/* Changez cette couleur selon votre préférence */
+    font-weight: bolder;
 }
 
 .goal label[for="protein_goal"] {
     color: #62891F; 
-    font-weight: bolder; /* Changez cette couleur selon votre préférence */
+    font-weight: bolder; 
 }
 
 
 .goal label[for="diet_goal"] {
     color: #62891F; 
-    font-weight: bolder; /* Changez cette couleur selon votre préférence */
+    font-weight: bolder; 
 }
 
 .goal label[for="health_goal"] {
     color: #62891F; 
-    font-weight: bolder; /* Changez cette couleur selon votre préférence */
+    font-weight: bolder; 
 }
 
 
 .goal label[for="meal_plan_goal"] {
     color: #62891F; 
-    font-weight: bolder; /* Changez cette couleur selon votre préférence */
+    font-weight: bolder; /
 }
 
 

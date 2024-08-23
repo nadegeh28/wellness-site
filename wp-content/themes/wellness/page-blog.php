@@ -12,7 +12,7 @@
                 'img_src' => get_template_directory_uri() . '/assets/img/article-1.jpg',
                 'alt' => 'Les Avantages et Défis du Régime Vegan',
                 'title' => 'Les Avantages et Défis du Régime Vegan : Une Analyse Approfondie',
-                'class' => 'special-article-1'
+                
             ],
             [
                 'link' => 'http://localhost:8888/wellness-site/index.php/article-2/',
