@@ -1216,6 +1216,15 @@ section {
 
 
 
+
+
+
+
+
+
+
+
+
 .blog-container {
     text-align: center;
     padding: 50px;
@@ -1265,8 +1274,30 @@ section {
 }
 
 
+.special-article-1 img {
+    height: 200px; /* Ajuste la hauteur pour l'article 5 */
+}
 
 
+.special-article-5 img {
+    height: 200px; /* Ajuste la hauteur pour l'article 5 */
+}
+
+
+
+
+
+<<<<<<< HEAD
+
+.special-article-1 img {
+    height: 190px;
+ 
+ 
+ }
+
+.special-article-1 img {
+   height: 350px;
+=======
 .special-article-1 {
     height: 350px;
  
@@ -1275,6 +1306,7 @@ section {
 
 .special-article-1 img {
    height: 200px;
+>>>>>>> b388af375f0261c05efe158b19ef38e0683f6ce9
 
 
 }
