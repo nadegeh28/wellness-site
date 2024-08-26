@@ -15,6 +15,79 @@ header {
 }
 
 
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Par défaut pour les grands écrans (desktop) */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flexbox container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+/* Media Queries */
+
+/* Pour les tablettes */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .flex-item {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Pour les petits écrans comme les téléphones */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+    
+    .flex-item {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+
+
 
 .fade-in {
     opacity: 0;

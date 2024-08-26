@@ -84,7 +84,7 @@
     <h2 class="quiztitle fade-in">Besoin d'aide ?</h2>
     <div class="quizsection fade-in">
         <p>Faites le Quizz et Wellness trouvera le régime parfait pour vous</p>
-        <a href="#" class="startbtn">Start</a>
+        <a href="http://localhost:8888/wellness-site/index.php/quizz/" class="startbtn">Start</a>
     </div>
 </div>
 
