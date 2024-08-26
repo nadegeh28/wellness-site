@@ -107,6 +107,7 @@ img {
 .navbar-custom {
     background-color: #FFFF; 
     margin-top: -50px;
+    margin-bottom: 100px;
 }
 
 
@@ -359,12 +360,17 @@ color: #DCEDC8;
 }
 
 
-.hero-image img {
-    width: 870px;
-    margin-right: -200px;
-    border-radius: 50px;
+@media (max-width: 768px) {
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        border-radius: 20px;
 
+    }
 }
+
+
 
 .custom-title {
     text-align: center;
@@ -372,7 +378,7 @@ color: #DCEDC8;
 }
 
 .recipes h2, .services h2, .testimonials h2  {
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 50px;
     color: #689F38;
     background-color: #DCEDC8;
@@ -418,7 +424,6 @@ color: #DCEDC8;
     margin: 40px 20px;
 }
 
-
 .recipe-card img {
     max-width: 200px;
     border-radius: 250px;
@@ -428,6 +433,8 @@ color: #DCEDC8;
     margin-bottom: 10px;
 
 }
+
+
 
 .recipe-card .etoiles{
 width: 120px; 
@@ -1118,13 +1125,7 @@ width: 180px;
 
 
 
-.input-error {
-    border: 1px solid #D8000C;
-}
 
-.input-valid {
-    border: 1px solid #8BC34A;
-}
 
 
 .error-message {
@@ -1297,7 +1298,6 @@ section {
 
 
 
-
 .blog-container {
     text-align: center;
     padding: 50px;
@@ -1308,10 +1308,9 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center; 
-    grid-template-rows: auto; 
+    justify-content: center;
+    grid-template-rows: auto;
 }
-
 
 .article-card {
     background-color: #F2F2F2;
@@ -1334,60 +1333,50 @@ section {
 .article-card img {
     width: 100%;
     height: auto;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
-
 }
 
 .article-card p {
     padding: 15px;
     font-size: 14px;
     font-weight: 700;
-    color: #62891F; 
+    color: #62891F;
 }
 
-
+/* Special article styles */
 .special-article-1 img {
-    height: 200px; /* Ajuste la hauteur pour l'article 5 */
-}
-
-
-.special-article-5 img {
-    height: 200px; /* Ajuste la hauteur pour l'article 5 */
-}
-
-
-
-
-
-
-.special-article-1 img {
-    height: 190px;
- 
- 
- }
-
-.special-article-1 img {
-   height: 350px;
+    height: 350px; /* Adjusted height for special article 1 */
 }
 
 .special-article-5 img {
-    max-height: 200px; 
+    max-height: 200px; /* Adjusted max-height for special article 5 */
 }
 
-.part1, .part2 {
-    margin: 0; 
-    padding: 0; 
-    text-align: left;
+/* Heading styles */
+h1 {
+    text-align: left; /* Aligns the entire h1 element to the left */
+    margin-bottom: 0; /* Optionally, remove margin if needed */
 }
 
-.part2 {
-  margin-bottom: 100px; 
+h1 .part1, h1 .part2 {
+    text-align: left; /* Ensures that parts within h1 are also left-aligned */
+}
+
+/* Additional adjustments for part1 and part2 if needed */
+h1 .part1 {
+    margin-left: 100px;
+}
+
+h1 .part2 {
+    margin-bottom: 100px; /* Retains margin-bottom for .part2 */
 }
 
 
 
-/* Container principal pour le profil utilisateur */
+
+
+
 .profile-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -1395,10 +1384,10 @@ section {
     /* Assure que tout est aligné à gauche */
 }
 
-/* Flexbox pour aligner l'image et les détails côte à côte */
+
 .profile-header {
     display: flex;
-    gap: 30px; /* Espacement entre l'image et les détails */
+    gap: 30px; 
     align-items: flex-start; /* Aligner l'image avec le haut du contenu */
     margin-top: 20px; /* Ajouter un peu d'espace entre le titre et l'image */
 }
