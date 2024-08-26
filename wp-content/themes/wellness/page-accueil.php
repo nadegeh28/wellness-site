@@ -88,7 +88,7 @@
             </div>
             <div class="service-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/progricone.png" alt="Aperçu de son évolution">
-                <h3 class="services">objectif cible</h3>
+                <h3 class="services">Objectif cible</h3>
                 <p>Grâce à notre fonctionnalité de suivi, fixez des objectifs personnalisés adaptés à vos besoins. Définissez vos priorités et suivez vos progrès pour rester motivé et atteindre vos ambitions !</p>
             </div>
         </div>
