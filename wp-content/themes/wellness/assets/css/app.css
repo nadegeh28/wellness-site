@@ -1216,85 +1216,109 @@ section {
 
 
 
-/* Style de la section contenant les articles */
+
+
+
+
+
+
+
+
+
 .blog-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 40px;
 }
 
 .articles-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
+    justify-content: center; 
+    grid-template-rows: auto; 
 }
 
-/* Style des cartes d'articles */
+
 .article-card {
-    background-color: #f0f0f0; /* gris clair */
-    color: #2ecc71; /* vert */
+    background-color: #F2F2F2;
+    border-radius: 15px;
     text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px; /* Taille fixe des cartes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
 }
 
 .article-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .article-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    object-fit: cover;
+    object-fit: cover; 
+    border-radius: 15px 15px 0 0;
+
 }
 
-/* Spécifique pour la carte avec class special-article-5 */
-.special-article-5 {
-    background-color: #dcdcdc; /* Variation de gris pour se démarquer */
-}
-
-/* Style du texte dans les cartes */
 .article-card p {
-    font-size: 16px;
-    margin: 0;
-    color: #27ae60; /* Texte en vert */
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #62891F; 
 }
 
-/* Style pour la classe fade-in si nécessaire */
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out;
+
+.special-article-1 img {
+    height: 200px; /* Ajuste la hauteur pour l'article 5 */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+
+.special-article-5 img {
+    height: 200px; /* Ajuste la hauteur pour l'article 5 */
 }
 
-@media (max-width: 768px) {
-    .articles-grid {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .article-card {
-        width: 100%;
-        max-width: 350px; /* S'adapte à la taille d'écran */
-    }
+
+
+
+<<<<<<< HEAD
+
+.special-article-1 img {
+    height: 190px;
+ 
+ 
+ }
+
+.special-article-1 img {
+   height: 350px;
+=======
+.special-article-1 {
+    height: 350px;
+ 
+ 
+ }
+
+.special-article-1 img {
+   height: 200px;
+>>>>>>> b388af375f0261c05efe158b19ef38e0683f6ce9
+
+
 }
 
+
+.special-article-5 {
+    height: 350px; 
+}
+
+.special-article-5 img {
+    max-height: 200px; 
+}
 
 .part1, .part2 {
     margin: 0; 
